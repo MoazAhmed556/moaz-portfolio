@@ -8,6 +8,7 @@ import type { ChapterHeading, Project } from "@/types";
  *
  * To add a project:
  *   1. put its HTML file in /public/projects/<id>.html
+ *      (a multi-file app goes in /public/projects/<id>/ with a rewrite in next.config.ts — see README)
  *   2. add a desktop screenshot (/public/images/projects/<id>.jpg, 790×494)
  *      and a phone screenshot (/public/images/projects/<id>-m.jpg, 390×844)
  *   3. add an entry below. Order here = order in the exhibition.
@@ -17,7 +18,7 @@ import type { ChapterHeading, Project } from "@/types";
  */
 export const projectsHeading: ChapterHeading = {
   label: "The Projects",
-  title: "Eight digital destinations. ",
+  title: "Thirteen digital destinations. ",
   titleEmphasis: "Every one of them works.",
   lede: "These are real, working websites — not screenshots. Enter any project to scroll it, search it, add to the cart and use it as a customer would.",
 };
@@ -279,6 +280,182 @@ export const projects: Project[] = [
     notes: "A landing-page concept — course prices are display only.",
     allow: "",
   },
+  {
+    id: "aureve-jewelry",
+    name: "Aurève",
+    industry: "Jewellery · e-commerce",
+    previewUrl: "/projects/aureve-jewelry",
+    screenshot: "/images/projects/aureve-jewelry.jpg",
+    screenshotMobile: "/images/projects/aureve-jewelry-m.jpg",
+    colors: ["#39352f", "#f6f3ed", "#b99a68"],
+    tint: "#efe8dc",
+    accent: "#8a6c3e",
+    stats: ["39 pieces", "12 collections", "Gift finder"],
+    tagline: "Objects of beauty, made to be yours.",
+    description:
+      "A demo store for modern gold jewellery: 39 pieces across seven categories and twelve collections, presented like an editorial lookbook. A signature carousel, a three-question gift finder and a quick-view product dialog make browsing feel personal.",
+    role: "Designed and built as an interactive prototype: art direction, interface design and the full front-end in plain JavaScript, with no libraries.",
+    objectives: [
+      "Give fine jewellery the calm, unhurried feel of a boutique counter.",
+      "Help someone buying a gift find the right piece in three questions.",
+      "Keep a long editorial page easy to move through on a phone.",
+    ],
+    features: [
+      "Gallery with 14 filter chips, accent-insensitive search, four sorts and “show more” in batches of 12",
+      "Three-step gift finder by occasion, recipient and budget — exact matches first, then the closest alternatives",
+      "Cart drawer with quantities, a gift-wrap option and a free-shipping threshold, plus a wishlist — both saved in the browser",
+      "Search overlay with live results, and a product dialog with image views and “you may also like”",
+      "Signature carousel with buttons, thumbnails, arrow keys and swipe; the background colour changes with each piece",
+      "Hover-to-zoom detail images and an animated gift-box reveal",
+    ],
+    tech: ["HTML5 · <dialog>, <details>, <output>", "CSS3 · Grid, clip-path, backdrop-filter, aspect-ratio, dvh", "Vanilla JavaScript — no libraries", "IntersectionObserver", "Pointer Events", "localStorage", "Intl.NumberFormat", "inert", "Google Fonts"],
+    notes: "A demonstration store — products, prices and checkout are not real, and the page says so. Product photos load from Unsplash and need an internet connection.",
+    allow: "",
+  },
+  {
+    id: "furniture",
+    name: "Dune & Oak",
+    industry: "Furniture · interior design store",
+    previewUrl: "/projects/furniture",
+    screenshot: "/images/projects/furniture.jpg",
+    screenshotMobile: "/images/projects/furniture-m.jpg",
+    colors: ["#1e1a16", "#f5f1ea", "#a65733"],
+    tint: "#ebe3d7",
+    accent: "#a65733",
+    stats: ["45 products", "Sofa Studio", "Shop the room"],
+    tagline: "Calm, warm rooms made for living.",
+    description:
+      "A furniture and home-décor store organised around rooms rather than catalogues. 45 products in ten categories sit beside a Sofa Studio for comparing sofas and finishes, and a “Shop the Room” photograph whose eight hotspots add the whole scene to the cart.",
+    role: "Designed and built as an interactive prototype: art direction, interface design and the full front-end in plain JavaScript, with no libraries.",
+    objectives: [
+      "Show furniture the way people imagine it: in a room, not on a white background.",
+      "Make comparing sofas, finishes and sizes quick and tactile.",
+      "Keep a warm, natural-material character from the first screen to the cart.",
+    ],
+    features: [
+      "Shop with best-seller and new tabs, 11 category chips, a room filter, four sorts, debounced search and “show more”",
+      "Sofa Studio: browse four sofas with buttons, thumbnails, swipe or arrow keys, pick a finish and add to the cart",
+      "“Shop the Room”: eight hotspots on one photograph, a running total and “add all to cart”",
+      "Product details with options that change the price, a quantity picker and “pairs well with” suggestions",
+      "Cart drawer saved in the browser; every overlay traps focus, closes with Esc and returns focus",
+      "Collections tabs, story pop-ups that link to their products, and validated contact and newsletter forms (demo)",
+    ],
+    tech: ["HTML5 · inline SVG sprite", "CSS3 · Grid areas, scroll-snap, aspect-ratio, svh, sticky", "Vanilla JavaScript — no libraries", "IntersectionObserver", "localStorage", "matchMedia", "Touch events", "Google Fonts"],
+    notes: "A demo storefront — prices are illustrative, and checkout and the forms are not connected. Photos load from Unsplash and Pexels and need an internet connection.",
+    allow: "",
+  },
+  {
+    id: "fashion-store",
+    name: "VÉLORE",
+    industry: "Fashion · e-commerce",
+    previewUrl: "/projects/fashion-store",
+    screenshot: "/images/projects/fashion-store.jpg",
+    screenshotMobile: "/images/projects/fashion-store-m.jpg",
+    colors: ["#0e0e0e", "#f2f0ed", "#66615a"],
+    tint: "#ebe9e5",
+    accent: "#2a2723",
+    stats: ["22 products", "Men · Women · Kids", "Store stock checker"],
+    tagline: "Timeless style for every moment.",
+    description:
+      "A monochrome fashion store for men, women and kids. A campaign-style hero, cut-out product photography and fourteen category tiles lead into a full shop with quick view, bag, favourites and a stock checker for eight store branches.",
+    role: "Designed and built as an interactive prototype: art direction, interface design and the full front-end in plain JavaScript, with no libraries.",
+    objectives: [
+      "Give a fashion catalogue the pace and confidence of a printed campaign.",
+      "Keep men, women and kids distinct while staying one recognisable brand.",
+      "Answer size, colour and stock questions without leaving the page.",
+    ],
+    features: [
+      "Shop with All, Men, Women, Kids, New, Best and Favourites tabs, category chips, a collection filter and four sorts",
+      "Quick view with colour swatches and sizes — adding without a size shows a clear message",
+      "Bag and favourites drawers with quantities, undo on remove and a subtotal, saved and synced across browser tabs",
+      "Accent-insensitive search across name, category, colour and SKU, with suggestions",
+      "Stock checker and store locator for eight branches in four cities (demo stock), plus recently viewed items",
+      "Auto-playing campaign hero with swipe and arrow keys, a canvas wave background, parallax and scroll reveals",
+    ],
+    tech: ["HTML5 · <dialog>, SVG sprite, inert", "CSS3 · clip-path, backdrop-filter, mix-blend-mode, SVG filters, dvh", "Vanilla JavaScript — no libraries", "Canvas 2D", "IntersectionObserver & ResizeObserver", "Web Animations API", "requestAnimationFrame", "localStorage + storage event", "Intl.NumberFormat", "Google Fonts"],
+    notes: "A demo storefront — products, prices, branches and stock are samples, and checkout is not connected. Cut-out images are embedded (the page is about 2.9 MB); larger photos load from Unsplash.",
+    allow: "",
+  },
+  {
+    id: "atelier-01",
+    name: "ATELIER 01",
+    industry: "Architecture · interior design studio",
+    previewUrl: "/projects/atelier-01",
+    screenshot: "/images/projects/atelier-01.jpg",
+    screenshotMobile: "/images/projects/atelier-01-m.jpg",
+    colors: ["#1e1c19", "#f6f2eb", "#a27a50"],
+    tint: "#e9e1d5",
+    accent: "#7e5c3a",
+    stats: ["7 pages", "Interactive floor plan", "13 rooms · 3 levels"],
+    tagline: "Architecture of mass and light, explored room by room.",
+    description:
+      "A photography-led, multi-page website for a luxury architecture and interiors studio. Visitors walk a sample residence on an interactive 2D floor plan: choose a level, open a room, and its photograph grows out of the plan with its materials, details and the rooms it connects to.",
+    role: "Designed and built end to end: creative direction (chosen from four explored concepts), the visual system, image curation and the React front-end, including the SVG floor-plan component and the GSAP motion.",
+    objectives: [
+      "Present architecture through photography and drawings, the way an architect reads a building.",
+      "Make moving between floors and rooms feel spatial, without any 3D.",
+      "Keep projects, rooms, materials and team in data files, so the site can be adapted for another studio.",
+    ],
+    features: [
+      "Explore: an SVG floor plan with walls, doors and glazing on three levels, chosen from a building cross-section",
+      "Selecting a room zooms its photograph out of the plan; each room lists specs, materials, details and connected rooms, including the stair to other levels",
+      "Seven pages — Home, Explore, Projects, Project details, Materials, Studio and Contact — joined by a numbered page transition",
+      "Projects with typology filters animated by GSAP Flip, gallery and index views, and story-led project pages",
+      "Material library with a cursor loupe, cross-linked pairings and a sample tray that carries into the enquiry form",
+      "Enquiry form with full validation and a local submission flow: entries are saved in the browser and no email is sent",
+    ],
+    tech: ["React 19", "React Router 8", "Vite 8", "GSAP 3 · ScrollTrigger, SplitText, Flip", "SVG (floor plans)", "CSS custom properties & Grid", "lucide-react", "localStorage", "sharp image pipeline (WebP)", "Fontsource variable fonts"],
+    notes: "A sample studio — projects, rooms, team and contact details are placeholders. Photography from Unsplash plus client-supplied images, credited inside the site. The enquiry form saves locally only and does not send email.",
+    allow: "",
+  },
+  {
+    id: "automotive-showroom",
+    name: "Salon Noir",
+    industry: "Automotive · interactive 3D showroom",
+    previewUrl: "/projects/automotive-showroom",
+    screenshot: "/images/projects/automotive-showroom.jpg",
+    screenshotMobile: "/images/projects/automotive-showroom-m.jpg",
+    colors: ["#060607", "#eeeae3", "#d6c39d"],
+    tint: "#e7e3dc",
+    accent: "#6f6248",
+    stats: ["3 real 3D cars", "45 anatomy points", "Three.js"],
+    tagline: "A private automotive museum you can walk into.",
+    description:
+      "A cinematic single-scene showroom built with Three.js: three real 3D cars on felt plinths under ring lights. Select a car and the camera arcs towards it; numbered anatomy markers, tied to exact points on the model, open part-by-part studies with specifications and animations.",
+    role: "Designed and built as an interactive experience: art direction, lighting and staging, camera choreography, 3D model preparation and the full front-end.",
+    objectives: [
+      "Give a digital car the hush and drama of a private museum hall.",
+      "Explain engineering honestly — every part says whether it is modelled, located on the body or shown as a schematic.",
+      "Stay smooth on modest laptops and phones.",
+    ],
+    features: [
+      "A hall of three real glTF cars with ring lights, string curtains and a soft planar floor reflection",
+      "Select a car and the camera arcs towards it in place while its neighbours dim; ← / → move between cars",
+      "15 numbered anatomy markers per car, with leader lines to exact points that hide when they face away; drag to orbit",
+      "Part studies with name, explanation, specifications, materials and an honest “3D source” label",
+      "Animated parts where the model allows: lights, spinning wheels, illustrated brake heat, doors, the front clamshell, suspension heave",
+      "Adaptive quality that lowers resolution, then the reflection, when frames slow down; plus reduced-motion support",
+    ],
+    tech: ["Three.js r187", "glTF 2.0 · GLTFLoader + DRACOLoader", "Reflector (planar reflection)", "Raycasting (surface-snapped anchors)", "Vite 8", "Vanilla JavaScript modules", "SVG leader lines", "Fontsource · Manrope, IBM Plex Mono", "glTF-Transform + sharp (model preparation)"],
+    notes: "Needs WebGL. 3D models: Car Concept by Eric Chadwick / Darmstadt Graphics Group (CC BY 4.0); Porsche 911 Carrera 4S by Lionsharp Studios (CC BY-SA 4.0); Ferrari 458 from the three.js examples (demo use — its licence could not be re-verified). Full credits are inside the experience.",
+    allow: "",
+  },
 ];
 
 export const projectName = (p: Project) => p.shortName ?? p.name;
+
+/**
+ * Filters in the project index. A project can appear in more than one.
+ * Add a new project's id to the filters that describe it.
+ */
+export const projectFilters: { id: string; label: string; projects: string[] }[] = [
+  {
+    id: "commerce",
+    label: "E-commerce",
+    projects: ["nar-hatab", "freshmart", "hany-pharmacy", "maison-sucree", "shopik-loopik", "bo-scrunchiess", "pawland", "aureve-jewelry", "furniture", "fashion-store"],
+  },
+  { id: "food", label: "Food & hospitality", projects: ["nar-hatab", "freshmart", "maison-sucree"] },
+  { id: "interiors", label: "Architecture & interiors", projects: ["furniture", "atelier-01"] },
+  { id: "experience", label: "Interactive experiences", projects: ["atelier-01", "automotive-showroom"] },
+  { id: "landing", label: "Landing pages", projects: ["offscript"] },
+];

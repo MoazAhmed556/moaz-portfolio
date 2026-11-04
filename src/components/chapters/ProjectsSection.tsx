@@ -5,7 +5,7 @@ import { chapterById } from "@/data/navigation";
 import { projects, projectsHeading } from "@/data/projects";
 import { pad } from "@/lib/utils";
 
-/** 05 · THE PROJECTS — eight working prototypes in a cinematic exhibition. */
+/** 05 · THE PROJECTS — the working prototypes in a cinematic exhibition. */
 export function ProjectsSection() {
   const chapter = chapterById("projects");
   return (

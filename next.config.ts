@@ -25,8 +25,18 @@ const nextConfig: NextConfig = {
   },
 
   // Clean URLs for the live prototypes: /projects/pawland → /projects/pawland.html
+  // Rewrites run after files in /public are checked, so the built apps' assets are served directly.
   async rewrites() {
-    return [{ source: "/projects/:slug([a-z0-9-]+)", destination: "/projects/:slug.html" }];
+    return [
+      // single-file prototypes whose file names are not lowercase
+      { source: "/projects/aureve-jewelry", destination: "/projects/Aureve-Jewelry.html" },
+      { source: "/projects/furniture", destination: "/projects/Furniture.html" },
+      // multi-page app built into its own folder: every page URL falls back to its index.html
+      { source: "/projects/atelier-01", destination: "/projects/atelier-01/index.html" },
+      { source: "/projects/atelier-01/:path*", destination: "/projects/atelier-01/index.html" },
+      { source: "/projects/automotive-showroom", destination: "/projects/automotive-showroom/index.html" },
+      { source: "/projects/:slug([a-z0-9-]+)", destination: "/projects/:slug.html" },
+    ];
   },
 
   async headers() {

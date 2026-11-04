@@ -10,7 +10,7 @@ export const chapters: Chapter[] = [
   { id: "vision", number: 2, title: "The Vision", blurb: "How I approach problems." },
   { id: "challenges", number: 3, title: "The Challenges", blurb: "My professional experience." },
   { id: "expertise", number: 4, title: "The Expertise", blurb: "Skills, tools and current learning — with evidence." },
-  { id: "projects", number: 5, title: "The Projects", blurb: "Eight live projects you can use." },
+  { id: "projects", number: 5, title: "The Projects", blurb: "Thirteen live projects you can use." },
   { id: "lens", number: 6, title: "Behind the Lens", blurb: "A personal photography collection." },
   { id: "next", number: 7, title: "The Next Chapter", blurb: "What I am learning, and where I am heading." },
   { id: "connection", number: 8, title: "The Connection", blurb: "Get in touch." },

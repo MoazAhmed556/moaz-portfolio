@@ -1,5 +1,5 @@
 /* =====================================================================
-   05 · THE PROJECTS — an exhibition of eight destinations
+   05 · THE PROJECTS — an exhibition of the working prototypes
    On wide screens the rooms are pinned and travel sideways as you scroll
    (<ProjectGallery/> writes --lp / --ad per room). Elsewhere they stack.
    ===================================================================== */
@@ -70,6 +70,23 @@
 .index-list .il-name { font-family: var(--serif); font-size: 24px; line-height: 1.1; display: block; }
 .index-list .il-ind { font-size: 13px; color: var(--ink-3); }
 .index-list .il-n { font-family: var(--serif); font-size: 18px; color: var(--copper-ink); padding-right: 6px; }
+.index-filters { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 20px; }
+.index-filters button { display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 0 14px; border-radius: 30px; border: 1px solid var(--line-2); background: rgba(255, 255, 255, .7); font-size: 13px; color: var(--ink); transition: background-color .3s, border-color .3s, color .3s; }
+.index-filters button span { font-size: 11.5px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+.index-filters button:hover { border-color: var(--copper); }
+.index-filters button[aria-pressed="true"] { background: var(--charcoal); border-color: var(--charcoal); color: var(--white); }
+.index-filters button[aria-pressed="true"] span { color: rgba(255, 255, 255, .7); }
+
+/* room compositions: the rooms alternate between three arrangements (wide, two-column rooms only) */
+@media (min-width: 1101px) {
+  .rx--mirror { grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); }
+  .rx--mirror .rx-visual { order: 2; }
+  .rx--mirror .rx-phone { right: auto; left: -4%; }
+  .rx--mirror .rx-num { right: auto; left: clamp(20px, 2.4vw, 40px); }
+  .rx--phone .rx-visual { padding-left: 24%; }
+  .rx--phone .rx-browser { translate: 0 -6%; }
+  .rx--phone .rx-phone { right: auto; left: 0; bottom: auto; top: 50%; width: 31%; translate: 0 -42%; }
+}
 
 @media (max-width: 1100px) {
   .rx { grid-template-columns: 1fr; height: auto; }

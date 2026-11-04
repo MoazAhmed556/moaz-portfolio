@@ -12,6 +12,9 @@ import type { Project } from "@/types";
 /** Wide screens get the pinned, sideways exhibition. Must match the media query in styles/chapters/projects.css. */
 const PIN_QUERY = "(min-width: 1024px) and (min-height: 560px)";
 
+/** Rooms cycle through three arrangements so the exhibition doesn't repeat one card (see projects.css). */
+const ROOM_LAYOUTS = ["rx--gallery", "rx--mirror", "rx--phone"];
+
 let hashRealigned = false;
 /**
  * Direct links such as /#lens: the browser scrolls to the chapter before the pinned
@@ -132,7 +135,7 @@ export function ProjectGallery({ projects }: { projects: Project[] }) {
           {projects.map((p, i) => (
             <article
               key={p.id}
-              className="rx"
+              className={`rx ${ROOM_LAYOUTS[i % ROOM_LAYOUTS.length]}`}
               ref={(el) => {
                 roomRefs.current[i] = el;
               }}

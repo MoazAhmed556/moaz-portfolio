@@ -8,7 +8,7 @@ A cinematic, bright-luxury portfolio in eight chapters, built with **Next.js 16 
 | 02 | The Vision | Drifting clouds and five working principles, each with a real "in practice" proof. |
 | 03 | The Challenges | Fog clears and arches draw in, revealing experience at Markatty and Dentolize. |
 | 04 | The Expertise | A blueprint. Three tabs of skills, each showing its evidence (no percentages). |
-| 05 | The Projects | A sideways exhibition of 8 working prototypes, each opening in a live, interactive browser viewer. |
+| 05 | The Projects | A sideways exhibition of 13 working projects, each opening in a live, interactive browser viewer. |
 | 06 | Behind the Lens | 19 curated iPhone photographs over a moving "living architecture" background. |
 | 07 | The Next Chapter | Sunrise. Done, learning and aiming for, kept separate. |
 | 08 | The Connection | Real contact details, copy-email and CV download. |
@@ -74,8 +74,23 @@ Every data file is typed (`src/types/index.ts`), so VS Code shows each field and
 ### Add a project
 1. Put the prototype's HTML file in `public/projects/<id>.html`. It's served at `/projects/<id>`.
 2. Add screenshots: `public/images/projects/<id>.jpg` (desktop, 790×494) and `<id>-m.jpg` (phone, 390×844).
-3. Add an entry to `src/data/projects.ts`. Its position in the list is its position in the exhibition. Every room, the index, the viewer and the "01–08" counters update automatically.
-4. When a project is hosted publicly, add `liveUrl: "https://…"`. The "Open on its own" links then become "Visit the live site". The viewer keeps showing the local copy, because many live sites refuse to be framed by another page.
+3. Add an entry to `src/data/projects.ts`. Its position in the list is its position in the exhibition. Every room, the index, the viewer and the "01–13" counters update automatically. Rooms alternate between three compositions by position.
+4. Add its id to the matching filters in `projectFilters` (same file) — they drive the category chips in the project index.
+5. When a project is hosted publicly, add `liveUrl: "https://…"`. The "Open on its own" links then become "Visit the live site". The viewer keeps showing the local copy, because many live sites refuse to be framed by another page.
+
+**Multi-file apps** (ATELIER 01, Salon Noir) are production builds in their own folder, `public/projects/<id>/`, built from their source projects with a matching base path. `next.config.ts` maps `/projects/<id>` (and, for ATELIER 01, every page below it) to that folder's `index.html`. After changing either source project, rebuild it into the portfolio:
+
+```bash
+cd D:\Download\ATELIER-01
+npx vite build --base=/projects/atelier-01/ --outDir ../Moaz-Portfolio-Experience/public/projects/atelier-01 --emptyOutDir
+```
+
+```bash
+cd D:\Download\Automotive-Showroom-Experience
+npx vite build --base=/projects/automotive-showroom/ --outDir ../Moaz-Portfolio-Experience/public/projects/automotive-showroom --emptyOutDir
+```
+
+(In Git Bash, prefix each command with `MSYS_NO_PATHCONV=1` so `--base` is not turned into a Windows path.)
 
 ### Link a skill to a project
 In `src/data/skills.ts`, add project ids to a skill's `projects: [...]`. Each one becomes a "See it in …" button that opens that project in the viewer.
@@ -96,7 +111,8 @@ Moaz-Portfolio-Experience/
 ├── public/
 │   ├── photography/            19 curated photographs (Next.js serves optimised sizes)
 │   ├── images/projects/        exhibition screenshots (desktop + phone) per project
-│   ├── projects/               the 8 working prototypes shown in the live viewer
+│   ├── projects/               the 13 working projects shown in the live viewer
+│   │                           (11 single HTML files + atelier-01/ and automotive-showroom/ builds)
 │   └── cv/Moaz_Ahmed_CV.pdf
 ├── src/
 │   ├── app/
@@ -166,7 +182,7 @@ Every subscription, listener, observer and animation loop is removed in its effe
 **Fonts.** Cormorant Garamond and Hanken Grotesk via `next/font`. They're downloaded at build time and served from the site itself (no Google requests from visitors), so a `public/fonts` folder isn't needed.
 
 **Live previews.**
-- The 8 prototypes are static HTML in `public/projects`. `next.config.ts` gives them clean URLs (`/projects/pawland`).
+- The prototypes are static HTML in `public/projects`, plus two built apps in their own folders there. `next.config.ts` gives them all clean URLs (`/projects/pawland`, `/projects/atelier-01`).
 - The viewer loads one at a time in a same-origin `<iframe>` with a loading state.
 - It offers desktop, tablet and phone widths, reload, open in a new tab, and full screen (in-window, plus native full screen where the browser allows).
 - The iframe is removed when the viewer closes.
@@ -261,5 +277,6 @@ Re-encoding removed all metadata, including GPS. Titles describe only what is vi
 
 - Experience, dates and figures come from the CV. No testimonials, metrics or certifications were added.
 - DevOps, Linux, Docker and Jenkins appear **only** under "Currently learning".
-- None of the 8 prototypes has its own public address yet, so the viewer runs the copies in this project and says so.
+- None of the 13 projects has its own public address yet, so the viewer runs the copies in this project and says so.
+- Demo limits are stated per project: demo checkouts and forms, ATELIER 01's enquiry form (saved in the browser only, no email), and Salon Noir's 3D model licences.
 - No GitHub link is shown on the site because none was provided. Add one to `contacts` in `src/data/site.ts`.

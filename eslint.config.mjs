@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Pre-built project apps served from /public (generated, minified code)
+    "public/projects/**",
   ]),
 ]);
 
