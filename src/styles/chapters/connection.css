@@ -1,0 +1,27 @@
+/* =====================================================================
+   08 · THE CONNECTION
+   ===================================================================== */
+.ch-connect { background: linear-gradient(180deg, #fffaf2 0%, #ffffff 35%); padding: 14vh 0 0; }
+.conn-title { font-family: var(--serif); font-weight: 300; font-size: clamp(56px, 9vw, 168px); line-height: .94; letter-spacing: -.02em; margin-top: 20px; max-width: 13ch; }
+.conn-grid { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: clamp(36px, 6vw, 110px); margin-top: clamp(56px, 7vw, 100px); padding-top: 32px; border-top: 1px solid var(--line-2); }
+.conn-k { font-size: 12px; letter-spacing: .22em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 10px; }
+.conn-email { display: inline-block; font-family: var(--serif); font-size: clamp(30px, 3.6vw, 60px); line-height: 1.08; overflow-wrap: anywhere; background: linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat; transition: background-size .6s var(--ease-out), color .3s; }
+.conn-email:hover { background-size: 100% 1px; color: var(--copper); }
+.conn-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+.conn-list { display: grid; }
+.conn-list div { display: grid; grid-template-columns: 130px minmax(0, 1fr); gap: 14px; padding: 16px 0; border-bottom: 1px solid var(--line); }
+.conn-list div:first-child { padding-top: 0; }
+.conn-list dt { font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-3); padding-top: 3px; }
+.conn-list a { display: inline-flex; align-items: center; gap: 8px; overflow-wrap: anywhere; transition: color .3s; }
+.conn-list a:hover { color: var(--copper); }
+.back-begin { display: inline-flex; align-items: center; gap: 10px; margin-top: 12vh; font-size: 14px; font-weight: 500; padding: 12px 20px; border-radius: 40px; border: 1px solid var(--line-2); transition: border-color .3s; }
+.back-begin:hover { border-color: var(--charcoal); }
+.foot { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding-top: 30px; padding-bottom: calc(30px + env(safe-area-inset-bottom)); margin-top: 8vh; border-top: 1px solid var(--line); font-size: 13.5px; color: var(--ink-3); }
+
+@media (max-width: 960px) {
+  .conn-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 760px) {
+  .conn-list div { grid-template-columns: 1fr; gap: 4px; }
+  .conn-actions .btn { flex: 1 1 auto; }
+}

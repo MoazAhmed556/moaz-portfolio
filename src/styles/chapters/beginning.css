@@ -1,0 +1,109 @@
+/* =====================================================================
+   01 · THE BEGINNING — a sunlit white room; the camera moves through the window
+   --p (0→1) is written by <ScrollEngine/> as the pinned room scrolls past.
+   ===================================================================== */
+.ch { position: relative; }
+
+.ch-begin { height: 180vh; background: #f4f1ea; --p: 0; }
+.begin-stage { position: sticky; top: 0; height: 100vh; height: 100svh; overflow: hidden; }
+.room {
+  --bx1: 20%; --bx2: 80%; --by1: 13%; --by2: 70%;
+  --wx: 55%; --wy: 21%; --ww: 15.5%; --wh: 43%;
+  position: absolute; inset: 0;
+  transform-origin: calc(var(--wx) + var(--ww) * .27) calc(var(--wy) + var(--wh) * .3);
+  transform: scale(calc(1 + var(--p) * var(--p) * 9));
+  will-change: transform;
+}
+.room-wall { position: absolute; inset: 0; }
+.room-ceiling { clip-path: polygon(0 0, 100% 0, var(--bx2) var(--by1), var(--bx1) var(--by1)); background: linear-gradient(180deg, #fbfaf6, #f2eee6); }
+.room-left { clip-path: polygon(0 0, var(--bx1) var(--by1), var(--bx1) var(--by2), 0 100%); background: linear-gradient(90deg, #e9e3d8, #f1ede5); }
+.room-right { clip-path: polygon(var(--bx2) var(--by1), 100% 0, 100% 100%, var(--bx2) var(--by2)); background: linear-gradient(270deg, #e3dccf, #ece7de); }
+.room-back { clip-path: polygon(var(--bx1) var(--by1), var(--bx2) var(--by1), var(--bx2) var(--by2), var(--bx1) var(--by2)); background: #f2eee6; }
+.room-floor { clip-path: polygon(var(--bx1) var(--by2), var(--bx2) var(--by2), 100% 100%, 0 100%); background: linear-gradient(180deg, #e9e2d6 0%, #e2d9ca 100%); }
+.room-spill {
+  position: absolute; left: calc(var(--wx) - 14%); top: calc(var(--wy) - 8%); width: calc(var(--ww) + 28%); height: calc(var(--wh) + 22%);
+  background: radial-gradient(closest-side, rgba(255, 252, 244, .95), rgba(255, 251, 242, .35) 55%, rgba(255, 251, 242, 0));
+}
+.room-window {
+  position: absolute; left: var(--wx); top: var(--wy); width: var(--ww); height: var(--wh); overflow: hidden;
+  border-radius: 999px 999px 3px 3px / 46% 46% 3px 3px;
+  box-shadow: 0 0 0 6px #f8f5ee, 0 0 0 7px rgba(41, 43, 44, .06), 0 0 90px 30px rgba(255, 250, 238, .7);
+}
+.win-sky { position: absolute; inset: 0; background: linear-gradient(180deg, #8fbcdb 0%, #a9cde5 38%, #c9dfec 72%, #e6eef2 100%); }
+.win-cloud { position: absolute; width: 140%; height: 30%; left: -20%; border-radius: 50%; background: radial-gradient(closest-side, rgba(255, 255, 255, .95), rgba(255, 255, 255, 0)) 20% 50% / 45% 100% no-repeat, radial-gradient(closest-side, rgba(255, 255, 255, .9), rgba(255, 255, 255, 0)) 60% 40% / 55% 100% no-repeat; animation: winCloud 38s ease-in-out infinite alternate; }
+.win-cloud.c1 { top: 30%; }
+.win-cloud.c2 { top: 62%; opacity: .7; animation-duration: 52s; animation-direction: alternate-reverse; }
+@keyframes winCloud { from { transform: translateX(-18%); } to { transform: translateX(18%); } }
+.win-frame { position: absolute; inset: 0; }
+.win-frame::before { content: ""; position: absolute; left: 50%; top: 0; bottom: 0; width: 5px; margin-left: -2.5px; background: #f8f5ee; }
+.win-frame::after { content: ""; position: absolute; left: 0; right: 0; top: 56%; height: 5px; background: #f8f5ee; }
+.room-shaft {
+  position: absolute; inset: 0; pointer-events: none;
+  clip-path: polygon(var(--wx) calc(var(--wy) + var(--wh)), calc(var(--wx) + var(--ww)) calc(var(--wy) + var(--wh)), 70% 100%, 26% 100%);
+  background: linear-gradient(180deg, rgba(255, 250, 238, .62), rgba(255, 249, 235, .1));
+  animation: sun 18s ease-in-out infinite alternate;
+}
+.room-patch {
+  position: absolute; inset: 0; pointer-events: none;
+  clip-path: polygon(calc(var(--wx) - 1%) calc(var(--by2) + 4%), calc(var(--wx) + var(--ww) + 1%) calc(var(--by2) + 4%), 70% 100%, 32% 100%);
+  background: linear-gradient(180deg, #fffaf0, #fbf2e0);
+  animation: sun 18s ease-in-out infinite alternate;
+}
+.room-patch::before { content: ""; position: absolute; inset: 0; background: rgba(150, 128, 98, .22); clip-path: polygon(calc(var(--wx) + var(--ww) / 2 - .25%) calc(var(--by2) + 4%), calc(var(--wx) + var(--ww) / 2 + .25%) calc(var(--by2) + 4%), 52% 100%, 50% 100%); }
+.room-patch i { position: absolute; left: 0; right: 0; top: 86%; height: 1.4%; background: rgba(150, 128, 98, .18); }
+@keyframes sun { from { transform: translateX(0) skewX(0deg); } to { transform: translateX(-1.6%) skewX(-2deg); } }
+.begin-sky { position: absolute; inset: 0; background: #b7d6ea; opacity: clamp(0, calc((var(--p) - .78) * 5), 1); pointer-events: none; }
+
+.begin-content {
+  position: absolute; left: var(--gutter); right: var(--gutter); top: calc(var(--nav-h) + 4vh); max-width: 760px;
+  opacity: calc(1 - var(--p) * 2.4); transform: translate3d(0, calc(var(--p) * -90px), 0);
+}
+.begin-name { font-family: var(--serif); font-weight: 300; text-transform: uppercase; font-size: min(11vw, 18.5vh); line-height: .84; letter-spacing: .04em; margin: 22px 0 22px -.04em; color: var(--charcoal); }
+.bn-line { display: block; white-space: nowrap; }
+.bn-line .lt { display: inline-block; }
+.begin-roles { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; font-size: 12.5px; font-weight: 500; letter-spacing: .22em; text-transform: uppercase; color: var(--ink-2); }
+.begin-roles i { width: 1px; height: 14px; background: var(--line-2); }
+.begin-head { font-family: var(--serif); font-size: clamp(26px, 2.5vw, 40px); line-height: 1.12; margin-top: 26px; max-width: 22ch; }
+.begin-intro { color: var(--ink-2); max-width: 46ch; margin-top: 16px; font-size: 16.5px; }
+.begin-ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.scroll-cue { position: absolute; left: 50%; bottom: 26px; transform: translateX(-50%); display: grid; justify-items: center; gap: 10px; font-size: 11px; letter-spacing: .3em; text-transform: uppercase; color: var(--ink-3); opacity: calc(1 - var(--p) * 4); }
+.scroll-cue i { position: relative; width: 1px; height: 52px; background: var(--line-2); overflow: hidden; }
+.scroll-cue i::after { content: ""; position: absolute; left: -1px; width: 3px; height: 14px; border-radius: 2px; background: var(--copper); animation: cue 2.4s var(--ease) infinite; }
+@keyframes cue { from { top: -14px; } to { top: 100%; } }
+
+/* entrance: the sun comes into the room (.ready is added by <HeroEntrance/>) */
+.js .room { filter: brightness(1.06) saturate(.6); transition: filter 2.4s var(--ease); }
+.js .room-shaft, .js .room-patch, .js .room-spill { opacity: 0; transition: opacity 2.6s var(--ease) .3s; }
+.js .bn-line .lt { opacity: 0; transform: translateY(42%); filter: blur(10px); transition: opacity 1.2s var(--ease-out), transform 1.4s var(--ease-out), filter 1.2s var(--ease-out); transition-delay: calc(400ms + var(--li) * 70ms); }
+.js .ch-begin .ch-label, .js .begin-roles, .js .begin-head, .js .begin-intro, .js .begin-ctas, .js .scroll-cue span { opacity: 0; translate: 0 16px; transition: opacity 1.1s var(--ease), translate 1.2s var(--ease-out); }
+.ready .room { filter: none; }
+.ready .room-shaft, .ready .room-patch, .ready .room-spill { opacity: 1; }
+.ready .bn-line .lt { opacity: 1; transform: none; filter: none; }
+.ch-begin.ready .ch-label, .ready .begin-roles, .ready .begin-head, .ready .begin-intro, .ready .begin-ctas, .ready .scroll-cue span { opacity: 1; translate: 0 0; }
+.ch-begin.ready .ch-label { transition-delay: .2s; }
+.ready .begin-roles { transition-delay: 1.05s; }
+.ready .begin-head { transition-delay: 1.2s; }
+.ready .begin-intro { transition-delay: 1.35s; }
+.ready .begin-ctas { transition-delay: 1.5s; }
+.ready .scroll-cue span { transition-delay: 1.8s; }
+
+@media (max-width: 760px) {
+  .ch-begin { height: 170vh; }
+  .room { --bx1: 12%; --bx2: 88%; --by1: 9%; --by2: 52%; --wx: 36%; --wy: 15%; --ww: 28%; --wh: 33%; }
+  .begin-content { top: auto; bottom: calc(46px + env(safe-area-inset-bottom)); }
+  .begin-name { font-size: min(19vw, 12vh); margin: 14px 0 14px; }
+  .begin-roles { font-size: 10.5px; letter-spacing: .16em; gap: 6px 10px; }
+  .begin-head { font-size: 25px; margin-top: 18px; }
+  .begin-intro { font-size: 15px; display: none; }
+  .begin-ctas { margin-top: 20px; }
+  .begin-ctas .btn { flex: 1 1 auto; }
+  .scroll-cue { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .room { transform: none !important; }
+  .begin-content, .scroll-cue { opacity: 1 !important; transform: none !important; }
+  .js .room, .js .room-shaft, .js .room-patch, .js .room-spill, .js .bn-line .lt, .js .ch-begin .ch-label, .js .begin-roles, .js .begin-head, .js .begin-intro, .js .begin-ctas, .js .scroll-cue span { opacity: 1 !important; transform: none !important; filter: none !important; translate: none !important; }
+  .ch-begin { height: auto; }
+  .begin-stage { position: relative; }
+  .begin-sky { display: none; }
+}

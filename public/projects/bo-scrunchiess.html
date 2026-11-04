@@ -1,0 +1,770 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BO Scrunchiess — Satin hair accessories</title>
+<meta name="description" content="Satin bonnets, scrunchies, bows, gift boxes and more from BO Scrunchiess, on one page.">
+<meta name="theme-color" content="#fbf7f3">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.markatty.store">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..600&family=Jost:wght@400;500;600&display=swap">
+<style>
+/* BO Scrunchiess — The one-page hair gift boutique */
+:root{
+  --silk:#fbf7f3; --pearl:#fff; --lilac:#efe3f2; --lilac-d:#d9c2e1; --orchid:#b8679f; --orchid-d:#97487f;
+  --berry:#5b1838; --berry-d:#3f0f27; --champ:#eadbc4; --cocoa:#2d2126; --mute:#6f6168; --line:#e8dde2;
+  --display:"Bodoni Moda",Didot,"Bodoni 72","Times New Roman",serif;
+  --ui:"Jost","Futura","Century Gothic","Avenir Next",system-ui,sans-serif;
+  --gut:18px; --max:1280px; --hdr:60px;
+  --ease:cubic-bezier(.22,.7,.2,1);
+  color-scheme:light;
+}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--silk);color:var(--cocoa);font:400 16px/1.55 var(--ui);overflow-x:hidden}
+img{display:block;max-width:100%}
+button,input{font:inherit;color:inherit}
+button{cursor:pointer}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--orchid-d);outline-offset:3px;border-radius:4px}
+[tabindex="-1"]:focus{outline:none}
+.wrap{max-width:var(--max);margin:0 auto;padding-left:var(--gut);padding-right:var(--gut)}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:10px;top:-60px;z-index:200;background:var(--berry);color:#fff;padding:10px 14px;border-radius:8px}
+.skip:focus{top:10px}
+@media (min-width:768px){:root{--gut:32px;--hdr:68px}}
+
+/* ---------- header ---------- */
+.hdr{position:sticky;top:0;z-index:50;height:var(--hdr);background:rgba(251,247,243,.9);backdrop-filter:blur(12px) saturate(1.3);-webkit-backdrop-filter:blur(12px) saturate(1.3);border-bottom:1px solid transparent;transition:border-color .3s}
+.hdr.scrolled{border-bottom-color:var(--line)}
+.hdr .wrap{height:100%;display:flex;align-items:center;gap:14px}
+.brand{display:flex;align-items:baseline;gap:8px;text-decoration:none;color:var(--berry)}
+.brand{align-items:center}
+.brand img{height:40px;width:auto}
+.brand img+.bt{display:none}
+.brand b{font:600 26px/1 var(--display);letter-spacing:-.02em}
+.brand span{font:500 12px/1 var(--ui);letter-spacing:.32em;text-transform:uppercase;color:var(--orchid-d)}
+@media (max-width:359px){.brand span{display:none}}
+.now{margin-inline-start:auto;display:flex;align-items:center;gap:8px;opacity:0;transform:translateY(-6px);transition:opacity .3s,transform .3s;pointer-events:none;min-width:0}
+.now.on{opacity:1;transform:none;pointer-events:auto}
+.now button{border:1px solid var(--line);background:#fff;border-radius:999px;height:36px;padding:0 14px 0 6px;display:flex;align-items:center;gap:8px;font-size:14px;max-width:46vw}
+.now button img{width:26px;height:26px;border-radius:50%;object-fit:cover;flex:none}
+.now button span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bagbtn{margin-inline-start:auto;flex:none;position:relative;height:42px;min-width:42px;border-radius:999px;border:0;background:var(--berry);color:#fff;display:flex;align-items:center;gap:8px;padding:0 16px;font-weight:500;letter-spacing:.02em}
+.now.on+.bagbtn{margin-inline-start:0}
+.bagbtn svg{width:20px;height:20px}
+.bagbtn .n{min-width:22px;height:22px;padding:0 6px;border-radius:999px;background:var(--lilac);color:var(--berry);font-size:12px;font-weight:600;display:grid;place-items:center}
+.bagbtn.bump{animation:bump .5s var(--ease)}
+@keyframes bump{30%{transform:scale(1.12)}60%{transform:scale(.96)}}
+@media (max-width:599px){.bagbtn .lbl{display:none}.bagbtn{padding:0 10px}}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;padding:28px 0 8px}
+.hero-grid{display:grid;gap:26px;align-items:center}
+.hero h1{font:500 clamp(42px,11vw,96px)/.95 var(--display);letter-spacing:-.035em;margin:0;color:var(--berry-d)}
+.hero h1 em{font-style:italic;font-weight:400}
+.hero p{font-size:17px;color:var(--mute);margin:18px 0 24px;max-width:34ch}
+.cta{display:inline-flex;align-items:center;gap:12px;height:52px;padding:0 26px;border-radius:999px;background:var(--berry);color:#fff;text-decoration:none;font-weight:500;letter-spacing:.03em;border:0}
+.cta:hover{background:var(--berry-d)}
+.cta svg{width:18px;height:18px}
+.arch{position:relative;border-radius:999px 999px 28px 28px;overflow:hidden;background:var(--lilac);aspect-ratio:4/5;box-shadow:0 40px 60px -40px rgba(91,24,56,.45)}
+.arch img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 20%}
+.hero-art{position:relative;max-width:520px;width:100%;margin-inline:auto}
+.hero-art .small{position:absolute;width:38%;aspect-ratio:1;border-radius:50%;overflow:hidden;background:#fff;box-shadow:0 20px 40px -20px rgba(91,24,56,.5);border:6px solid var(--silk);inset-inline-start:-6%;bottom:6%}
+.hero-art .small img{width:100%;height:100%;object-fit:cover;transform:scale(1.7);transform-origin:50% 28%}
+.hero-art .tag{position:absolute;inset-inline-end:-2%;top:14%;background:var(--silk);border:1px solid var(--line);padding:10px 14px;border-radius:14px;font-size:13px;line-height:1.35;max-width:170px;box-shadow:0 14px 30px -18px rgba(91,24,56,.4)}
+.hero-art .tag b{display:block;font:500 18px/1.2 var(--display);color:var(--berry)}
+.ribbon{position:absolute;inset:0;pointer-events:none;z-index:-1;width:100%;height:100%}
+.ribbon path{fill:none;stroke:var(--lilac-d);stroke-width:14;stroke-linecap:round;opacity:.55}
+.ribbon path.hl{stroke:#fff;stroke-width:3;opacity:.8}
+@media (min-width:900px){
+  .hero{padding:48px 0 20px}
+  .hero-grid{grid-template-columns:1.1fr .9fr;gap:56px}
+  .arch{aspect-ratio:4/5;max-height:620px}
+}
+@media (max-width:899px){
+  .hero{padding-top:20px}
+  .hero-art{max-width:none}
+  .arch{aspect-ratio:auto;height:clamp(220px,58vw,340px);border-radius:999px 999px 24px 24px/240px 240px 24px 24px}
+  .hero-art .small{width:min(30%,120px);inset-inline-start:auto;inset-inline-end:4%;bottom:-8%}
+  .hero-art .tag{display:none}
+  .hero-copy{text-align:left}
+}
+
+/* ---------- category selector ---------- */
+.picker{padding-top:36px;padding-bottom:18px;scroll-margin-top:var(--hdr)}
+.picker h2{font:500 clamp(24px,5vw,34px)/1.1 var(--display);margin:0 0 4px;color:var(--berry-d)}
+.picker p{margin:0 0 18px;color:var(--mute)}
+.cats{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x proximity;padding:6px 2px 14px;scrollbar-width:none;margin:0 calc(var(--gut)*-1);padding-inline:var(--gut)}
+.cats::-webkit-scrollbar{display:none}
+.cats{scroll-padding-inline:var(--gut)}
+@media (max-width:899px){.frame{aspect-ratio:1/1.08}.shape-arch .frame{border-radius:200px 200px 24px 24px}}
+.cat{flex:none;scroll-snap-align:start;width:112px;border:0;background:transparent;padding:0;text-align:center;text-decoration:none;color:inherit;display:flex;flex-direction:column;align-items:center;gap:8px}
+.cat .ring{position:relative;width:100px;height:100px;border-radius:50%;padding:5px;background:conic-gradient(from 200deg,var(--lilac-d),var(--champ),var(--lilac),var(--lilac-d));transition:transform .35s var(--ease)}
+.cat .ring img,.cat .ring .ph{width:100%;height:100%;border-radius:50%;object-fit:cover;background:#fff;border:3px solid var(--silk)}
+.cat .nm{font-size:14px;font-weight:500;line-height:1.2}
+.cat .ct{font-size:12px;color:var(--mute)}
+.cat:hover .ring{transform:translateY(-3px)}
+.cat[aria-current=true] .ring{background:conic-gradient(from 200deg,var(--berry),var(--orchid),var(--berry))}
+.cat[aria-current=true] .nm{color:var(--berry)}
+@media (min-width:1200px){.cats{justify-content:space-between;overflow:visible;margin:0;padding-inline:0}.cat{width:auto;flex:1}}
+
+/* ---------- category stage ---------- */
+.stage{position:relative;padding-top:72px;padding-bottom:64px;scroll-margin-top:var(--hdr);isolation:isolate}
+.stage::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--bg,transparent)}
+.stage.t-lilac{--bg:linear-gradient(180deg,var(--silk),var(--lilac) 40%,var(--silk))}
+.stage.t-champ{--bg:linear-gradient(180deg,var(--silk),#f4ebdd 45%,var(--silk))}
+.stage.t-blush{--bg:linear-gradient(180deg,var(--silk),#f8e7ec 45%,var(--silk))}
+.stage.t-berry{--bg:var(--berry-d);color:#f7e9ef}
+.stage.t-berry .s-head h2,.stage.t-berry .f-name{color:#fff}
+.stage.t-berry .s-head p,.stage.t-berry .f-desc,.stage.t-berry .f-meta{color:#dcc3cf}
+.stage.t-berry .chip{background:transparent;color:#f7e9ef;border-color:rgba(255,255,255,.3)}
+.stage.t-berry .chip[aria-pressed=true]{background:#fff;color:var(--berry-d);border-color:#fff}
+.stage.t-berry .qty{border-color:rgba(255,255,255,.3)}
+.stage.t-berry .add{background:var(--lilac);color:var(--berry-d)}
+.stage.t-berry .add:hover{background:#fff}
+.stage.t-berry .pc{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.16)}
+.stage.t-berry .pc[aria-pressed=true]{border-color:#fff;box-shadow:0 0 0 1px #fff}
+.stage.t-berry .pc .rn,.stage.t-berry .pc .rp{color:#f7e9ef}
+.stage.t-berry .price-now{color:#fff}
+.stage.t-berry .price-was{color:#cfb2c0}
+.s-head{display:flex;align-items:flex-end;gap:16px;margin-bottom:28px}
+.s-title{min-width:0}
+.s-title p{margin-top:8px!important}
+.s-head h2{font:400 clamp(40px,10vw,84px)/.92 var(--display);letter-spacing:-.03em;margin:0;color:var(--berry-d)}
+.s-head p{margin:0;color:var(--mute);font-size:15px;max-width:40ch}
+.s-head .mood{flex:none;width:64px;height:80px;border-radius:999px 999px 14px 14px;overflow:hidden;background:#fff;box-shadow:0 14px 24px -16px rgba(63,15,39,.6)}
+.s-head .mood img{width:100%;height:100%;object-fit:cover}
+.s-head{position:relative}
+@media (min-width:900px){.s-head .mood{width:96px;height:120px}}
+.pattern{height:120px;background-size:520px auto;background-position:center;opacity:.9}
+@media (min-width:768px){.pattern{height:160px;background-size:760px auto}}
+.compo{display:grid;gap:24px;align-items:start}
+.col{min-width:0}
+.col .rail-h{margin-top:30px}
+.feature{position:relative}
+.frame{position:relative;overflow:hidden;background:#fff;aspect-ratio:4/5;border-radius:28px;box-shadow:0 50px 70px -50px rgba(63,15,39,.55)}
+.frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .55s var(--ease),transform 1.2s var(--ease)}
+.frame img.wide{object-fit:contain;background:#fff}
+.frame img.out{opacity:0;transform:scale(1.035)}
+.frame .noimg{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:20px;color:var(--mute);font-size:14px;background:repeating-linear-gradient(135deg,#fbf3f7 0 14px,#f6ecf1 14px 28px)}
+.shape-arch .frame{border-radius:999px 999px 28px 28px}
+.shape-oval .frame{border-radius:50%/42%}
+.gal-nav{position:absolute;left:0;right:0;bottom:14px;display:flex;justify-content:center;gap:8px;align-items:center;z-index:2}
+.gal-nav button{width:40px;height:40px;border-radius:50%;border:0;background:rgba(255,255,255,.88);color:var(--berry);display:grid;place-items:center;box-shadow:0 6px 16px -8px rgba(0,0,0,.4)}
+.gal-nav button svg{width:18px;height:18px}
+.gal-nav .cnt{background:rgba(255,255,255,.88);border-radius:999px;padding:6px 12px;font-size:13px;color:var(--berry);min-width:64px;text-align:center}
+html[dir=rtl] .gal-nav svg{transform:scaleX(-1)}
+.details{position:relative}
+.f-meta{font-size:13px;letter-spacing:.08em;color:var(--orchid-d);margin:0 0 8px}
+.f-name{font:500 clamp(28px,6vw,46px)/1.05 var(--display);letter-spacing:-.02em;margin:0 0 12px;color:var(--berry-d)}
+.price{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin:0 0 14px}
+.price-now{font:600 26px/1 var(--ui);color:var(--berry)}
+.price-was{font-size:16px;color:var(--mute);text-decoration:line-through}
+.price-off{font-size:13px;font-weight:600;background:var(--lilac);color:var(--berry);padding:3px 9px;border-radius:999px}
+.f-desc{color:var(--mute);margin:0 0 18px;max-width:46ch;white-space:pre-line}
+.opt{margin:0 0 16px;border:0;padding:0}
+.opt legend{font-size:13px;font-weight:600;letter-spacing:.06em;margin-bottom:8px;padding:0}
+.opt legend span{font-weight:400;color:var(--mute);letter-spacing:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{height:36px;padding:0 13px;border-radius:999px;border:1px solid var(--line);background:#fff;font-size:14px}
+.chip[aria-pressed=true]{background:var(--berry);color:#fff;border-color:var(--berry)}
+.chips.clamp .chip:nth-child(n+13){display:none}
+.opt .more{border:0;background:none;padding:8px 0 0;color:var(--orchid-d);text-decoration:underline;font-size:14px}
+.stage.t-berry .opt .more{color:#f3c6dc}
+.chip:disabled{opacity:.45;text-decoration:line-through;cursor:not-allowed}
+.buy{display:flex;gap:10px;align-items:stretch;flex-wrap:wrap;margin-top:6px}
+.qty{display:flex;align-items:center;border:1px solid var(--line);border-radius:999px;height:52px;padding:0 4px}
+.qty button{width:42px;height:42px;border-radius:50%;border:0;background:transparent;font-size:22px;line-height:1}
+.qty button:disabled{opacity:.35;cursor:not-allowed}
+.qty output{min-width:28px;text-align:center;font-weight:600}
+.add{flex:1;min-width:180px;height:52px;border-radius:999px;border:0;background:var(--berry);color:#fff;font-weight:500;letter-spacing:.03em;font-size:16px;display:flex;align-items:center;justify-content:center;gap:10px;transition:background .2s,transform .15s}
+.add:hover{background:var(--berry-d)}
+.add:active{transform:scale(.98)}
+.add:disabled{background:#d8ccd2;color:#6f6168;cursor:not-allowed}
+.add .ok{display:none}
+.add.done .ok{display:inline}.add.done .lbl{display:none}
+.note{font-size:13px;color:var(--mute);margin:10px 0 0}
+.stage.t-berry .note{color:#cfb2c0}
+
+/* supporting products */
+.rail{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 2px 10px;scrollbar-width:thin}
+.pc{flex:none;scroll-snap-align:start;width:132px;border:1px solid var(--line);background:#fff;border-radius:18px;padding:8px;text-align:start;display:flex;flex-direction:column;gap:6px;transition:border-color .2s,transform .25s var(--ease)}
+.pc:hover{transform:translateY(-3px)}
+.pc[aria-pressed=true]{border-color:var(--berry);box-shadow:0 0 0 1px var(--berry)}
+.pc .ri{position:relative;aspect-ratio:1;border-radius:12px;overflow:hidden;background:#f6eff3}
+.pc .ri img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.pc .rn{font-size:13px;line-height:1.25;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.5em}
+.pc .rp{font-size:13px;font-weight:600;color:var(--berry)}
+.rail-h{font-size:13px;letter-spacing:.06em;font-weight:600;margin:26px 0 10px;display:flex;justify-content:space-between;align-items:center}
+.stage.t-berry .rail-h{color:#f7e9ef}
+
+/* composition variants */
+@media (min-width:900px){
+  .compo{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:56px}
+  .v-right .feature{order:2}
+  .v-right .col{order:1}
+  .compo>.col{align-self:center}
+  .frame{aspect-ratio:4/5;max-height:76vh}
+  .v-orbit .compo{grid-template-columns:1fr}
+  .v-orbit .orbit{position:relative;display:grid;grid-template-columns:1fr minmax(0,460px) 1fr;align-items:center;gap:36px}
+  .v-orbit .orbit .feature{grid-column:2}
+  .v-orbit .orbit .side{display:flex;flex-direction:column;gap:14px}
+  .v-orbit .orbit .side.l{grid-column:1;grid-row:1;align-items:flex-end}
+  .v-orbit .orbit .side.r{grid-column:3;grid-row:1;align-items:flex-start}
+  .v-orbit .side button{width:150px}
+  .v-orbit .side button:nth-child(2){transform:translateX(-24px)}
+  .v-orbit .side.r button:nth-child(2){transform:translateX(24px)}
+  .v-orbit .details{max-width:640px;margin:0 auto;text-align:center}
+  .v-orbit .price,.v-orbit .chips,.v-orbit .buy{justify-content:center}
+  .v-orbit .f-desc{margin-inline:auto}
+}
+.side{display:none}
+@media (min-width:900px){.v-orbit .side{display:flex}.v-orbit .rail-wrap.orbit-extra{display:block}.v-orbit .rail-wrap.orbit-hide{display:none}}
+
+/* reveal choreography */
+.js .stage .frame{clip-path:inset(12% 8% 0 8% round 28px);opacity:.001;transition:clip-path 1s var(--ease),opacity .6s}
+.js .stage .details>*{opacity:0;transform:translateY(14px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+.js .stage .rail button,.js .stage .side button{opacity:0;transform:translateY(16px)}
+.js .stage.in .frame{clip-path:inset(0 0 0 0 round 28px);opacity:1}
+.js .stage.in.shape-arch .frame{clip-path:none}
+.js .stage.in .details>*{opacity:1;transform:none}
+.js .stage.in .rail button,.js .stage.in .side button{opacity:1;transform:none;transition:opacity .5s var(--ease) calc(var(--i,0)*70ms + .25s),transform .5s var(--ease) calc(var(--i,0)*70ms + .25s),border-color .2s}
+.js .stage.in .details>*:nth-child(2){transition-delay:.08s}.js .stage.in .details>*:nth-child(3){transition-delay:.14s}.js .stage.in .details>*:nth-child(4){transition-delay:.2s}.js .stage.in .details>*:nth-child(n+5){transition-delay:.26s}
+.js .stage.shape-arch .frame{clip-path:none;opacity:0;transform:translateY(24px) scale(.98);transition:opacity .9s var(--ease),transform 1s var(--ease)}
+.js .stage.in.shape-arch .frame{opacity:1;transform:none}
+.drift{transition:transform .2s linear}
+@media (prefers-reduced-motion:reduce){
+  .js .stage .frame,.js .stage .details>*,.js .stage .rail button,.js .stage .side button{clip-path:none!important;opacity:1!important;transform:none!important;transition:none!important}
+  .frame img{transition:opacity .2s}
+  .frame img.wide{object-fit:contain;background:#fff}
+.frame img.out{transform:none}
+  .bagbtn.bump{animation:none}
+  .ribbon path{stroke-dashoffset:0!important;transition:none!important}
+}
+
+/* ---------- bag ---------- */
+.scrim{position:fixed;inset:0;background:rgba(45,33,38,.45);z-index:80;opacity:0;transition:opacity .25s}
+.scrim.on{opacity:1}
+.bag{position:fixed;top:0;bottom:0;right:0;width:min(440px,100%);z-index:90;background:var(--silk);display:flex;flex-direction:column;transform:translateX(104%);transition:transform .35s var(--ease);box-shadow:-30px 0 60px -30px rgba(63,15,39,.5)}
+.bag.on{transform:none}
+.bag-h{display:flex;align-items:center;justify-content:space-between;padding:16px 18px;border-bottom:1px solid var(--line)}
+.bag-h h2{margin:0;font:500 28px/1 var(--display);color:var(--berry-d)}
+.x{width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:#fff;display:grid;place-items:center}
+.x svg{width:18px;height:18px}
+.bag-b{flex:1;overflow:auto;padding:6px 18px}
+.bag-f{border-top:1px solid var(--line);padding:16px 18px calc(16px + env(safe-area-inset-bottom));background:#fff}
+.line{display:grid;grid-template-columns:72px 1fr;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
+.line .th{width:72px;height:88px;border-radius:12px;overflow:hidden;background:#f6eff3}
+.line .th img{width:100%;height:100%;object-fit:cover}
+.line h3{margin:0;font:500 17px/1.2 var(--display)}
+.line .v{font-size:13px;color:var(--mute);margin:3px 0 8px}
+.line .row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.line .qty{height:38px}
+.line .qty button{width:32px;height:32px;font-size:18px}
+.line .lt{margin-inline-start:auto;font-weight:600}
+.rm{border:0;background:none;color:var(--orchid-d);text-decoration:underline;font-size:13px;padding:4px 0}
+.sum{display:flex;justify-content:space-between;align-items:baseline;margin:2px 0}
+.sum.big{font-size:20px;font-weight:600;margin:6px 0}
+.bag-f .note{margin:0 0 12px}
+.btn-wide{width:100%;height:52px;border-radius:999px;border:0;background:var(--berry);color:#fff;font-weight:500;letter-spacing:.03em}
+.empty{text-align:center;padding:48px 10px;color:var(--mute)}
+.empty h3{font:500 26px/1.2 var(--display);color:var(--berry-d);margin:14px 0 6px}
+.empty svg{width:90px;height:90px;margin:0 auto;color:var(--lilac-d)}
+.empty .cta{margin-top:18px}
+.chk h3{font:500 26px/1.2 var(--display);color:var(--berry-d);margin:4px 0 10px}
+.demo{background:var(--lilac);border-radius:14px;padding:12px 14px;font-size:14px;margin:0 0 14px}
+.chk ul{list-style:none;padding:0;margin:0 0 12px;font-size:14px}
+.chk li{display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px dashed var(--line)}
+.contact{display:grid;gap:8px;margin-top:12px}
+.contact a,.contact button{display:flex;align-items:center;justify-content:center;height:46px;border-radius:999px;border:1px solid var(--line);background:#fff;text-decoration:none;font-weight:500}
+.linkback{border:0;background:none;color:var(--orchid-d);text-decoration:underline;padding:8px 0;font-size:14px}
+
+/* flying thumbnail */
+.fly{position:fixed;left:0;top:0;width:64px;height:64px;border-radius:50%;overflow:hidden;z-index:120;pointer-events:none;box-shadow:0 10px 24px -8px rgba(63,15,39,.6);border:3px solid #fff}
+.fly img{width:100%;height:100%;object-fit:cover}
+.toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,16px);background:var(--cocoa);color:#fff;padding:11px 18px;border-radius:999px;font-size:14px;z-index:130;opacity:0;transition:opacity .2s,transform .2s;pointer-events:none;max-width:calc(100% - 32px);text-align:center}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+
+/* ---------- footer ---------- */
+/* Footer Container */
+#ftr {
+  background: var(--berry-d, #2b111e); /* Change background color here */
+  color: #e9d6df;                       /* Text color */
+  padding: 56px 20px 34px;
+  margin-top: 40px;
+}
+
+/* Big Brand Heading */
+#ftr .big {
+  font: 400 clamp(40px, 10vw, 88px)/.95 var(--display);
+  color: #fff;
+  letter-spacing: -.03em;
+  margin: 0 0 26px;
+}
+
+/* 3-Column Layout */
+#ftr .cols {
+  display: grid;
+  gap: 26px;
+}
+
+@media (min-width: 768px) {
+  #ftr .cols {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Column Titles */
+#ftr h2 {
+  font: 500 13px/1 var(--ui);
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0 0 12px;
+}
+
+/* Links List */
+#ftr ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+#ftr a {
+  color: #fff;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+#ftr a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+/* Bottom Disclaimer Text */
+#ftr .fine {
+  margin-top: 34px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, .15);
+  font-size: 13px;
+  color: #cfb2c0;
+}
+@media (min-width:768px){.ftr .cols{grid-template-columns:repeat(3,1fr)}}
+.ftr h2{font:500 13px/1 var(--ui);letter-spacing:.14em;text-transform:uppercase;color:#fff;margin:0 0 12px}
+.ftr ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.ftr a{color:#fff}
+.ftr .fine{margin-top:34px;padding-top:16px;border-top:1px solid rgba(255,255,255,.15);font-size:13px;color:#cfb2c0}
+
+
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<a class="skip" href="#choose">Skip to the collection</a>
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="BO Scrunchiess, back to top"><img src="https://cdn.markatty.store/public/channel/9746/1975419785/CvDsC8ykA2feWhM04knfKzIHNMMx7H7vS8ilURHu.png" alt="" width="34" height="40" referrerpolicy="no-referrer" onerror="this.remove()"><b class="bt">BO</b><span>Scrunchiess</span></a>
+    <div class="now" id="now" aria-hidden="true"><button type="button" id="nowBtn" tabindex="-1"><img alt="" id="nowImg"><span id="nowTxt"></span></button></div>
+    <button class="bagbtn" id="bagBtn" type="button" aria-haspopup="dialog" aria-controls="bag">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 8h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8z"/><path d="M9 10V7a3 3 0 0 1 6 0v3"/></svg>
+      <span class="lbl">Bag</span><span class="n" id="bagN">0</span><span class="sr" id="bagSr">items in your bag</span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" aria-labelledby="heroH">
+    <svg class="ribbon" id="ribbon" viewBox="0 0 1440 700" preserveAspectRatio="none" aria-hidden="true"><path d="M-40 520 C 220 380, 420 640, 700 470 S 1120 160, 1500 300"/><path class="hl" d="M-40 520 C 220 380, 420 640, 700 470 S 1120 160, 1500 300"/></svg>
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <h1 id="heroH">Satin for every strand, wrapped like a gift.</h1>
+        <p id="heroP"></p>
+        <a class="cta" href="#choose" data-go="choose">Explore the collection <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a>
+      </div>
+      <div class="hero-art" id="heroArt"></div>
+    </div>
+  </section>
+
+  <section class="picker wrap" id="choose" aria-labelledby="chooseH" tabindex="-1">
+    <h2 id="chooseH">Choose a category</h2>
+    <p>Pick one and we’ll take you straight to it. Everything is on this page.</p>
+    <nav class="cats" id="cats" aria-label="Categories"></nav>
+  </section>
+
+  <div id="stages"></div>
+</main>
+
+<footer class="ftr" id="ftr"></footer>
+
+<div class="scrim" id="scrim" hidden></div>
+<aside class="bag" id="bag" role="dialog" aria-modal="true" aria-labelledby="bagH" hidden>
+  <div class="bag-h"><h2 id="bagH">Your bag</h2><button class="x" type="button" data-act="close" aria-label="Close bag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+  <div class="bag-b" id="bagBody"></div>
+  <div class="bag-f" id="bagFoot"></div>
+</aside>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>window.BO={"capturedOn":"25 October 2026","store":{"site":"https://bo-scrunchiess.shop/","phone":"+201129610868","phoneTxt":"+20 112 961 0868","email":"boscrunchies@gmail.com","instagram":"https://www.instagram.com/bo.scrunchiess","tiktok":"https://www.tiktok.com/@bo.scrunchies","facebook":"https://www.facebook.com/share/1AUn6ehQGE/","delivery":"The store estimates delivery within 8–10 business days.","logo":"https://cdn.markatty.store/public/channel/9746/1975419785/CvDsC8ykA2feWhM04knfKzIHNMMx7H7vS8ilURHu.png"},"hero":[{"src":"https://cdn.markatty.store/public/slider/2160/jRmI2yXyt9L1jg1ymaonwfp1tOZ0zdqZmF1iVeJn.webp","alt":"BO Scrunchiess campaign photo: a long lilac satin bow worn in dark hair"},{"src":"https://cdn.markatty.store/public/slider/2161/a4iZkZGOejWWWymjNW2fJtQJVCDZ61JKabKMA6UA.webp","alt":"BO Scrunchiess campaign photo: a cherry satin bonnet"},{"src":"https://cdn.markatty.store/public/slider/2162/SUKfAlFxgrhqVSdJZArUggu2lqckHth3gVDunGYy.webp","alt":"BO Scrunchiess campaign photo: a pink satin bow on a ponytail"},{"src":"https://cdn.markatty.store/public/advertisement/1553668634/ifk4Qbl90s6sHmXBwGPW6HZkm2IhvRlghM14WVGV.jpg","alt":"Pattern of pink and blue satin scrunchies","role":"pattern"}],"cats":[{"id":28565,"name":"Bonnet","items":["317602","317601","317600","317599"],"mood":{"src":"https://cdn.markatty.store/public/category/28565/SBcKk2PMIRoGbKJhAxusYQTpURzrK0ThaMxaQLjh.jpg","alt":"Satin bonnet"}},{"id":28566,"name":"Headband","items":["317603"],"mood":null},{"id":28567,"name":"Heatless curls","items":["317605","317604"],"mood":{"src":"https://cdn.markatty.store/public/category/28567/bvcdOHFhznsrBkyHRHnpW2uIkoYCkhuPDxiPlHCX.jpg","alt":"Satin heatless curling rod"}},{"id":28568,"name":"Scrunchies","items":["330051","327798","317606","317609","317608","317607"],"mood":null},{"id":28569,"name":"Hairband","items":["317611","317610"],"mood":null},{"id":28570,"name":"Bow","items":["317622","317621","317620","317615","317614","317609","317608"],"mood":{"src":"https://cdn.markatty.store/public/category/28570/ft3g6ZFKqES9CZaCIiGiJyfbCi9pi3mnGb7qonYW.jpg","alt":"A pink satin bow worn in long hair"}},{"id":28571,"name":"Boxes","items":["327798","327614","317616","317618","317617"],"mood":{"src":"https://cdn.markatty.store/public/category/28571/a18cA31c5efqXbu8yUI5asA8JwOo6vVNQev7U9sT.jpg","alt":"An open gift box filled with satin bows and scrunchies"}},{"id":29049,"name":"Mask","items":["328482"],"mood":{"src":"https://cdn.markatty.store/public/category/29049/lKCezskdJ0VpTSnBDd8yNCWvygdfaztCsxTYgxsO.jpg","alt":"Two pink satin sleep masks"}},{"id":28986,"name":"Pillow case","items":["317619"],"mood":null}],"products":{"317599":{"id":"317599","name":"Simple hair bonnet","desc":"Two-layer silk satin bonnet – large size – suitable for all hair types\nProtects your hair while you sleep or during your daily routine.","imgs":["https://cdn.markatty.store/public/product/317599/1uGSAxcitxXRnAMVU6wj9lCzWpc3OAz9P9ZVm6zL.jpg","https://cdn.markatty.store/public/product/317599/5BXtSbp7tkM17dkq72wJMXc2fNQUBnaryF9NqJvT.jpg","https://cdn.markatty.store/public/product/317599/m3Nx61rtAMER78qQyOfPA3jDmjDt3YqIqeGHvJwD.jpg","https://cdn.markatty.store/public/product/317599/HhyjYSOcLK7wD3QFT4U7RXttk9YoPGldItDXRdc1.jpg","https://cdn.markatty.store/public/product/317599/sWiUK3tGvvH8RH2uizLjnzEppUzn8Kk1IrsCJOi0.jpg","https://cdn.markatty.store/public/product/317599/vvD0B9YIxuTTXyt12PgZTuCXfl5DqNx82sjeVzIv.jpg","https://cdn.markatty.store/public/product/317599/FQIFIgPKIhwr5ZnM09m3K6pcsRPpfEHEG99fq3N2.jpg","https://cdn.markatty.store/public/product/317599/RPHBlDHA3gYVCA7qjs4D7BwhwQmhXBbx5owgn1D5.jpg","https://cdn.markatty.store/public/product/317599/LhrHXAcwkwgCnCCEay5KnKEjSkl8uXqmtFKjjRvJ.jpg","https://cdn.markatty.store/public/product/317599/R779DBOZEXdYSFwOAmUL2XTFCJhTU2vAu2s2LcZK.jpg","https://cdn.markatty.store/public/product/317599/DROjxpuzyzEZsAOuCI5DvRAHPIQ33C85raAEQ9cD.jpg","https://cdn.markatty.store/public/product/317599/BXO5X5CtDXGGeuI7usvk8IaQBI8tdNNEdfFp7xYo.jpg","https://cdn.markatty.store/public/product/317599/pP7PFv32PEtLejQTtfZVM6yAU6nOSz7fTRO8oBtJ.jpg","https://cdn.markatty.store/public/product/317599/FVayyYneXyIf8aV0gCfPj1LsbxkKBAolixt7sOu9.jpg","https://cdn.markatty.store/public/product/317599/6DdgiAXI65eyMpBe0bv94oSCRM0UkklYjMT1IZHT.jpg"],"opts":[{"label":"Colour","values":["Black","Navy blue","Peacock","Beige","Pink","Lavender","Cherry","Burgundy","Baby blue","Olive","Cashmere","Silver","Red","Purple","Mint green"]}],"vars":[{"k":"Black","avail":1,"now":149.0,"was":null,"off":null,"img":5},{"k":"Navy blue","avail":1,"now":149.0,"was":null,"off":null,"img":3},{"k":"Peacock","avail":1,"now":149.0,"was":null,"off":null,"img":10},{"k":"Beige","avail":1,"now":149.0,"was":null,"off":null,"img":11},{"k":"Pink","avail":1,"now":149.0,"was":null,"off":null,"img":1},{"k":"Lavender","avail":1,"now":149.0,"was":null,"off":null,"img":8},{"k":"Cherry","avail":1,"now":149.0,"was":null,"off":null,"img":6},{"k":"Burgundy","avail":1,"now":149.0,"was":null,"off":null,"img":9},{"k":"Baby blue","avail":1,"now":149.0,"was":null,"off":null,"img":13},{"k":"Olive","avail":1,"now":149.0,"was":null,"off":null,"img":14},{"k":"Cashmere","avail":1,"now":149.0,"was":null,"off":null,"img":7},{"k":"Silver","avail":1,"now":149.0,"was":null,"off":null,"img":0},{"k":"Red","avail":1,"now":149.0,"was":null,"off":null,"img":4},{"k":"Purple","avail":1,"now":149.0,"was":null,"off":null,"img":2},{"k":"Mint green","avail":1,"now":149.0,"was":null,"off":null,"img":12}],"now":149.0,"was":null,"off":null,"soldOut":false},"317600":{"id":"317600","name":"Double face bonnet","desc":"Two-layer silk satin bonnet in two colors – large size – suitable for all hair types\nProtects your hair while you sleep or during your daily routine.","imgs":["https://cdn.markatty.store/public/product/317600/gbGsNh551LWAaAoPY9caC1Z1fKBTzP9WIwSVoxqz.jpg","https://cdn.markatty.store/public/product/317600/vT9e00ubW6CuKa38SZYQHxmkTsV6OKci16y0ODfp.jpg","https://cdn.markatty.store/public/product/317600/0dSVTMhTK2c0giE8DeMS3um8V1E1Tp8EdaGPTpTp.jpg","https://cdn.markatty.store/public/product/317600/CCe3xhkL1hBKKrTFAOXuaCzI7EhU3uJddX2KXMJK.jpg","https://cdn.markatty.store/public/product/317600/Mmnsq9CgEc1CzK1FNKhT0fHaauGTXxjXfWaA2ztf.jpg","https://cdn.markatty.store/public/product/317600/gAoJib3Wr6P6n5LA9HxKXkzkVL0zrxUbDZcqJZaP.jpg","https://cdn.markatty.store/public/product/317600/ZZP2Pmn3OENuPg4taPVWXAyxZV1dxFN3gZxQ2SA5.jpg","https://cdn.markatty.store/public/product/317600/iOTMVjAfRG3lL8yUNtFEX4YsEDA9DLXJlJbcYDZf.jpg","https://cdn.markatty.store/public/product/317600/MWgHdpgdKcVJ43DVcs56kpZXmx0rN8KigVQrcyGM.jpg","https://cdn.markatty.store/public/product/317600/38r0MTjrael5XrRoDc5JJnnOuvUeXdZHRmGVgwZO.jpg","https://cdn.markatty.store/public/product/317600/gz2HVOFo6TvDAjRftJmpOMiv8H6Lg27umRcXzgoR.jpg","https://cdn.markatty.store/public/product/317600/Es5URKdOy0UgUo840jXzMd2zWPlCzubstx3Ldmch.jpg","https://cdn.markatty.store/public/product/317600/NOuOVbLmQqzseB8NoDjt8ihdxBxYHT6bVJ8CDpzD.jpg","https://cdn.markatty.store/public/product/317600/dUTpQeKoKMapNJvC152knY4qdNcGfJ9hKZSQgyLa.jpg","https://cdn.markatty.store/public/product/317600/t29vds6mW7Yp0i3LZ6eb8ssPuM5ItENga0vpTowJ.jpg","https://cdn.markatty.store/public/product/317600/A461368qTMxRSDyJGbxfJi2yfdFbquAAALavpCD6.jpg","https://cdn.markatty.store/public/product/317600/65Hf7DJd8n8kYZ10MDtZ8ORGDn1PDIOGEgzGkg0g.jpg","https://cdn.markatty.store/public/product/317600/1c3Sg70QVJh7PIzxa5i6PrawJjEto9GBafo66oj5.jpg","https://cdn.markatty.store/public/product/317600/Sso3vok7E6e2C9V3uwtsCmnLJHyd7a1smRxVd4Y8.jpg","https://cdn.markatty.store/public/product/317600/lmLgg5GRLf86Cx3QRjc1vdouvegSsRejwXeivw86.jpg","https://cdn.markatty.store/public/product/317600/q48r3jcqro88BYqmq7R5uhOA72TCTyqMjA4KIm6D.jpg","https://cdn.markatty.store/public/product/317600/3PJczye3NQIKFyIrzPjmiDwdKPaKSPiBdwhbXRlo.jpg","https://cdn.markatty.store/public/product/317600/7G1H0VDAguEtetqRPWOnlUdO7xnRBNyiPlRzk6ev.jpg","https://cdn.markatty.store/public/product/317600/9HiKnFTvnGMxrnlNVnE8jLcV3lJsP7leJPRMC88c.jpg","https://cdn.markatty.store/public/product/317600/eGOTacy7gOCqNhpQbVumt37mFmqm6mt2Lb5UkSp4.jpg","https://cdn.markatty.store/public/product/317600/rAkwXPLi60g9TnQA0g9Q9Ummx9E5yiKQPPmJY5qR.jpg"],"opts":[{"label":"Colour","values":["اسود*بيج","موف*سلفر","بترولى*اسود","بينك*اوف وايت","سلفر*بترولى","بيج* نبيتي","موف*لافندر","موف*بينك","بيبي بلو*لافندر","زيتي*بيج","سلفر*بينك","بترولى*لافندر","بينك*بيبي بلو","لافندر*اسود","منت جرين*سلفر","بينك*اسود","بينك*منت جرين","بورجندى*بيبي بلو","نبيتي*بيبي بلو","بترولى*بيبي بلو","منت جرين*نبيتي","منت جرين*بيج","جنزاري*سلفر","منت جرين*اوف وايت"]}],"vars":[{"k":"اسود*بيج","avail":1,"now":175.0,"was":null,"off":null,"img":0},{"k":"موف*سلفر","avail":1,"now":175.0,"was":null,"off":null,"img":22},{"k":"بترولى*اسود","avail":1,"now":175.0,"was":null,"off":null,"img":23},{"k":"بينك*اوف وايت","avail":1,"now":175.0,"was":null,"off":null,"img":1},{"k":"سلفر*بترولى","avail":1,"now":175.0,"was":null,"off":null,"img":24},{"k":"بيج* نبيتي","avail":1,"now":175.0,"was":null,"off":null,"img":24},{"k":"موف*لافندر","avail":1,"now":175.0,"was":null,"off":null,"img":20},{"k":"موف*بينك","avail":1,"now":175.0,"was":null,"off":null,"img":17},{"k":"بيبي بلو*لافندر","avail":1,"now":175.0,"was":null,"off":null,"img":16},{"k":"زيتي*بيج","avail":1,"now":175.0,"was":null,"off":null,"img":9},{"k":"سلفر*بينك","avail":1,"now":175.0,"was":null,"off":null,"img":4},{"k":"بترولى*لافندر","avail":1,"now":175.0,"was":null,"off":null,"img":6},{"k":"بينك*بيبي بلو","avail":1,"now":175.0,"was":null,"off":null,"img":2},{"k":"لافندر*اسود","avail":1,"now":175.0,"was":null,"off":null,"img":18},{"k":"منت جرين*سلفر","avail":1,"now":175.0,"was":null,"off":null,"img":7},{"k":"بينك*اسود","avail":1,"now":175.0,"was":null,"off":null,"img":5},{"k":"بينك*منت جرين","avail":1,"now":175.0,"was":null,"off":null,"img":11},{"k":"بورجندى*بيبي بلو","avail":1,"now":175.0,"was":null,"off":null,"img":8},{"k":"نبيتي*بيبي بلو","avail":1,"now":175.0,"was":null,"off":null,"img":8},{"k":"بترولى*بيبي بلو","avail":1,"now":175.0,"was":null,"off":null,"img":10},{"k":"منت جرين*نبيتي","avail":1,"now":175.0,"was":null,"off":null,"img":15},{"k":"منت جرين*بيج","avail":1,"now":175.0,"was":null,"off":null,"img":9},{"k":"جنزاري*سلفر","avail":1,"now":175.0,"was":null,"off":null,"img":24},{"k":"منت جرين*اوف وايت","avail":1,"now":175.0,"was":null,"off":null,"img":25}],"now":175.0,"was":null,"off":null,"soldOut":false},"317601":{"id":"317601","name":"Cute Bonnet for Kids","desc":"Elegant two-layer silk satin bonnet , designed for children aged 4 and above, perfect for all hair types","imgs":["https://cdn.markatty.store/public/product/317601/iRlL8F7m09dZtBDcbbgFzLpzizzduaten6Rj2rNH.jpg","https://cdn.markatty.store/public/product/317601/OWZmpOSQOemJrvCrkgnLgZb11Y832M7wtAs7rtRR.jpg","https://cdn.markatty.store/public/product/317601/pdDSo5dq419GS7SXwfvMyMteJI4Ql1guQGlKdaoG.jpg","https://cdn.markatty.store/public/product/317601/2bbtnaVDaLN6ztQE7yhB0C7YgUOelrgpFhHuqWa7.jpg","https://cdn.markatty.store/public/product/317601/HuliUqWvbrBOhrFA0TZTCRi9MGoFOcZHbkddiRyT.jpg","https://cdn.markatty.store/public/product/317601/QkMY4BcE8eUrvqPAxoLkO5X0KG9K2sj1OqK3p1xK.jpg","https://cdn.markatty.store/public/product/317601/f9mrj8G8DNkghk9mEDgk9z9q81TyP4jNgr794kDV.jpg","https://cdn.markatty.store/public/product/317601/6jhscFyK3xO8RRwDrX9oqH2ihTNKZZntWMCYCPku.jpg","https://cdn.markatty.store/public/product/317601/Lc4O2mNC7il22sPHx6lHAVPlY36fkGrvRAQ3uw1j.jpg","https://cdn.markatty.store/public/product/317601/ofUGQjmvDfuNkB5hbRNYvFeVbGVftn0WNoIw5guF.jpg","https://cdn.markatty.store/public/product/317601/Zdkh1ycsUSYZNPwtUj7cDJKDH6L18JfZ9SvsBeBC.jpg","https://cdn.markatty.store/public/product/317601/TvsfVOgJioDRQkCLh77rFLtC3Ui9myOiIEPpKm1I.jpg","https://cdn.markatty.store/public/product/317601/SD5uhHzVaa88j3qcUasePQbZf0Hdz195yeULulRG.jpg","https://cdn.markatty.store/public/product/317601/RNudPcMCxiEakZITseGo6PttNQgbeKbmiG0ZsorF.jpg","https://cdn.markatty.store/public/product/317601/dzrSA85FHHESfKXyFye1ZtlhvqOJj0MekQKgtrDr.jpg"],"opts":[{"label":"Colour","values":["Black","Navy blue","Peacock","Beige","Pink","Lavender","Cherry","Burgundy","Baby blue","Olive","Cashmere","Silver","Red","Purple","Mint green"]}],"vars":[{"k":"Black","avail":1,"now":125.0,"was":null,"off":null,"img":6},{"k":"Navy blue","avail":1,"now":125.0,"was":null,"off":null,"img":4},{"k":"Peacock","avail":1,"now":125.0,"was":null,"off":null,"img":14},{"k":"Beige","avail":1,"now":125.0,"was":null,"off":null,"img":10},{"k":"Pink","avail":1,"now":125.0,"was":null,"off":null,"img":1},{"k":"Lavender","avail":1,"now":125.0,"was":null,"off":null,"img":8},{"k":"Cherry","avail":1,"now":125.0,"was":null,"off":null,"img":7},{"k":"Burgundy","avail":1,"now":125.0,"was":null,"off":null,"img":9},{"k":"Baby blue","avail":1,"now":125.0,"was":null,"off":null,"img":12},{"k":"Olive","avail":1,"now":125.0,"was":null,"off":null,"img":13},{"k":"Cashmere","avail":1,"now":125.0,"was":null,"off":null,"img":2},{"k":"Silver","avail":1,"now":125.0,"was":null,"off":null,"img":0},{"k":"Red","avail":1,"now":125.0,"was":null,"off":null,"img":5},{"k":"Purple","avail":1,"now":125.0,"was":null,"off":null,"img":3},{"k":"Mint green","avail":1,"now":125.0,"was":null,"off":null,"img":11}],"now":125.0,"was":null,"off":null,"soldOut":false},"317602":{"id":"317602","name":"Cute double face Bonnet for Kids","desc":"Elegant doub face silk satin bonnet , designed for children aged 4 and above, perfect for all hair types","imgs":["https://cdn.markatty.store/public/product/317602/N7USXLlT5aIznLih2oqSL80La9kOMDcCFJzRJ3Ib.jpg","https://cdn.markatty.store/public/product/317602/Np9hn5NLykiGm2lqSkKBrnHZcARIrfYZosrjyOT0.jpg","https://cdn.markatty.store/public/product/317602/Im6ZUeVSsyg1y8eiFcEC1N3SvNy73yRrVdRLFy6x.jpg","https://cdn.markatty.store/public/product/317602/aaJqWKpvcNimNuZdJ7Nt0PmcqQ5Q2Jujib8voXao.jpg","https://cdn.markatty.store/public/product/317602/mfVi7gtc6t8OVfrdZHUYGVHFcawRJVY4kueJW9Yv.jpg","https://cdn.markatty.store/public/product/317602/jDuUzplF0YeaTDi1RWu1Jz8KjtiXRmV7HBulv3Zr.jpg","https://cdn.markatty.store/public/product/317602/Jfaxk8IJa7MqT3oAJAnG0UZn41cfnstqke1VmFxG.jpg","https://cdn.markatty.store/public/product/317602/fNgpWDDf2KqDqrPsaLm1Ut5HI96CxuVza73BrFoG.jpg","https://cdn.markatty.store/public/product/317602/UHCashSvreXVUxUEBJJx3MWN1Kl92Qp5LXTgr7yX.jpg","https://cdn.markatty.store/public/product/317602/q8CmbzTxqwWU2zWEyqZruDh2F3aPWjTkKHjeLLTY.jpg","https://cdn.markatty.store/public/product/317602/bkIxh2yiOLkDMDzaT0n7r0EpJBAzr7317cVFwRrP.jpg","https://cdn.markatty.store/public/product/317602/BdprZUG8Mt2EXDrG782naEALWOk9Q3yQSdj6qpLp.jpg","https://cdn.markatty.store/public/product/317602/fl1gZYhzpqxgoEtb0GD4WPYm9b37hsQUwsBm3ayz.jpg","https://cdn.markatty.store/public/product/317602/SqxvTq8qsNRfUMjneG0DLCqWH6DC0KS6gZuO2Vor.jpg","https://cdn.markatty.store/public/product/317602/149FaTTZqtExbnKO8Xq3FbbeJWdKXPRwVhtjLp3Y.jpg","https://cdn.markatty.store/public/product/317602/rzNoFdRhBYzMOcuK40mg4vqO8H2tiKnC4GFElc5I.jpg","https://cdn.markatty.store/public/product/317602/t1DWroOhJZjFkKOufKE1UiJKJY7BPb94Jm9veFVj.jpg","https://cdn.markatty.store/public/product/317602/sFJZ6rzMjYfIJ92bfRSTN5kI83QUnBFu3pz3VfSN.jpg","https://cdn.markatty.store/public/product/317602/N2oToru1GjLCQHHE9xChv8y3KRsyhdEPUc3GXYSX.jpg","https://cdn.markatty.store/public/product/317602/B7ENqEkXiAPfikiZbyPagKm3Jo2XvYevhxfSEiqT.jpg","https://cdn.markatty.store/public/product/317602/lwMxIyHFUQRzsZXVO35n0cKTJBEEQLQJk7WM8EDw.jpg","https://cdn.markatty.store/public/product/317602/DZWNCAUn0cEvuvlIxvOf5z4OPBONjoCqrpusqKKU.jpg","https://cdn.markatty.store/public/product/317602/Yo0PfwRRfawxvUsCWHniUXT0nC5poyYwI93wNx4V.jpg","https://cdn.markatty.store/public/product/317602/Ax9PN9Sy26rUxKwCnfEEIZRRVuaGmN7hbavI88L5.jpg","https://cdn.markatty.store/public/product/317602/gPVbZRta3D362Yc4clVnFfCenvMKIPipxUvt9VAo.jpg","https://cdn.markatty.store/public/product/317602/kNV8UgPd10csOlgldWhaev9VPR4uNSEO5tPtd1zQ.jpg"],"opts":[{"label":"Colour","values":["اسود*بيج","موف*سلفر","بترولى*اسود","بينك*اوف وايت","سلفر*بترولى","بيج* نبيتي","موف*لافندر","موف*بينك","بيبي بلو*لافندر","زيتي*بيج","سلفر*بينك","بترولى*لافندر","بينك*بيبي بلو","لافندر*اسود","منت جرين*سلفر","بينك*اسود","بينك*منت جرين","بورجندى*بيبي بلو","نبيتي*بيبي بلو","بترولى*بيبي بلو","منت جرين*نبيتي","منت جرين*بيج","جنزاري*سلفر","منت جرين*اوف وايت"]}],"vars":[{"k":"اسود*بيج","avail":1,"now":155.0,"was":null,"off":null,"img":25},{"k":"موف*سلفر","avail":1,"now":155.0,"was":null,"off":null,"img":22},{"k":"بترولى*اسود","avail":1,"now":155.0,"was":null,"off":null,"img":23},{"k":"بينك*اوف وايت","avail":1,"now":155.0,"was":null,"off":null,"img":1},{"k":"سلفر*بترولى","avail":1,"now":155.0,"was":null,"off":null,"img":13},{"k":"بيج* نبيتي","avail":1,"now":155.0,"was":null,"off":null,"img":21},{"k":"موف*لافندر","avail":1,"now":155.0,"was":null,"off":null,"img":20},{"k":"موف*بينك","avail":1,"now":155.0,"was":null,"off":null,"img":18},{"k":"بيبي بلو*لافندر","avail":1,"now":155.0,"was":null,"off":null,"img":17},{"k":"زيتي*بيج","avail":1,"now":155.0,"was":null,"off":null,"img":9},{"k":"سلفر*بينك","avail":1,"now":155.0,"was":null,"off":null,"img":3},{"k":"بترولى*لافندر","avail":1,"now":155.0,"was":null,"off":null,"img":6},{"k":"بينك*بيبي بلو","avail":1,"now":155.0,"was":null,"off":null,"img":4},{"k":"لافندر*اسود","avail":1,"now":155.0,"was":null,"off":null,"img":19},{"k":"منت جرين*سلفر","avail":1,"now":155.0,"was":null,"off":null,"img":7},{"k":"بينك*اسود","avail":1,"now":155.0,"was":null,"off":null,"img":5},{"k":"بينك*منت جرين","avail":1,"now":155.0,"was":null,"off":null,"img":12},{"k":"بورجندى*بيبي بلو","avail":1,"now":155.0,"was":null,"off":null,"img":11},{"k":"نبيتي*بيبي بلو","avail":1,"now":155.0,"was":null,"off":null,"img":8},{"k":"بترولى*بيبي بلو","avail":1,"now":155.0,"was":null,"off":null,"img":10},{"k":"منت جرين*نبيتي","avail":1,"now":155.0,"was":null,"off":null,"img":16},{"k":"منت جرين*بيج","avail":1,"now":155.0,"was":null,"off":null,"img":9},{"k":"جنزاري*سلفر","avail":1,"now":155.0,"was":null,"off":null,"img":13},{"k":"منت جرين*اوف وايت","avail":1,"now":155.0,"was":null,"off":null,"img":7}],"now":155.0,"was":null,"off":null,"soldOut":false},"317603":{"id":"317603","name":"Sortit hairband","desc":"Elegant Sortit Hair Band, designed for a chic and comfortable look during exercise and skincare routines.","imgs":["https://cdn.markatty.store/public/product/317603/jGXLkdfNyEg8vBF76QZUUc6fbDjDSm2LCmLjo77a.jpg","https://cdn.markatty.store/public/product/317603/G45mNzx7x1nsHu7VJNoOBMEMGrtACN0okb9D4nQs.jpg","https://cdn.markatty.store/public/product/317603/viHSOtfQs1rDPCaRADH6zkn4lHlTXolVG8NzPLHD.jpg","https://cdn.markatty.store/public/product/317603/nYhNeiZqvPqp8dcQ5lryncEsAvCCthDNe6ScVjjk.jpg","https://cdn.markatty.store/public/product/317603/fmjNEJVVEQ4rBcCS4oVDKY5EeiDV6UgTWmezcCWn.jpg","https://cdn.markatty.store/public/product/317603/fYAfUSu6lKgDUfVEeR6GjLVeMuBq5loA7Im9yyB9.jpg","https://cdn.markatty.store/public/product/317603/XyQr7sV2ucEMRLSeELDZEIBjz7pp9GDhRVwHuRss.jpg","https://cdn.markatty.store/public/product/317603/aBPo1x2wETzwk2kQDSic2THmdyXNY7V5yl7RGWRM.jpg","https://cdn.markatty.store/public/product/317603/3XWl65FjgZmAWEyGqVPUJoKHifKkXw0UYfGQq11U.jpg","https://cdn.markatty.store/public/product/317603/c2ar6Q5uXHAdYWleYFrEKBLzvZJgOBWGJoUNROtI.jpg","https://cdn.markatty.store/public/product/317603/2ZZVCw5fLxxbXB8zosaL3bGQVKE9WLrlNVDQDAYS.jpg","https://cdn.markatty.store/public/product/317603/Ho16z5X7vKBxPoB3X0UlOoVO3n7MQWl0Ve29DW17.jpg","https://cdn.markatty.store/public/product/317603/YUfgsEMkVYy0LKHPYAz0ZqjNTCpZdCthdiG5ToEh.jpg","https://cdn.markatty.store/public/product/317603/ejhCkRifbXO29JmUgmDuFdQYZG6o4Lm8aHKU8asd.jpg","https://cdn.markatty.store/public/product/317603/QDWQWiq2OsLv4K8vuBZjhgTiH4s3DnnZJcaYA2y4.jpg","https://cdn.markatty.store/public/product/317603/Zn7oLwUq5Nh7KPuiJCKc3jgmoHLn1B9HVcVLdtws.jpg"],"opts":[{"label":"Colour","values":["Black","Off white","Navy blue","Peacock","Beige","Pink","Lavender","Cherry","Burgundy","Baby blue","Olive","Cashmere","Silver","Red","Purple","Mint green"]}],"vars":[{"k":"Black","avail":1,"now":99.0,"was":null,"off":null,"img":2},{"k":"Off white","avail":1,"now":99.0,"was":null,"off":null,"img":8},{"k":"Navy blue","avail":1,"now":99.0,"was":null,"off":null,"img":15},{"k":"Peacock","avail":1,"now":99.0,"was":null,"off":null,"img":4},{"k":"Beige","avail":1,"now":99.0,"was":null,"off":null,"img":3},{"k":"Pink","avail":1,"now":99.0,"was":null,"off":null,"img":1},{"k":"Lavender","avail":1,"now":99.0,"was":null,"off":null,"img":7},{"k":"Cherry","avail":1,"now":99.0,"was":null,"off":null,"img":0},{"k":"Burgundy","avail":1,"now":99.0,"was":null,"off":null,"img":12},{"k":"Baby blue","avail":1,"now":99.0,"was":null,"off":null,"img":10},{"k":"Olive","avail":1,"now":99.0,"was":null,"off":null,"img":11},{"k":"Cashmere","avail":1,"now":99.0,"was":null,"off":null,"img":13},{"k":"Silver","avail":1,"now":99.0,"was":null,"off":null,"img":5},{"k":"Red","avail":1,"now":99.0,"was":null,"off":null,"img":6},{"k":"Purple","avail":1,"now":99.0,"was":null,"off":null,"img":14},{"k":"Mint green","avail":1,"now":99.0,"was":null,"off":null,"img":9}],"now":99.0,"was":null,"off":null,"soldOut":false},"317604":{"id":"317604","name":"Heatless curls","desc":"Silk satin curly roll for creating curly or wavy hair, comes with scrunchies","imgs":["https://cdn.markatty.store/public/product/317604/SqdMLeP3XdHsKmOlX1H6CemEoUfY2G3xcmgJbjUI.jpg","https://cdn.markatty.store/public/product/317604/iXpAcfg2bfLv4aZMBpfx98ZwzitMxv4RA5q5u1fD.jpg","https://cdn.markatty.store/public/product/318507/yEWOxkI6rX0n720s7twdgSVeCLYvDKiTkEi7rDWT.jpg","https://cdn.markatty.store/public/product/317604/oZL7cHldztOSQel4Lw2fSXEhgqDeJ5GLcxqjBAfZ.jpg","https://cdn.markatty.store/public/product/317604/S2cPaC9qxg23nHHgFXxq05aG2l6QbAARmqwvNr2p.jpg","https://cdn.markatty.store/public/product/317604/BNWQWvdpJwFqyBJGujPMUk5zunkTdI8vIoQdrKSD.jpg","https://cdn.markatty.store/public/product/317604/xgmPiG14YoNgmSICDVHXu5Vr8dPpzwsyYcE9IIhB.jpg","https://cdn.markatty.store/public/product/317604/eqZLiILJxUH6p74NJlBD5ulnjycHKgx6QyWRwY3x.jpg","https://cdn.markatty.store/public/product/317604/IOC7pzuyPFPc1umS5ztIGHBmp9hVvAhnwmSSalLu.jpg","https://cdn.markatty.store/public/product/317604/fOTXTvVfJLYWU4iZFB3rUgQmqBFJvERKhbc0iHiu.jpg","https://cdn.markatty.store/public/product/317604/6p0Vf3fYEhOUOIzSu6ZjgXufA17QfRglaaOXF9ew.jpg","https://cdn.markatty.store/public/product/317604/c4lMrr94pRSnIDewVpNBJEHe1QVTrQFqwpON3J0W.jpg","https://cdn.markatty.store/public/product/317604/PPJNk8GpKI7mQjwKiyjwHX8e9ieopLEHglqEjpbb.jpg","https://cdn.markatty.store/public/product/317604/r42ggHpqdijh5zLjXwsWI0BE2TqdkUWbZSvln5TE.jpg","https://cdn.markatty.store/public/product/317604/UWIcxlr5CKOXMB4f4B0Qc6d4dI9RtqSfZCj2HeOU.jpg","https://cdn.markatty.store/public/product/317604/umw4AqAEIwZZbvDY6xyzSFzOFWNwTBlInaezvOcj.jpg"],"opts":[{"label":"Colour","values":["Black","Off white","Navy blue","Peacock","Beige","Pink","Lavender","Cherry","Burgundy","Baby blue","Olive","Cashmere","Silver","Red","Purple","Mint green"]}],"vars":[{"k":"Black","avail":1,"now":149.0,"was":null,"off":null,"img":2},{"k":"Off white","avail":1,"now":149.0,"was":null,"off":null,"img":0},{"k":"Navy blue","avail":1,"now":149.0,"was":null,"off":null,"img":7},{"k":"Peacock","avail":1,"now":149.0,"was":null,"off":null,"img":11},{"k":"Beige","avail":1,"now":149.0,"was":null,"off":null,"img":4},{"k":"Pink","avail":1,"now":149.0,"was":null,"off":null,"img":1},{"k":"Lavender","avail":1,"now":149.0,"was":null,"off":null,"img":9},{"k":"Cherry","avail":1,"now":149.0,"was":null,"off":null,"img":8},{"k":"Burgundy","avail":1,"now":149.0,"was":null,"off":null,"img":6},{"k":"Baby blue","avail":1,"now":149.0,"was":null,"off":null,"img":6},{"k":"Olive","avail":1,"now":149.0,"was":null,"off":null,"img":14},{"k":"Cashmere","avail":1,"now":149.0,"was":null,"off":null,"img":10},{"k":"Silver","avail":1,"now":149.0,"was":null,"off":null,"img":12},{"k":"Red","avail":1,"now":149.0,"was":null,"off":null,"img":15},{"k":"Purple","avail":1,"now":149.0,"was":null,"off":null,"img":5},{"k":"Mint green","avail":1,"now":149.0,"was":null,"off":null,"img":3}],"now":149.0,"was":null,"off":null,"soldOut":false},"317605":{"id":"317605","name":"Heatless curls tail","desc":"Silk satin curly roll for creating curly or wavy hair, comes with a hair tie.","imgs":["https://cdn.markatty.store/public/product/317605/NyaXrxbORxSyLo7pNC4Vt9bHDKlaJeAAu9PZQ1c4.jpg","https://cdn.markatty.store/public/product/317605/BhwxmjQW1OahC8yc3As5JWRd5MjRkfkjmgay6m01.jpg","https://cdn.markatty.store/public/product/317605/iSg9Iw4KsuZLof3l624hTDwDDN4I4ksZbxT88sBC.jpg","https://cdn.markatty.store/public/product/317605/cjH493RCcy79HUyEWwjjihXLHWt9yeQS2FhjlYeF.jpg","https://cdn.markatty.store/public/product/317605/q3iijd1TJ27fDh8QuIv23TdChY1iWsE9ivXlxDlf.jpg","https://cdn.markatty.store/public/product/317605/2tp4lgJPXNOtiE0OngN3Sg1DcJ15xcdBJqR8FV9n.jpg","https://cdn.markatty.store/public/product/317605/vS0U0NCO2TFSJwv6psTgIdHdjtQWgiYaaIjwuCnm.jpg","https://cdn.markatty.store/public/product/317605/43del0sLEMoBJrHomBwUJHcQxMXvkec6Sygz9JWJ.jpg","https://cdn.markatty.store/public/product/317605/UbRknsHPWIGnNKYf8HfxjZbXgyMyFPgTAH0MPvHl.jpg","https://cdn.markatty.store/public/product/317605/6NNfLlrp1c9NGS6ue3GkSsPRFSEyayLoayskylq4.jpg","https://cdn.markatty.store/public/product/317605/ERCXmDiPGEzMDKxXtYc03fuWXpap6a3QTLZ0WJCL.jpg","https://cdn.markatty.store/public/product/317605/qSPFdLAEXrlR5HByAhvjoA4V1V3QN3efcWi4qLjd.jpg","https://cdn.markatty.store/public/product/317605/CGbUqsGZfb4tB80lUoslbc3OJ9IU8wFhN0azrz5w.jpg","https://cdn.markatty.store/public/product/317605/0hNJiesWKIonMvKFakSkFFcnrBCs4BQ3nqPns8TQ.png","https://cdn.markatty.store/public/product/317605/dXF6mnTS1hkuHYhRlZuCj0ti4KzlquiI0eP2vyWs.jpg","https://cdn.markatty.store/public/product/317605/AeaSXM90L5zRyVVd4GF2ODcBDIWWC3xMUu6wqrjy.jpg"],"opts":[{"label":"Colour","values":["Black","Off white","Navy blue","Peacock","Beige","Pink","Lavender","Cherry","Burgundy","Baby blue","Olive","Cashmere","Silver","Red","Purple","Mint green"]}],"vars":[{"k":"Black","avail":1,"now":119.0,"was":null,"off":null,"img":9},{"k":"Off white","avail":1,"now":119.0,"was":null,"off":null,"img":3},{"k":"Navy blue","avail":1,"now":119.0,"was":null,"off":null,"img":11},{"k":"Peacock","avail":1,"now":119.0,"was":null,"off":null,"img":6},{"k":"Beige","avail":1,"now":119.0,"was":null,"off":null,"img":10},{"k":"Pink","avail":1,"now":119.0,"was":null,"off":null,"img":1},{"k":"Lavender","avail":1,"now":119.0,"was":null,"off":null,"img":2},{"k":"Cherry","avail":1,"now":119.0,"was":null,"off":null,"img":13},{"k":"Burgundy","avail":1,"now":119.0,"was":null,"off":null,"img":12},{"k":"Baby blue","avail":1,"now":119.0,"was":null,"off":null,"img":5},{"k":"Olive","avail":1,"now":119.0,"was":null,"off":null,"img":4},{"k":"Cashmere","avail":1,"now":119.0,"was":null,"off":null,"img":8},{"k":"Silver","avail":1,"now":119.0,"was":null,"off":null,"img":15},{"k":"Red","avail":1,"now":119.0,"was":null,"off":null,"img":7},{"k":"Purple","avail":1,"now":119.0,"was":null,"off":null,"img":14},{"k":"Mint green","avail":1,"now":119.0,"was":null,"off":null,"img":0}],"now":119.0,"was":null,"off":null,"soldOut":false},"317606":{"id":"317606","name":"Simple hair scrunchie","desc":"Elegant silk satin scrunchie, designed to protect your hair and keep it tangle-free.","imgs":["https://cdn.markatty.store/public/product/317606/cYldq1MXYaDKRc6o4Fut9GlbnsK5iEgWoIP3D8hN.jpg","https://cdn.markatty.store/public/product/317606/h0OLBAMaSbT5r9WtWQCgcXdOOrS2osDkYvbd2abF.jpg","https://cdn.markatty.store/public/product/317606/qO0lRoIhB7J9GH5w8nMmwZdTfBLhXob2gFWoFAVR.jpg","https://cdn.markatty.store/public/product/317606/5Ac2kAPOohxTjeJMQlycqM3kR2QJIVzer0chUpto.jpg","https://cdn.markatty.store/public/product/317606/pUq04p6VV4Jkm1uwHG9yPSFCkWRg9MpbAwaxXLmY.jpg","https://cdn.markatty.store/public/product/317606/hDG4I8ANybH12TPeeGQL6VOvVqo3obx2VtobBLDc.jpg","https://cdn.markatty.store/public/product/317606/kRWRjfddxW2LtIpOxBI8uu7ePOiYoLm4d8fcrntY.jpg","https://cdn.markatty.store/public/product/317606/Lr1Oxe7C3lqyOxIMRC4fEh1wKolhT63s7xvs658K.jpg","https://cdn.markatty.store/public/product/317606/wcHGJVs6F96rZLFaSGcI9uzgksF0ZGkJk8z4pa4N.jpg","https://cdn.markatty.store/public/product/317606/8d6aSiZW7v5hp0xrntQXmaNnSbOF4nLQj1QbQ3oJ.jpg","https://cdn.markatty.store/public/product/317606/PtuzhixwQxuOXgbfeQF98Tm9nz2KVxHa9vPcefiL.jpg","https://cdn.markatty.store/public/product/317606/5kl5pakSd8AnCxIAk0onjAqybYCmLeRc7ea4JGsW.jpg","https://cdn.markatty.store/public/product/317606/WOZFvh2IIXxixgZ3ZjrxyLee6fqaqqibBifxt3vK.jpg","https://cdn.markatty.store/public/product/317606/QddufDUPFilwb8nYuHw0zpNJ9cN3NS5UeJspzGYM.jpg","https://cdn.markatty.store/public/product/317606/6gUw5zTmYAAzn9yVM0SjgkKLfyR7frab68H5VSSV.jpg","https://cdn.markatty.store/public/product/317606/L4yjWu0Nkd2oskMcpzfYXjgjbPatswPAXNBaYthc.jpg","https://cdn.markatty.store/public/product/317606/IH05RLrNGAec2rujFspb15gZ4TGtJjf8yP7ZjUrt.jpg"],"opts":[{"label":"Colour","values":["Black","Off white","Navy blue","Peacock","Beige","Pink","Lavender","Cherry","Burgundy","Baby blue","Olive","Cashmere","Silver","Red","Purple","Mint green"]},{"label":"Size","values":["S","M","L"]}],"vars":[{"k":"Black / S","avail":1,"now":30.0,"was":null,"off":null,"img":13},{"k":"Black / M","avail":1,"now":45.0,"was":null,"off":null,"img":13},{"k":"Black / L","avail":1,"now":55.0,"was":null,"off":null,"img":13},{"k":"Off white / S","avail":1,"now":30.0,"was":null,"off":null,"img":3},{"k":"Off white / M","avail":1,"now":45.0,"was":null,"off":null,"img":3},{"k":"Off white / L","avail":1,"now":55.0,"was":null,"off":null,"img":3},{"k":"Navy blue / S","avail":1,"now":30.0,"was":null,"off":null,"img":15},{"k":"Navy blue / M","avail":1,"now":45.0,"was":null,"off":null,"img":15},{"k":"Navy blue / L","avail":1,"now":55.0,"was":null,"off":null,"img":15},{"k":"Peacock / S","avail":1,"now":30.0,"was":null,"off":null,"img":12},{"k":"Peacock / M","avail":1,"now":45.0,"was":null,"off":null,"img":12},{"k":"Peacock / L","avail":1,"now":55.0,"was":null,"off":null,"img":12},{"k":"Beige / S","avail":1,"now":30.0,"was":null,"off":null,"img":10},{"k":"Beige / M","avail":1,"now":45.0,"was":null,"off":null,"img":10},{"k":"Beige / L","avail":1,"now":55.0,"was":null,"off":null,"img":10},{"k":"Pink / S","avail":1,"now":30.0,"was":null,"off":null,"img":1},{"k":"Pink / M","avail":1,"now":45.0,"was":null,"off":null,"img":1},{"k":"Pink / L","avail":1,"now":55.0,"was":null,"off":null,"img":1},{"k":"Lavender / S","avail":1,"now":30.0,"was":null,"off":null,"img":4},{"k":"Lavender / M","avail":1,"now":45.0,"was":null,"off":null,"img":4},{"k":"Lavender / L","avail":1,"now":55.0,"was":null,"off":null,"img":4},{"k":"Cherry / S","avail":1,"now":30.0,"was":null,"off":null,"img":8},{"k":"Cherry / M","avail":1,"now":45.0,"was":null,"off":null,"img":8},{"k":"Cherry / L","avail":1,"now":55.0,"was":null,"off":null,"img":8},{"k":"Burgundy / S","avail":1,"now":30.0,"was":null,"off":null,"img":6},{"k":"Burgundy / M","avail":1,"now":45.0,"was":null,"off":null,"img":6},{"k":"Burgundy / L","avail":1,"now":55.0,"was":null,"off":null,"img":6},{"k":"Baby blue / S","avail":1,"now":30.0,"was":null,"off":null,"img":5},{"k":"Baby blue / M","avail":1,"now":45.0,"was":null,"off":null,"img":5},{"k":"Baby blue / L","avail":1,"now":55.0,"was":null,"off":null,"img":5},{"k":"Olive / S","avail":1,"now":30.0,"was":null,"off":null,"img":14},{"k":"Olive / M","avail":1,"now":45.0,"was":null,"off":null,"img":14},{"k":"Olive / L","avail":1,"now":55.0,"was":null,"off":null,"img":14},{"k":"Cashmere / S","avail":1,"now":30.0,"was":null,"off":null,"img":16},{"k":"Cashmere / M","avail":1,"now":45.0,"was":null,"off":null,"img":16},{"k":"Cashmere / L","avail":1,"now":55.0,"was":null,"off":null,"img":16},{"k":"Silver / S","avail":1,"now":30.0,"was":null,"off":null,"img":0},{"k":"Silver / M","avail":1,"now":45.0,"was":null,"off":null,"img":0},{"k":"Silver / L","avail":1,"now":55.0,"was":null,"off":null,"img":0},{"k":"Red / S","avail":1,"now":30.0,"was":null,"off":null,"img":7},{"k":"Red / M","avail":1,"now":45.0,"was":null,"off":null,"img":7},{"k":"Red / L","avail":1,"now":55.0,"was":null,"off":null,"img":7},{"k":"Purple / S","avail":1,"now":30.0,"was":null,"off":null,"img":11},{"k":"Purple / M","avail":1,"now":45.0,"was":null,"off":null,"img":11},{"k":"Purple / L","avail":1,"now":55.0,"was":null,"off":null,"img":11},{"k":"Mint green / S","avail":1,"now":30.0,"was":null,"off":null,"img":2},{"k":"Mint green / M","avail":1,"now":45.0,"was":null,"off":null,"img":2},{"k":"Mint green / L","avail":1,"now":55.0,"was":null,"off":null,"img":2}],"now":30.0,"was":null,"off":null,"soldOut":false},"317607":{"id":"317607","name":"Patterned Scrunchie","desc":"Elegant medium satin silk hair clip with a stylish pattern, perfect for preventing tangles and providing superior softness.","imgs":["https://cdn.markatty.store/public/product/317607/G794YigNPzBmRVS5TsjC9x0laHh7EpU4GogI4tXu.jpg","https://cdn.markatty.store/public/product/317607/bHWgH66aMMKrMM4rzQHx3IlTILzIbWPlqYsajtW7.jpg","https://cdn.markatty.store/public/product/317607/yUSIpGkKlp7mhlrULm5YhHoDUrjlOHZDlmBTfhHT.jpg","https://cdn.markatty.store/public/product/317607/qb1DsoZb2P0TZiszO9bBoAWOkvCvjeuIkxiPyXvS.jpg"],"opts":[{"label":"Colour","values":["بينك*اوف وايت","بيبي بلو*اوف وايت","جراى مشجر","رمادى منقرش"]}],"vars":[{"k":"بينك*اوف وايت","avail":0,"now":55.0,"was":null,"off":null,"img":1},{"k":"بيبي بلو*اوف وايت","avail":1,"now":55.0,"was":null,"off":null,"img":0},{"k":"جراى مشجر","avail":1,"now":55.0,"was":null,"off":null,"img":3},{"k":"رمادى منقرش","avail":1,"now":55.0,"was":null,"off":null,"img":2}],"now":55.0,"was":null,"off":null,"soldOut":false},"317608":{"id":"317608","name":"Scrunchies with bow","desc":"Elegant satin hair clip featuring a silk satin bow tail, perfect for preventing hair tangles.","imgs":["https://cdn.markatty.store/public/product/317608/xyTjqKwLmgOVNe4I6hjL9CJ4Ja5oVnysY0cEGAFK.jpg","https://cdn.markatty.store/public/product/317608/GsXMGUMsGUz0uI6U9XdcuaxrSX9MhnTYrEaCJu4p.jpg","https://cdn.markatty.store/public/product/317608/jqSpshcCA5yjIKYL8zxhGtoVTWmgRmdMn0TNK6e6.jpg","https://cdn.markatty.store/public/product/317608/573956bspnJLrhWBX14O6jRea1Qne1txmDDPy62r.jpg","https://cdn.markatty.store/public/product/317608/C6d236duds1Y88Ei70fF7fixn0HBoQWo4c2ifAdy.jpg","https://cdn.markatty.store/public/product/317608/7NEcIwWuRBM4pA8mWXxeRWwnM4mYIMMwT4yvuZuz.jpg","https://cdn.markatty.store/public/product/317608/F5sgRJcg4UmLsLWsTv6vfIevZ8qzLeEH6DPdbiBh.jpg","https://cdn.markatty.store/public/product/317608/TlUlgAh20bHXidxPUQFx384S0HCZl4gwrtyLRA3I.jpg","https://cdn.markatty.store/public/product/317608/TLP442ePH9A6scoJtWLAQSWL0KfHybFSXpAiWTL5.jpg","https://cdn.markatty.store/public/product/317608/VJ7IhHqHJ6R4pfmN2dQ7WPKj56b9CNE0492Om1zY.jpg","https://cdn.markatty.store/public/product/317608/Qm9yffoHZ5OW3B8umDHE0IXDgxsBYWmng5yZxtC8.jpg","https://cdn.markatty.store/public/product/317608/v8Amd8tkoBHkojRaBIFEWZhxKRBN9wS77CYQutuG.jpg","https://cdn.markatty.store/public/product/317608/3SiGulq85sgtz4XjAAsnOMzrMC6PdQeiERcaKZi9.jpg","https://cdn.markatty.store/public/product/317608/ktuJI6ayVdcYAsVP3aU9keEWEkrcFPw5FxTxH6GJ.jpg","https://cdn.markatty.store/public/product/317608/xKORTs52gwLmZaYrtXIzHiFUI8QfyMiOhV89iMsp.jpg","https://cdn.markatty.store/public/product/317608/zzRUUANPUPOYlJSNWESpn5gDXgSXDNdxq2JJQNXg.jpg"],"opts":[{"label":"Colour","values":["Black","Off white","Navy blue","Peacock","Beige","Pink","Lavender","Cherry","Burgundy","Baby blue","Olive","Cashmere","Silver","Red","Purple","Mint green"]}],"vars":[{"k":"Black","avail":1,"now":99.0,"was":null,"off":null,"img":13},{"k":"Off white","avail":1,"now":99.0,"was":null,"off":null,"img":12},{"k":"Navy blue","avail":1,"now":99.0,"was":null,"off":null,"img":11},{"k":"Peacock","avail":1,"now":99.0,"was":null,"off":null,"img":5},{"k":"Beige","avail":1,"now":99.0,"was":null,"off":null,"img":7},{"k":"Pink","avail":1,"now":99.0,"was":null,"off":null,"img":1},{"k":"Lavender","avail":1,"now":99.0,"was":null,"off":null,"img":15},{"k":"Cherry","avail":1,"now":99.0,"was":null,"off":null,"img":4},{"k":"Burgundy","avail":1,"now":99.0,"was":null,"off":null,"img":6},{"k":"Baby blue","avail":1,"now":99.0,"was":null,"off":null,"img":14},{"k":"Olive","avail":1,"now":99.0,"was":null,"off":null,"img":10},{"k":"Cashmere","avail":1,"now":99.0,"was":null,"off":null,"img":0},{"k":"Silver","avail":1,"now":99.0,"was":null,"off":null,"img":3},{"k":"Red","avail":1,"now":99.0,"was":null,"off":null,"img":9},{"k":"Purple","avail":1,"now":99.0,"was":null,"off":null,"img":2},{"k":"Mint green","avail":1,"now":99.0,"was":null,"off":null,"img":8}],"now":99.0,"was":null,"off":null,"soldOut":false},"317609":{"id":"317609","name":"Bow Hair Clip","desc":"[ Delicate small satin hair clip with a mini bow, perfect for preventing tangles – [ suitable for adults","imgs":["https://cdn.markatty.store/public/product/317609/NvJDdFrY1hGimZX9EVlTBb5RjdRcyQ5tPCA4HCdb.jpg","https://cdn.markatty.store/public/product/317609/4zvbRJ8y1281JsCD5vPtssbZPYifMYkNy3FrX3se.jpg","https://cdn.markatty.store/public/product/317609/uDJLyQ8Vk4XEa5i4ZuB9BTSNszGR2LmLlZjLmcXs.jpg","https://cdn.markatty.store/public/product/317609/xg4L4DcNRUQmfFdhvgAI58ephVuaUadCNH7EKZO3.jpg","https://cdn.markatty.store/public/product/317609/cRly5v6wapxqzll65Rgg06HgF4bYqOV0yNPRjPTL.jpg","https://cdn.markatty.store/public/product/317609/houQuvmo19wqZ4gOGPAJIusG6mg9hOyScg5cyLlW.jpg","https://cdn.markatty.store/public/product/317609/12fR3h8gc61oVRINkmq0sbhb5h8J62RhICWJhIGA.jpg","https://cdn.markatty.store/public/product/317609/NDx2bcQaW8ZadXnhfL6Mjgn5DQOLMBhoH6ESylOM.jpg","https://cdn.markatty.store/public/product/317609/ppP9pwfIoIVBIGqjrGvYpB2hUQtZSwrq6c5pD7Le.jpg","https://cdn.markatty.store/public/product/317609/dKVf258atwdrToyLpKnt4YqTcetnLjYa35ZeytRx.jpg","https://cdn.markatty.store/public/product/317609/KfTE5jBc6ATWpFftetrhBnZbl5iX4iMYjEEGSdmg.jpg","https://cdn.markatty.store/public/product/317609/jkSQGwGc8QPk09FnqkahgyW0BGiULUTuWxJmOoVw.jpg","https://cdn.markatty.store/public/product/317609/UB1Y68fp6toNIt0mNfJfI7TbGeBqhhLiPUWIo7PA.jpg","https://cdn.markatty.store/public/product/317609/aSF8VOChGgAwq5ewUal1IzrLuiiGR9wtjYMdEmfX.jpg","https://cdn.markatty.store/public/product/317609/R1VjmnU41aEZnMsiQt9dP4hVZQay03vNeZoGq7wG.jpg","https://cdn.markatty.store/public/product/317609/SW87nV3u7n5sRvyYYadiyvWrVdqXA8ZFdsOBr7it.jpg"],"opts":[{"label":"Colour","values":["Black","Off white","Navy blue","Peacock","Beige","Pink","Lavender","Cherry","Burgundy","Baby blue","Olive","Cashmere","Silver","Red","Purple","Mint green"]}],"vars":[{"k":"Black","avail":1,"now":60.0,"was":null,"off":null,"img":2},{"k":"Off white","avail":1,"now":60.0,"was":null,"off":null,"img":13},{"k":"Navy blue","avail":1,"now":60.0,"was":null,"off":null,"img":7},{"k":"Peacock","avail":1,"now":60.0,"was":null,"off":null,"img":3},{"k":"Beige","avail":1,"now":60.0,"was":null,"off":null,"img":10},{"k":"Pink","avail":1,"now":60.0,"was":null,"off":null,"img":1},{"k":"Lavender","avail":1,"now":60.0,"was":null,"off":null,"img":4},{"k":"Cherry","avail":1,"now":60.0,"was":null,"off":null,"img":11},{"k":"Burgundy","avail":1,"now":60.0,"was":null,"off":null,"img":8},{"k":"Baby blue","avail":1,"now":60.0,"was":null,"off":null,"img":12},{"k":"Olive","avail":1,"now":60.0,"was":null,"off":null,"img":0},{"k":"Cashmere","avail":1,"now":60.0,"was":null,"off":null,"img":5},{"k":"Silver","avail":1,"now":60.0,"was":null,"off":null,"img":13},{"k":"Red","avail":1,"now":60.0,"was":null,"off":null,"img":11},{"k":"Purple","avail":1,"now":60.0,"was":null,"off":null,"img":14},{"k":"Mint green","avail":1,"now":60.0,"was":null,"off":null,"img":6}],"now":60.0,"was":null,"off":null,"soldOut":false},"317610":{"id":"317610","name":"Hairband","desc":"A hairband made of durable plastic, fully wrapped in soft satin fabric, offering an elegant look and a luxurious touch. Comfortable to wear, stays in place without causing pressure or discomfort, perfect for everyday use or special occasions, and adds a chic, feminine touch to your style.","imgs":["https://cdn.markatty.store/public/product/317610/HTjy2yjjKSXhH4i5kPIfdXSh3lzgROMdGdcCI1au.jpg","https://cdn.markatty.store/public/product/317610/BbXljg7gJRG0OjLcGiMNzOHVhMqszTOU56jTurZb.jpg","https://cdn.markatty.store/public/product/317610/F6BSgblHbGQeYGpbIWMy70w3R0fPJZWYYExC0F80.jpg","https://cdn.markatty.store/public/product/317610/cmoc4PIMQfvydwbEaODY7Hr9YAhi7iarlUDBcEDl.jpg","https://cdn.markatty.store/public/product/317610/JvFlnIDKbPdBhRgQXaIfohckxFA1EFchUOjEU1Iy.jpg","https://cdn.markatty.store/public/product/317610/dM87qKvE4XILha1eXOgdyWOoYc9Z3kqsV2XlKWVH.jpg","https://cdn.markatty.store/public/product/317610/H21mcjBv8iIDtlpG56JJ2DsbVXxwGZfRhRsqVPeF.jpg","https://cdn.markatty.store/public/product/317610/n3gCrFy3tAvDP67KbFHi2UwbLMbN4Na15iLmVTTJ.jpg","https://cdn.markatty.store/public/product/317610/sfqQCbszMloPzDOxAHumYm3sFyw9Y3VYtF8eFzPy.jpg","https://cdn.markatty.store/public/product/317610/WY0KoNOjNX8yF9zs9bnH5TKdyCCkKGXSI627KNMT.jpg","https://cdn.markatty.store/public/product/317610/rI0mf808deGqJFMSsHonOgOZdOeCZW8m7ylq7XPH.jpg","https://cdn.markatty.store/public/product/317610/RfbWXONNoxejJm8Fo0pHWd4KIQTF7f7J5RB1ZwSI.jpg","https://cdn.markatty.store/public/product/317610/gItANYaQy3swZ2cZb28zDyrZZCsF2by4tFI5l559.jpg","https://cdn.markatty.store/public/product/317610/0hEddty204UIcS7nBY5ReMJ8YuvbpGfrB6jIsNeC.jpg","https://cdn.markatty.store/public/product/317610/a82GiwaWx2YOdsKPuZba4vyTHnOC1WkfrbpbZKJK.jpg","https://cdn.markatty.store/public/product/317610/RfOSk6cVpp0Jt31MTRAytROfzSL6zmsf5XkAzrsm.jpg"],"opts":[{"label":"Colour","values":["Black","Off white","Navy blue","Peacock","Beige","Pink","Lavender","Cherry","Burgundy","Baby blue","Olive","Cashmere","Silver","Red","Purple","Mint green"]}],"vars":[{"k":"Black","avail":1,"now":79.0,"was":null,"off":null,"img":10},{"k":"Off white","avail":1,"now":79.0,"was":null,"off":null,"img":12},{"k":"Navy blue","avail":1,"now":79.0,"was":null,"off":null,"img":6},{"k":"Peacock","avail":1,"now":79.0,"was":null,"off":null,"img":3},{"k":"Beige","avail":1,"now":79.0,"was":null,"off":null,"img":9},{"k":"Pink","avail":1,"now":79.0,"was":null,"off":null,"img":1},{"k":"Lavender","avail":1,"now":79.0,"was":null,"off":null,"img":11},{"k":"Cherry","avail":1,"now":79.0,"was":null,"off":null,"img":5},{"k":"Burgundy","avail":1,"now":79.0,"was":null,"off":null,"img":4},{"k":"Baby blue","avail":1,"now":79.0,"was":null,"off":null,"img":7},{"k":"Olive","avail":1,"now":79.0,"was":null,"off":null,"img":0},{"k":"Cashmere","avail":1,"now":79.0,"was":null,"off":null,"img":2},{"k":"Silver","avail":1,"now":79.0,"was":null,"off":null,"img":15},{"k":"Red","avail":1,"now":79.0,"was":null,"off":null,"img":13},{"k":"Purple","avail":1,"now":79.0,"was":null,"off":null,"img":14},{"k":"Mint green","avail":1,"now":79.0,"was":null,"off":null,"img":8}],"now":79.0,"was":null,"off":null,"soldOut":false},"317611":{"id":"317611","name":"Floral headband","desc":"Elegant satin headband adorned with soft 3D chiffon flowers for a feminine, romantic look.","imgs":["https://cdn.markatty.store/public/product/317611/lpjOY67jbNvQUHGviKfUN73DsF52c8Z6r7QxNCe1.jpg","https://cdn.markatty.store/public/product/317611/K5vFHgu27mcBG5u7LAya1Yml0l8NM5wNI9MJztpP.jpg","https://cdn.markatty.store/public/product/317611/rfy65PoLDDTTc1tDfT2110MPObIzqhVkk5SOlXOO.jpg","https://cdn.markatty.store/public/product/317611/cZ7K3BLUMChK7z6LbYDb3crVmlGoQU5kBOlLQhzG.jpg","https://cdn.markatty.store/public/product/317611/bZCiEBpcQgeRDiDNFz2xe347LSmEhcSsjN1gQgmb.jpg","https://cdn.markatty.store/public/product/317611/kuHazgcHrJl4o7zagU9OxS0OesTbGIArDEKtr3GX.jpg","https://cdn.markatty.store/public/product/317611/HfdXvEPi8yLKuA1aznUr58GGZlNtAvmltOQcmIv2.jpg","https://cdn.markatty.store/public/product/317611/YdcO93jZipA80Fw4ETnJYzT3cqeBby9gAYbEjC1e.jpg"],"opts":[{"label":"Colour","values":["Black","Off white","Beige","Pink","Lavender","Cherry","Baby blue","Cashmere"]}],"vars":[{"k":"Black","avail":1,"now":109.0,"was":null,"off":null,"img":-1},{"k":"Off white","avail":1,"now":109.0,"was":null,"off":null,"img":-1},{"k":"Beige","avail":1,"now":109.0,"was":null,"off":null,"img":-1},{"k":"Pink","avail":1,"now":109.0,"was":null,"off":null,"img":-1},{"k":"Lavender","avail":1,"now":109.0,"was":null,"off":null,"img":-1},{"k":"Cherry","avail":1,"now":109.0,"was":null,"off":null,"img":-1},{"k":"Baby blue","avail":1,"now":109.0,"was":null,"off":null,"img":-1},{"k":"Cashmere","avail":1,"now":109.0,"was":null,"off":null,"img":-1}],"now":109.0,"was":null,"off":null,"soldOut":false},"317614":{"id":"317614","name":"Tail hair bow","desc":"Elegant two-piece bow with a flowing silk satin tail, complete with a gentle, smooth clip.","imgs":["https://cdn.markatty.store/public/product/317614/M8MomKzO9hm63bb8eLxKIkzlrUjtkTYh4GqXrOrH.jpg","https://cdn.markatty.store/public/product/317614/dIUuMuvi5SZ30cwggs97alpJ7z0GcOHrrvU7XF4H.jpg","https://cdn.markatty.store/public/product/317614/XO3q0BSwNqqFylsB4Y1jtQpUgbWpYiq60eLP1ysw.jpg","https://cdn.markatty.store/public/product/317614/mcvmG6n3XUCeP3vIBAzZMvSPgI5MMXdObV8GZ1Te.jpg","https://cdn.markatty.store/public/product/317614/6WZLjtJgaT7stRXQYTpdJ76XADIZ6nagS2555dIr.jpg","https://cdn.markatty.store/public/product/317614/c2x4AiHY5TYggVqwsCIu38Vlvo1qgk2lDaPA0mup.jpg","https://cdn.markatty.store/public/product/317614/9FbmUkLC6LZPGBWnw8uLvxp0FfJUwDjaGDkoVaHw.jpg","https://cdn.markatty.store/public/product/317614/D0m2887l3LVGwMScTPLJ7BumPFTbQR3Sbd6HigZj.jpg","https://cdn.markatty.store/public/product/317614/FX6shnQHQvVjJOzxzRLYRYVfSGAXq5U2SJHD0gVk.jpg","https://cdn.markatty.store/public/product/317614/oFrDykNp4aK55LrjZXQEVnCgnzXAVyib71rR0s9R.jpg","https://cdn.markatty.store/public/product/317614/spWE0RW2Y0gq9iwhSULPY2r1rv0MxaSsRLqDyuHK.jpg","https://cdn.markatty.store/public/product/317614/mu4UoCY6l0E6M6vWFife0VxOGryhrWTWt0Pl2r9j.jpg","https://cdn.markatty.store/public/product/317614/u9Xv4YUQFf76Ubfw06mUfuhcYok58SDEuhi32CqW.jpg","https://cdn.markatty.store/public/product/317614/LcJYg5jdJi4PoRReZdXCyqaFj7zKdPb1C9X4zRso.jpg","https://cdn.markatty.store/public/product/317614/sPSCeQk8ag3yNc9JdEH154OXcLKCYyC5ePFlxIfm.jpg","https://cdn.markatty.store/public/product/317614/QhQWm40Q0WZyS7U144wViYCQrBAZ9jgMiaHu9qsy.jpg"],"opts":[{"label":"Size","values":["S","M","L"]},{"label":"Colour","values":["Black","Off white","Navy blue","Peacock","Beige","Pink","Lavender","Cherry","Burgundy","Baby blue","Olive","Cashmere","Silver","Red","Purple"]}],"vars":[{"k":"S / Black","avail":1,"now":89.0,"was":null,"off":null,"img":5},{"k":"S / Off white","avail":1,"now":89.0,"was":null,"off":null,"img":11},{"k":"S / Navy blue","avail":1,"now":89.0,"was":null,"off":null,"img":3},{"k":"S / Peacock","avail":1,"now":89.0,"was":null,"off":null,"img":4},{"k":"S / Beige","avail":1,"now":89.0,"was":null,"off":null,"img":6},{"k":"S / Pink","avail":1,"now":89.0,"was":null,"off":null,"img":1},{"k":"S / Lavender","avail":1,"now":89.0,"was":null,"off":null,"img":9},{"k":"S / Cherry","avail":1,"now":89.0,"was":null,"off":null,"img":12},{"k":"S / Burgundy","avail":1,"now":89.0,"was":null,"off":null,"img":8},{"k":"S / Baby blue","avail":1,"now":89.0,"was":null,"off":null,"img":13},{"k":"S / Olive","avail":1,"now":89.0,"was":null,"off":null,"img":2},{"k":"S / Cashmere","avail":1,"now":89.0,"was":null,"off":null,"img":15},{"k":"S / Silver","avail":1,"now":89.0,"was":null,"off":null,"img":0},{"k":"S / Red","avail":1,"now":89.0,"was":null,"off":null,"img":7},{"k":"S / Purple","avail":1,"now":89.0,"was":null,"off":null,"img":10},{"k":"M / Black","avail":1,"now":109.0,"was":null,"off":null,"img":5},{"k":"M / Off white","avail":1,"now":109.0,"was":null,"off":null,"img":11},{"k":"M / Navy blue","avail":1,"now":109.0,"was":null,"off":null,"img":3},{"k":"M / Peacock","avail":1,"now":109.0,"was":null,"off":null,"img":4},{"k":"M / Beige","avail":1,"now":109.0,"was":null,"off":null,"img":6},{"k":"M / Pink","avail":1,"now":109.0,"was":null,"off":null,"img":1},{"k":"M / Lavender","avail":1,"now":109.0,"was":null,"off":null,"img":9},{"k":"M / Cherry","avail":1,"now":109.0,"was":null,"off":null,"img":12},{"k":"M / Burgundy","avail":1,"now":109.0,"was":null,"off":null,"img":8},{"k":"M / Baby blue","avail":1,"now":109.0,"was":null,"off":null,"img":13},{"k":"M / Olive","avail":1,"now":109.0,"was":null,"off":null,"img":2},{"k":"M / Cashmere","avail":1,"now":109.0,"was":null,"off":null,"img":15},{"k":"M / Silver","avail":1,"now":109.0,"was":null,"off":null,"img":0},{"k":"M / Red","avail":1,"now":109.0,"was":null,"off":null,"img":7},{"k":"M / Purple","avail":1,"now":109.0,"was":null,"off":null,"img":10},{"k":"L / Black","avail":1,"now":155.0,"was":null,"off":null,"img":5},{"k":"L / Off white","avail":1,"now":155.0,"was":null,"off":null,"img":11},{"k":"L / Navy blue","avail":1,"now":155.0,"was":null,"off":null,"img":3},{"k":"L / Peacock","avail":1,"now":155.0,"was":null,"off":null,"img":4},{"k":"L / Beige","avail":1,"now":155.0,"was":null,"off":null,"img":6},{"k":"L / Pink","avail":1,"now":155.0,"was":null,"off":null,"img":1},{"k":"L / Lavender","avail":1,"now":155.0,"was":null,"off":null,"img":9},{"k":"L / Cherry","avail":1,"now":155.0,"was":null,"off":null,"img":12},{"k":"L / Burgundy","avail":1,"now":155.0,"was":null,"off":null,"img":8},{"k":"L / Baby blue","avail":1,"now":155.0,"was":null,"off":null,"img":13},{"k":"L / Olive","avail":1,"now":155.0,"was":null,"off":null,"img":2},{"k":"L / Cashmere","avail":1,"now":155.0,"was":null,"off":null,"img":15},{"k":"L / Silver","avail":1,"now":155.0,"was":null,"off":null,"img":0},{"k":"L / Red","avail":1,"now":155.0,"was":null,"off":null,"img":7},{"k":"L / Purple","avail":1,"now":155.0,"was":null,"off":null,"img":10}],"now":89.0,"was":null,"off":null,"soldOut":false},"317615":{"id":"317615","name":"Infinity Bow","desc":"Elegant single-piece infinity bow crafted from silk satin, complete with a gentle, smooth clip.","imgs":["https://cdn.markatty.store/public/product/317615/hugJgZaTSv9Vjx87vL3HxCO6flUB8XlC4qFXbNc6.jpg","https://cdn.markatty.store/public/product/317615/bHW3zZbFS6Dsbgh58AAeJDnb0GZhzwdg6UYv0XAv.jpg","https://cdn.markatty.store/public/product/317615/AMZx6JHih2TAsKpGXb13WaJV6VJYOsRY31mCM5wd.jpg","https://cdn.markatty.store/public/product/317615/SOckWOqbnwjJUgRLt4Qnbeehklk0neqOxvlanX6s.jpg","https://cdn.markatty.store/public/product/317615/ASxMR9yeGS4aWu3y1CFcf9Ds3FTnP6LOCaFsDc7T.jpg","https://cdn.markatty.store/public/product/317615/CEfcqVIAUyTMbXcfD05tWrguVUmmV7ChwAauMrlE.jpg","https://cdn.markatty.store/public/product/317615/y2T4Lm0wGCMfOzCIxgOBW9idPhMfbO9xAnntNGFN.jpg","https://cdn.markatty.store/public/product/317615/EBsSWqyUnjlTPZgqzOhsxIb1PHASgST2C8wjVOnw.jpg","https://cdn.markatty.store/public/product/317615/qcxYcSr7B5KoTG20CyCy1vIUWY9s0bY0GcapbXTu.jpg","https://cdn.markatty.store/public/product/317615/8ekGCyLdYwbU59PC9auhgz1ksYrLDYGBkWOraLeJ.jpg","https://cdn.markatty.store/public/product/317615/694ao40Y1LXBAlxRT1lisObnr39je1kmVRorSmlq.jpg","https://cdn.markatty.store/public/product/317615/jmE7YWnKyVYlbZ91GwTEW7yT014GhikKN3LTqa86.jpg","https://cdn.markatty.store/public/product/317615/cJUgSnRYLYrJJf1JT04DWPgzH36E1DXGk6QhvE9A.jpg","https://cdn.markatty.store/public/product/317615/CoF4uEIgaw2MFNnrQRd7LPiPfHhdXtVsz79YFSZh.jpg","https://cdn.markatty.store/public/product/317615/tqF6MX4G0MjUC35TFmmFDANfTHnXti1HCeNR2zso.jpg","https://cdn.markatty.store/public/product/317615/cho1CnjQJ9xlDEBk681ArjUW0ZuPGmnSDqjQm2xc.jpg"],"opts":[{"label":"Colour","values":["Black","Off white","Navy blue","Peacock","Beige","Pink","Lavender","Cherry","Burgundy","Baby blue","Olive","Cashmere","Silver","Red"]},{"label":"Size","values":["S","M","L"]}],"vars":[{"k":"Black / S","avail":1,"now":89.0,"was":null,"off":null,"img":9},{"k":"Black / M","avail":1,"now":109.0,"was":null,"off":null,"img":9},{"k":"Black / L","avail":1,"now":159.0,"was":null,"off":null,"img":9},{"k":"Off white / S","avail":1,"now":89.0,"was":null,"off":null,"img":13},{"k":"Off white / M","avail":1,"now":109.0,"was":null,"off":null,"img":13},{"k":"Off white / L","avail":1,"now":159.0,"was":null,"off":null,"img":13},{"k":"Navy blue / S","avail":1,"now":89.0,"was":null,"off":null,"img":8},{"k":"Navy blue / M","avail":1,"now":109.0,"was":null,"off":null,"img":8},{"k":"Navy blue / L","avail":1,"now":159.0,"was":null,"off":null,"img":8},{"k":"Peacock / S","avail":1,"now":89.0,"was":null,"off":null,"img":2},{"k":"Peacock / M","avail":1,"now":109.0,"was":null,"off":null,"img":2},{"k":"Peacock / L","avail":1,"now":159.0,"was":null,"off":null,"img":2},{"k":"Beige / S","avail":1,"now":89.0,"was":null,"off":null,"img":7},{"k":"Beige / M","avail":1,"now":109.0,"was":null,"off":null,"img":7},{"k":"Beige / L","avail":1,"now":159.0,"was":null,"off":null,"img":7},{"k":"Pink / S","avail":1,"now":89.0,"was":null,"off":null,"img":1},{"k":"Pink / M","avail":1,"now":109.0,"was":null,"off":null,"img":1},{"k":"Pink / L","avail":1,"now":159.0,"was":null,"off":null,"img":1},{"k":"Lavender / S","avail":1,"now":89.0,"was":null,"off":null,"img":10},{"k":"Lavender / M","avail":1,"now":109.0,"was":null,"off":null,"img":10},{"k":"Lavender / L","avail":1,"now":159.0,"was":null,"off":null,"img":10},{"k":"Cherry / S","avail":1,"now":89.0,"was":null,"off":null,"img":0},{"k":"Cherry / M","avail":1,"now":109.0,"was":null,"off":null,"img":0},{"k":"Cherry / L","avail":1,"now":159.0,"was":null,"off":null,"img":0},{"k":"Burgundy / S","avail":1,"now":89.0,"was":null,"off":null,"img":5},{"k":"Burgundy / M","avail":1,"now":109.0,"was":null,"off":null,"img":5},{"k":"Burgundy / L","avail":1,"now":159.0,"was":null,"off":null,"img":5},{"k":"Baby blue / S","avail":1,"now":89.0,"was":null,"off":null,"img":15},{"k":"Baby blue / M","avail":1,"now":109.0,"was":null,"off":null,"img":15},{"k":"Baby blue / L","avail":1,"now":159.0,"was":null,"off":null,"img":15},{"k":"Olive / S","avail":1,"now":89.0,"was":null,"off":null,"img":11},{"k":"Olive / M","avail":1,"now":109.0,"was":null,"off":null,"img":11},{"k":"Olive / L","avail":1,"now":159.0,"was":null,"off":null,"img":11},{"k":"Cashmere / S","avail":1,"now":89.0,"was":null,"off":null,"img":4},{"k":"Cashmere / M","avail":1,"now":109.0,"was":null,"off":null,"img":4},{"k":"Cashmere / L","avail":1,"now":159.0,"was":null,"off":null,"img":4},{"k":"Silver / S","avail":1,"now":89.0,"was":null,"off":null,"img":6},{"k":"Silver / M","avail":1,"now":109.0,"was":null,"off":null,"img":6},{"k":"Silver / L","avail":1,"now":159.0,"was":null,"off":null,"img":6},{"k":"Red / S","avail":1,"now":89.0,"was":null,"off":null,"img":3},{"k":"Red / M","avail":1,"now":109.0,"was":null,"off":null,"img":3},{"k":"Red / L","avail":1,"now":159.0,"was":null,"off":null,"img":3}],"now":89.0,"was":null,"off":null,"soldOut":false},"317616":{"id":"317616","name":"Satin Essentials Box","desc":"...A premium box featuring satin products, including\n• Satin hair scrunchies in various sizes\n• Satin bows in different sizes\n• Double-face satin bonnet\n• Satin pillowcase (cushion size)","imgs":["https://cdn.markatty.store/public/product/317616/bhGjrQG2KpoEs5ci4pjcLDMepBVUFQGuxjTmGDLC.jpg"],"opts":[],"vars":[],"now":1200.0,"was":null,"off":null,"soldOut":false,"imgFromListing":true},"317617":{"id":"317617","name":"VIP Bridal Box","desc":"A complete satin bridal essentials box that includes\n• One large pillowcase\n• Two small pillowcases (cushion covers)\n• A curated selection of bows in various colors and sizes\n• A variety of hairbands\n• Fionka dantil\n• Hair scrunchies in different sizes and colors","imgs":["https://cdn.markatty.store/public/product/317617/4wyjWrS5PH07LC8IKd4u9GWrTmiUSlibZb20zjGr.jpg","https://cdn.markatty.store/public/product/317617/NJ9ItSgJvW6fwyRUTDNkc9YKuibiy1Gfgx4GGeDU.jpg"],"opts":[],"vars":[],"now":2499.0,"was":null,"off":null,"soldOut":false},"317618":{"id":"317618","name":"Elite Bride Luxury Set","desc":"A complete satin bridal box that includes all essential bridal accessories:\n• One large bed pillowcase\n• Two small pillowcases (decorative cushions)\n• A selection of bows in various styles and colors\n• scrunchies in all styles and colors\n• Curly hair rollers (optional)\n• Plus a complimentary branded gift box","imgs":["https://cdn.markatty.store/public/product/317618/7LF1Ezt3xgQ4JCaoB1TxY5QS6sD9BbC0c1Xf2OLT.jpg","https://cdn.markatty.store/public/product/317618/YsB5JoyA07tWrXdEK0BhZfxzCmYEufWp8LSa7ffW.jpg","https://cdn.markatty.store/public/product/317618/FNe3inXX2izHdAd4vLFO2rqzodZ8jqdNKZgS0tOi.jpg"],"opts":[],"vars":[],"now":3999.0,"was":null,"off":null,"soldOut":false},"317619":{"id":"317619","name":"Pillowcase","desc":"Silk satin pillowcase designed to help protect hair from frizz and breakage during sleep—size 70 × 50 cm.","imgs":["https://cdn.markatty.store/public/product/317619/popPD0sKBL1jMBIv8CPPJk9EaraatCaTYGYaPwId.jpg","https://cdn.markatty.store/public/product/317619/FWVoYxmScGl5Wl9uqx6VJ1A6Jhby1DIy6DILrGJW.jpg","https://cdn.markatty.store/public/product/317619/a9Mh3lhAaSEu7YaxAqW86xSzmjtLrcf5pcHAh3nH.jpg","https://cdn.markatty.store/public/product/317619/1ix1bzRv7zApEglPf7kCFFfpT4wQWmstWln47Acy.jpg","https://cdn.markatty.store/public/product/317619/ZGk3WJ9FbWzqhZgaeEovtmLotGjaH934LJNVoGCx.jpg","https://cdn.markatty.store/public/product/317619/OjCAFpYMHvLuwZ0m1OrIzJGEpw0EeUgvoFCZh3iS.jpg","https://cdn.markatty.store/public/product/317619/ac5Hu2JrM48ceT4kdkLfUOO91ehDYVCD2BQ0jCh4.jpg","https://cdn.markatty.store/public/product/317619/rJxUkmB9lsTJzoaMFPa3h2B8rMYL3PvpNy8il4iN.jpg","https://cdn.markatty.store/public/product/317619/BwQ1vBNozwOhjPV3zjinfm946Vojiq6nU54Dcb0r.jpg","https://cdn.markatty.store/public/product/317619/6WnRZ6CyFxsLjnEnwPqwV1Ofw8GTGamTcMhFcFma.jpg","https://cdn.markatty.store/public/product/317619/rX8dkoVtlhlQc2Pw0Hy50dKYdTNpE18gl8bfwt9Y.jpg","https://cdn.markatty.store/public/product/317619/lY4Srp6hqm8L9dbxbQwhDjwd6CDKfJpAehqkq1TC.jpg","https://cdn.markatty.store/public/product/317619/J7Ioj5EB9U4TVQFR3Eib5jTMNhynzWuKDg6WSY5d.jpg","https://cdn.markatty.store/public/product/317619/g2FkkCdpuMGgo80iU0ufDFHM7AnJy3RGcw6NcS6L.jpg","https://cdn.markatty.store/public/product/317619/35TFdekt3ooStUBwPkCUCi8KxScjaYPAlh0lQSE9.jpg"],"opts":[{"label":"Colour","values":["Black","Navy blue","Peacock","Beige","Pink","Lavender","Cherry","Burgundy","Baby blue","Olive","Cashmere","Silver","Purple","Mint green"]}],"vars":[{"k":"Black","avail":1,"now":199.0,"was":null,"off":null,"img":3},{"k":"Navy blue","avail":1,"now":199.0,"was":null,"off":null,"img":0},{"k":"Peacock","avail":1,"now":199.0,"was":null,"off":null,"img":8},{"k":"Beige","avail":0,"now":199.0,"was":null,"off":null,"img":8},{"k":"Pink","avail":1,"now":199.0,"was":null,"off":null,"img":1},{"k":"Lavender","avail":1,"now":199.0,"was":null,"off":null,"img":11},{"k":"Cherry","avail":1,"now":199.0,"was":null,"off":null,"img":13},{"k":"Burgundy","avail":1,"now":199.0,"was":null,"off":null,"img":10},{"k":"Baby blue","avail":1,"now":199.0,"was":null,"off":null,"img":6},{"k":"Olive","avail":1,"now":199.0,"was":null,"off":null,"img":12},{"k":"Cashmere","avail":1,"now":199.0,"was":null,"off":null,"img":9},{"k":"Silver","avail":1,"now":199.0,"was":null,"off":null,"img":14},{"k":"Purple","avail":1,"now":199.0,"was":null,"off":null,"img":7},{"k":"Mint green","avail":1,"now":199.0,"was":null,"off":null,"img":2}],"now":199.0,"was":null,"off":null,"soldOut":false},"317620":{"id":"317620","name":"Mini Bow","desc":"cute small bow clip for kids","imgs":["https://cdn.markatty.store/public/product/317620/PVu7v2pPkn6PpXuoNhNdYgdpr9ixoemchRstk5YI.jpg","https://cdn.markatty.store/public/product/317620/tFV4xlWZADGtS2upGNzGFmdO9qKT1IfeOspn1rRz.jpg","https://cdn.markatty.store/public/product/317620/moefD6BHEJJScp1pzoXRnT9hFtVEehEAdXyLsZCX.jpg","https://cdn.markatty.store/public/product/317620/AEYnX9UEznFjpMpd2zb14tSgZReZJbb1chTd7Acp.jpg","https://cdn.markatty.store/public/product/317620/jro0e6nFxTylmbLwtagtZbrfaReGP2aZUclNuWw2.jpg","https://cdn.markatty.store/public/product/317620/7mpZ2yTuVGEh60cebWCBtQAEhZlQdx9e6qtNUFat.jpg","https://cdn.markatty.store/public/product/317620/Y9EV4lfKYhPnIqtwWcTU1OMXfljBD2VdgrDsWlkD.jpg","https://cdn.markatty.store/public/product/317620/oSOIocXbGgSNGEOkpFKYMjhSZoaw14oGVZdzCj2v.jpg","https://cdn.markatty.store/public/product/317620/0mxt5SjhAJjopqCQH2vJahvliv7HpPuMLKJCFGEa.jpg","https://cdn.markatty.store/public/product/317620/NW1mIUNREeMnh5qcxMEtynrxC9yNtktsQ8EBYLdN.jpg","https://cdn.markatty.store/public/product/317620/iDZuUuJtbRMNpYi9WrZRXJWLkqr2clwSrxMNyE1W.jpg","https://cdn.markatty.store/public/product/317620/jGzMtrLh3tu7LXskDXQlC3yYTyguLBElndnr38oE.jpg","https://cdn.markatty.store/public/product/317620/4BFVLTJScx2ARcEML3c2Iwit0NDndMrCiG1HoEEb.jpg","https://cdn.markatty.store/public/product/317620/Qft5w7rRola36L9WXEAa99ca7lerXkvN33SYZNU4.jpg","https://cdn.markatty.store/public/product/317620/tuOCHMGzs9KVdMFXpg5ZRMNoRfyslQeAK9bwKd0q.jpg","https://cdn.markatty.store/public/product/317620/NUDsVGV0QQQfSavhWUHt4TABQvKPJhGzNVlJCRVu.png"],"opts":[{"label":"Colour","values":["Black","Off white","Navy blue","Peacock","Beige","Pink","Lavender","Cherry","Burgundy","Baby blue","Olive","Cashmere","Silver","Purple","Mint green"]}],"vars":[{"k":"Black","avail":1,"now":45.0,"was":null,"off":null,"img":14},{"k":"Off white","avail":1,"now":45.0,"was":null,"off":null,"img":15},{"k":"Navy blue","avail":1,"now":45.0,"was":null,"off":null,"img":7},{"k":"Peacock","avail":1,"now":45.0,"was":null,"off":null,"img":3},{"k":"Beige","avail":1,"now":45.0,"was":null,"off":null,"img":12},{"k":"Pink","avail":1,"now":45.0,"was":null,"off":null,"img":1},{"k":"Lavender","avail":1,"now":45.0,"was":null,"off":null,"img":5},{"k":"Cherry","avail":1,"now":45.0,"was":null,"off":null,"img":13},{"k":"Burgundy","avail":1,"now":45.0,"was":null,"off":null,"img":2},{"k":"Baby blue","avail":1,"now":45.0,"was":null,"off":null,"img":6},{"k":"Olive","avail":1,"now":45.0,"was":null,"off":null,"img":11},{"k":"Cashmere","avail":1,"now":45.0,"was":null,"off":null,"img":0},{"k":"Silver","avail":1,"now":45.0,"was":null,"off":null,"img":8},{"k":"Purple","avail":1,"now":45.0,"was":null,"off":null,"img":4},{"k":"Mint green","avail":1,"now":45.0,"was":null,"off":null,"img":10}],"now":45.0,"was":null,"off":null,"soldOut":false},"317621":{"id":"317621","name":"Satin Ribbon Bow","desc":"Satin Ribbon Bow . An elegant wide bow crafted from premium satin ribbons, 30 cm long, perfect for a chic and feminine touch.","imgs":["https://cdn.markatty.store/public/product/317621/HJr9y50KBxvJ4jD9Ul3YFXRGjaraAkxPUh68nBWU.jpg","https://cdn.markatty.store/public/product/317621/wt8Qbokb3ha4GzTzWpxhg893rzAs1HbI4gesl2hl.jpg","https://cdn.markatty.store/public/product/317621/IGl5Nd5XA4rt41b114lxMZVozbwuS0RNFsuM6WHC.jpg","https://cdn.markatty.store/public/product/317621/5uWdBpG3muLPt5EwK9GvYRTWaH4Cu8AwcAkfXOzD.jpg","https://cdn.markatty.store/public/product/317621/zTxtcm4PgoeWJ7gSx5uVXMQyPPaLgscbOT3k9tMB.jpg","https://cdn.markatty.store/public/product/317621/zOF5z01oAgPCAw2SRtHVOCu6Nkz7Q0oWgGDsNkZZ.jpg","https://cdn.markatty.store/public/product/317621/xeq4Me1eiz5FBlFNFLW0VxRNWq4azfYuuhNcfCKo.jpg","https://cdn.markatty.store/public/product/317621/fAaA7za7Yr2F0j2FCBnviMzDRUnWrJVEcyy5a3yi.jpg","https://cdn.markatty.store/public/product/317621/Uvz8JgVP3qB376Qw9LKTplh0sbgbjj2ka1l4tSI0.jpg","https://cdn.markatty.store/public/product/317621/jYE70JMcdjZwSlQrZyN34KMNVSNlzsUj8vIpowkC.jpg","https://cdn.markatty.store/public/product/317621/giihGruCYu1D7ocQEgSbkOPZ4RsV72jEnZBJwG60.jpg","https://cdn.markatty.store/public/product/317621/UjnEud0QldzO9J6DhjtxNsU9PYhu8txAncqlOkGI.jpg","https://cdn.markatty.store/public/product/317621/SkA3MoEBAayuLgSleHPs5qVHUTzA813JfjFls0MF.jpg"],"opts":[{"label":"Colour","values":["Red","Pink","Cherry","Peacock","Beige","Off white","Black","كحلى"]}],"vars":[{"k":"Red","avail":1,"now":65.0,"was":null,"off":null,"img":0},{"k":"Pink","avail":1,"now":65.0,"was":null,"off":null,"img":12},{"k":"Cherry","avail":1,"now":65.0,"was":null,"off":null,"img":0},{"k":"Peacock","avail":1,"now":65.0,"was":null,"off":null,"img":4},{"k":"Beige","avail":1,"now":65.0,"was":null,"off":null,"img":8},{"k":"Off white","avail":1,"now":65.0,"was":null,"off":null,"img":8},{"k":"Black","avail":1,"now":65.0,"was":null,"off":null,"img":10},{"k":"كحلى","avail":1,"now":65.0,"was":null,"off":null,"img":3}],"now":65.0,"was":null,"off":null,"soldOut":false},"317622":{"id":"317622","name":"Wide Infinity Satin Ribbon Bow","desc":"Wide Infinity Satin Ribbon Bow\nAn elegant wide infinity bow crafted from premium satin ribbons, 17 cm long, perfect for a chic and feminine touch.","imgs":["https://cdn.markatty.store/public/product/317622/TKlZmknrrp7H9bTDa6Ms2RGDVA0vsBQI0eW5MmzN.jpg","https://cdn.markatty.store/public/product/317622/pStr8Jn4XjLTY4x64JVRpSjxCpKsE8fQoZQXiuYQ.jpg","https://cdn.markatty.store/public/product/317622/q8024XUsxbQKtH5NeFHCKnACLn6tECQOMwAfpwDT.jpg","https://cdn.markatty.store/public/product/317622/EuOxdNT5FnXgoK8RLnkb9LHagiKNDC6fMnD7IsAu.jpg","https://cdn.markatty.store/public/product/317622/QnTNeUiDCevj5qUsnAgh3DWnnUp4PFZrnE5XmSE4.jpg","https://cdn.markatty.store/public/product/317622/CultLFmrqPgKQ8YES6JprmUPFmNytbVJAgt4xIwd.jpg","https://cdn.markatty.store/public/product/317622/ciPRTmnquCN3OMNh8uwI7UNjSATBvsjaKOd43aKh.jpg"],"opts":[{"label":"Colour","values":["Red","Olive","Baby blue","Pink","كحلى","Lavender","Cherry"]}],"vars":[{"k":"Red","avail":1,"now":69.0,"was":null,"off":null,"img":5},{"k":"Olive","avail":1,"now":51.75,"was":69.0,"off":"25% off","img":0},{"k":"Baby blue","avail":1,"now":51.75,"was":69.0,"off":"25% off","img":4},{"k":"Pink","avail":1,"now":51.75,"was":69.0,"off":"25% off","img":1},{"k":"كحلى","avail":1,"now":69.0,"was":null,"off":null,"img":2},{"k":"Lavender","avail":1,"now":69.0,"was":null,"off":null,"img":3},{"k":"Cherry","avail":1,"now":69.0,"was":null,"off":null,"img":6}],"now":69.0,"was":null,"off":null,"soldOut":false},"327614":{"id":"327614","name":"BO BoX","desc":"A box includes ( pillowcase - bonnet double face - bow medium - scrunchie medium )","imgs":["https://cdn.markatty.store/public/product/327614/yTcqMrL5f1VZyzdY3z40oSbtmipkcM1e5KDcx7pG.jpg","https://cdn.markatty.store/public/product/327614/KosPO0XoP3OqEb9Esnp8d8la20b3bFCojACFveWF.jpg"],"opts":[],"vars":[],"now":449.0,"was":500.0,"off":"10% off","soldOut":false},"327798":{"id":"327798","name":"Mini Box Scrunchies","desc":"A box includes 5 scrunchies","imgs":["https://cdn.markatty.store/public/product/327799/irglbU9ssN1yd0eP9EyER7qHQskTgVaQ8k8AoozM.jpg","https://cdn.markatty.store/public/product/327798/35c9wHAqmhlUAx04tBQXlYDYzBGSzE9ko5I4fzaQ.jpg","https://cdn.markatty.store/public/product/327799/fVN1D6rfCRgDqfOIlRMINoWDGREQ7JvCNor8EwF8.jpg","https://cdn.markatty.store/public/product/327798/iV8fePOW9kotq9XOFXVYXrAmyHloem2fMEjZdsQG.jpg","https://cdn.markatty.store/public/product/327799/Ax8cGfL0oy6RF9RFFHHi2O42vJRDeCVbSj5HxtPT.jpg","https://cdn.markatty.store/public/product/327798/sK09KdwoLe9ZVOH3OfrLhIda5mkLcwt4Vh5lLUkR.jpg","https://cdn.markatty.store/public/product/327799/AVDMPQbUb9xnysvIfpTueZJpmQz2YpBJpIvCFiCt.jpg","https://cdn.markatty.store/public/product/327798/s4d0RMfvDaXRfcft6U8A2rQxKuegvPNPr0tZaR1F.jpg"],"opts":[{"label":"Size","values":["S","M","L"]}],"vars":[{"k":"S","avail":0,"now":125.0,"was":150.0,"off":"17% off","img":1},{"k":"M","avail":0,"now":125.0,"was":150.0,"off":"17% off","img":1},{"k":"L","avail":1,"now":275.0,"was":null,"off":null,"img":4}],"now":125.0,"was":150.0,"off":"17% off","soldOut":false},"328482":{"id":"328482","name":"Sleep mask","desc":"Luxurious silk satin sleep mask designed to enhance sleep quality by effectively blocking light. Soft and gentle on the face, ensuring maximum comfort, and suitable for all ages.","imgs":["https://cdn.markatty.store/public/product/328482/0JrexDd4Jtu1ti4YdYECbDA35cJsNOhY22qxaaIc.jpg","https://cdn.markatty.store/public/product/328482/LDMZmIuqXZcYbnez8MMoXxmUkZqVKSYv042JOj2r.jpg","https://cdn.markatty.store/public/product/328482/yAOwZH6eO76fEG8NAACYQTo0OtYWTwSgPiD6EvK8.jpg","https://cdn.markatty.store/public/product/328482/IdH0HwW0GYRVgwp1Wx32TGerwhtqUvL6hvIlPfV6.jpg","https://cdn.markatty.store/public/product/328482/nESlFN0XrIPfShPHOKMY9pGo4YaUdXQTfAFXJrV8.jpg","https://cdn.markatty.store/public/product/328482/TlzDPiecW3GHp2SoCe1o3wUhcH9t8qkwDAoaZBv0.jpg","https://cdn.markatty.store/public/product/328482/WUSHW62cazMNUwtNOuDmn0tSL8bL0TgmjLJRGjqi.jpg","https://cdn.markatty.store/public/product/328482/L5d7Jm2T7eRvqVDC9kdi3ytpTw6IJ4ZFF8wzU3hs.jpg","https://cdn.markatty.store/public/product/328482/31WFfHijzu2hUfOWmA6WeBC38wIWLkj2fCo0LpnW.jpg","https://cdn.markatty.store/public/product/328482/cjKnR64NdMTiOspPeZWtFKsxkPPGU5WvRQlsaZPA.jpg","https://cdn.markatty.store/public/product/328482/2WM7nRwvvWN4WWNR4LrPapB41vWcl190TxZwdf5M.jpg","https://cdn.markatty.store/public/product/328482/3eihH91EpmXl7GEURwmSYtonEAZ7W9K3dJn6WGDV.jpg","https://cdn.markatty.store/public/product/328482/kltM9iGiRIMEd7eYOp31TAy2gxkamE6VKrCymkmD.jpg","https://cdn.markatty.store/public/product/328482/URtkb1j6HfEhjLMENLluFWQAqHYu4ThG3FCbUNsv.jpg","https://cdn.markatty.store/public/product/328482/LQN0u8GQpc0ds8l7CZ4jeqiKy4byNNmzAI94ld9X.jpg"],"opts":[{"label":"Colour","values":["Black","Navy blue","Peacock","Beige","Pink","Lavender","Cherry","Burgundy","Baby blue","Olive","Cashmere","Silver","Red","Purple","Mint green"]}],"vars":[{"k":"Black","avail":1,"now":110.0,"was":null,"off":null,"img":2},{"k":"Navy blue","avail":1,"now":108.0,"was":null,"off":null,"img":6},{"k":"Peacock","avail":1,"now":110.0,"was":null,"off":null,"img":7},{"k":"Beige","avail":1,"now":110.0,"was":null,"off":null,"img":14},{"k":"Pink","avail":1,"now":110.0,"was":null,"off":null,"img":1},{"k":"Lavender","avail":1,"now":110.0,"was":null,"off":null,"img":9},{"k":"Cherry","avail":1,"now":110.0,"was":null,"off":null,"img":10},{"k":"Burgundy","avail":1,"now":110.0,"was":null,"off":null,"img":8},{"k":"Baby blue","avail":1,"now":110.0,"was":null,"off":null,"img":12},{"k":"Olive","avail":1,"now":110.0,"was":null,"off":null,"img":5},{"k":"Cashmere","avail":1,"now":110.0,"was":null,"off":null,"img":11},{"k":"Silver","avail":1,"now":110.0,"was":null,"off":null,"img":3},{"k":"Red","avail":1,"now":110.0,"was":null,"off":null,"img":10},{"k":"Purple","avail":1,"now":110.0,"was":null,"off":null,"img":0},{"k":"Mint green","avail":1,"now":110.0,"was":null,"off":null,"img":13}],"now":110.0,"was":null,"off":null,"soldOut":false},"330051":{"id":"330051","name":"Mini Cutie Set","desc":"Satin silk hair scrunchie specially designed to protect your hair.\nPerfect for everyday use and suitable for all hair types.","imgs":["https://cdn.markatty.store/public/product/330051/TXFp3TIYbqnj0tJ1UNoI7kqmMgF3mX6rxPvZ0iIX.jpg","https://cdn.markatty.store/public/product/330051/5igmToiM3qeIJla8sRlZecacO90e4vvWMpMQIUhG.jpg","https://cdn.markatty.store/public/product/330051/z0fkiqb4RnZcPVIwGu8P2wEYTFmnxvE7WLKZ3Rkl.jpg","https://cdn.markatty.store/public/product/330051/XyLLLfX3CulKVkmVgyMUEmvlG57Gm4yQhz2L2XxS.jpg"],"opts":[{"label":"Colour","values":["Blue muse","Glow Up","Pastel Crush","Cozy Chic"]}],"vars":[{"k":"Blue muse","avail":1,"now":79.0,"was":null,"off":null,"img":3},{"k":"Glow Up","avail":0,"now":79.0,"was":null,"off":null,"img":3},{"k":"Pastel Crush","avail":1,"now":79.0,"was":null,"off":null,"img":0},{"k":"Cozy Chic","avail":1,"now":79.0,"was":null,"off":null,"img":2}],"now":79.0,"was":null,"off":null,"soldOut":false}}};</script>
+<script>
+(function(){
+'use strict';
+const D = window.BO, S = D.store;
+const PR = D.products; // id -> product
+const $ = (s, r=document) => r.querySelector(s), $$ = (s, r=document) => [...r.querySelectorAll(s)];
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const RM = matchMedia('(prefers-reduced-motion: reduce)');
+const fmt = n => n.toLocaleString('en-US', {minimumFractionDigits: n % 1 ? 2 : 0, maximumFractionDigits: 2});
+const egp = n => `${fmt(n)} EGP`;
+const slug = s => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+const IC = {
+  prev:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>',
+  next:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>',
+  check:'<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>'
+};
+
+/* ---------- product helpers ---------- */
+const hasVars = p => p.vars.length > 0;
+function varIndex(p, choice){ // choice: array of option values
+  const k = choice.join(' / '); return p.vars.findIndex(v => v.k === k);
+}
+function priceOf(p, vi){ const v = vi >= 0 ? p.vars[vi] : null; return v ? {now:v.now, was:v.was, off:v.off} : {now:p.now, was:p.was, off:p.off}; }
+function availOf(p, vi){ if (vi >= 0) return !!p.vars[vi].avail; return !p.soldOut; }
+const anyAvail = p => hasVars(p) ? p.vars.some(v => v.avail) : !p.soldOut;
+const img = (u, cls='', lazy=true, alt='') => `<img${cls?` class="${cls}"`:''} src="${esc(u)}" alt="${esc(alt)}"${lazy?' loading="lazy"':''} decoding="async" referrerpolicy="no-referrer">`;
+const noPhoto = '<div class="noimg">Photo not available yet</div>';
+// image failure → honest placeholder
+document.addEventListener('error', e => {
+  const t = e.target; if (!(t instanceof HTMLImageElement)) return;
+  if (t.closest('.frame')) { t.replaceWith(Object.assign(document.createElement('div'), {className:'noimg', textContent:'Photo not available yet'})); }
+  else t.style.visibility = 'hidden';
+}, true);
+
+/* ---------- state ---------- */
+const sel = {};   // pid -> array of chosen option values
+const photo = {}; // pid -> image index
+const feat = {};  // catId -> pid
+const qtyPick = {}; // pid -> qty to add
+const openOpts = {}; // 'pid|group' -> expanded
+for (const p of Object.values(PR)) {
+  if (hasVars(p)) { const first = p.vars.find(v => v.avail) || p.vars[0]; sel[p.id] = first.k.split(' / '); photo[p.id] = first.img >= 0 ? first.img : 0; }
+  else { sel[p.id] = []; photo[p.id] = 0; }
+  qtyPick[p.id] = 1;
+}
+const curVi = p => hasVars(p) ? varIndex(p, sel[p.id]) : -1;
+
+/* ---------- layouts per category (composition, frame shape, mood) ---------- */
+const LOOKS = [
+  {v:'v-left', shape:'shape-arch', t:'t-lilac'},
+  {v:'v-right', shape:'', t:'t-champ'},
+  {v:'v-orbit', shape:'shape-oval', t:'t-blush'},
+  {v:'v-left', shape:'', t:'t-lilac'},
+  {v:'v-right', shape:'shape-arch', t:'t-champ'},
+];
+function lookFor(cat, i){
+  if (/box/i.test(cat.name)) return {v: cat.items.length > 2 ? 'v-orbit' : 'v-left', shape:'', t:'t-berry'};
+  const L = LOOKS[i % LOOKS.length];
+  if (L.v === 'v-orbit' && cat.items.length < 4) return {v:'v-left', shape:L.shape, t:L.t};
+  return L;
+}
+function pickFeatured(cat){ // first piece (store order) that can be bought and has a photo
+  return cat.items.find(id => anyAvail(PR[id]) && PR[id].imgs.length) || cat.items.find(id => PR[id].imgs.length) || cat.items[0];
+}
+
+/* ---------- render: hero ---------- */
+function hero(){
+  const nP = Object.keys(PR).length, nC = D.cats.length;
+  $('#heroP').textContent = `Satin bonnets, scrunchies, bows, heatless curls and gift boxes from BO Scrunchiess — ${nP} pieces across ${nC} categories, all on one page.`;
+  const camp = D.hero.filter(h => h.role !== 'pattern');
+  $('#heroArt').innerHTML = `<div class="arch">${camp[0] ? img(camp[0].src, '', false, camp[0].alt) : noPhoto}</div>
+    ${camp[1] ? `<div class="small">${img(camp[1].src, '', false, camp[1].alt)}</div>` : ''}
+    <div class="tag"><b>${nP} pieces</b>bonnets, bows, scrunchies and gift boxes</div>`;
+  // ribbon draw-in: the one orchestrated page-load moment
+  if (!RM.matches) $$('#ribbon path').forEach(p => { const L = p.getTotalLength(); p.style.strokeDasharray = L; p.style.strokeDashoffset = L; p.getBoundingClientRect(); p.style.transition = 'stroke-dashoffset 2.4s cubic-bezier(.6,.05,.2,1) .2s'; p.style.strokeDashoffset = 0; });
+}
+
+/* ---------- render: category selector ---------- */
+function picker(){
+  $('#cats').innerHTML = D.cats.map(c => { const f = PR[pickFeatured(c)];
+    const th = c.mood ? c.mood.src : (f && f.imgs[0]);
+    return `<a class="cat" href="#${c.slug}" data-go="${c.slug}" aria-current="false"><span class="ring">${th ? img(th, '', false, '') : '<span class="ph"></span>'}</span><span class="nm">${esc(c.name)}</span><span class="ct">${c.items.length} ${c.items.length === 1 ? 'piece' : 'pieces'}</span></a>`; }).join('');
+}
+
+/* ---------- render: stages ---------- */
+function railBtn(cat, id, i){
+  const p = PR[id]; const pr = priceOf(p, curVi(p));
+  return `<button type="button" class="pc" data-pick="${esc(cat.slug)}|${esc(id)}" aria-pressed="${feat[cat.id] === id}" style="--i:${i}" aria-label="Show ${esc(p.name)}, ${egp(pr.now)}">
+    <span class="ri">${p.imgs.length ? img(p.imgs[0]) : ''}</span><span class="rn">${esc(p.name)}</span><span class="rp">${egp(pr.now)}${anyAvail(p) ? '' : ' · sold out'}</span></button>`;
+}
+function stage(cat, i){
+  const L = lookFor(cat, i); cat.look = L;
+  feat[cat.id] = pickFeatured(cat);
+  const solo = cat.items.length === 1;
+  const others = cat.items.filter(id => id !== feat[cat.id]);
+  const orbit = L.v === 'v-orbit';
+  const head = `<div class="s-head">${cat.mood ? `<span class="mood">${img(cat.mood.src, '', true, cat.mood.alt)}</span>` : ''}<div class="s-title"><h2 id="h-${cat.slug}">${esc(cat.name)}</h2><p>${solo ? 'One piece in this category.' : `${cat.items.length} pieces. Choose one to see it up close.`}</p></div></div>`;
+  const feature = `<div class="feature"><div class="frame" data-frame></div><div class="gal-nav" data-gal></div></div>`;
+  const rail = solo ? '' : `<div class="rail-wrap ${orbit && others.length <= 4 ? 'orbit-hide' : ''}"><p class="rail-h"><span>All ${cat.items.length} in ${esc(cat.name)}</span></p><div class="rail" data-rail>${cat.items.map((id, k) => railBtn(cat, id, k)).join('')}</div></div>`;
+  let compo;
+  if (orbit) compo = `<div class="compo"><div class="orbit"><div class="side l" data-side="l"></div>${feature}<div class="side r" data-side="r"></div></div><div class="details" data-details></div></div>${rail}`;
+  else compo = `<div class="compo">${feature}<div class="col"><div class="details" data-details></div>${rail}</div></div>`;
+  return `<section class="stage ${L.v} ${L.shape} ${L.t}${solo ? ' solo' : ''}" id="${cat.slug}" data-cat="${cat.id}" aria-labelledby="h-${cat.slug}"><div class="wrap">${head}${compo}</div></section>`;
+}
+function fillStage(cat, animate){
+  const sec = document.getElementById(cat.slug); const p = PR[feat[cat.id]];
+  setFrame(sec, p, animate);
+  renderDetails(sec, cat, p);
+  // rail + orbit sides
+  $$('[data-pick]', sec).forEach(b => b.setAttribute('aria-pressed', b.dataset.pick.split('|')[1] === p.id));
+  if (cat.look.v === 'v-orbit') {
+    const others = cat.items.filter(id => id !== p.id).slice(0, 4);
+    const l = $('[data-side=l]', sec), r = $('[data-side=r]', sec);
+    l.innerHTML = others.filter((_, k) => k % 2 === 0).map((id, k) => railBtn(cat, id, k)).join('');
+    r.innerHTML = others.filter((_, k) => k % 2 === 1).map((id, k) => railBtn(cat, id, k + 1)).join('');
+    $$('.side button', sec).forEach(b => b.classList.add('orb'));
+  }
+}
+function setFrame(sec, p, animate){
+  const fr = $('[data-frame]', sec), nav = $('[data-gal]', sec);
+  const n = p.imgs.length, k = Math.min(photo[p.id] || 0, Math.max(n - 1, 0));
+  if (!n) { fr.innerHTML = noPhoto; nav.innerHTML = ''; return; }
+  const src = p.imgs[k]; const old = $$('img', fr);
+  if (old.length && old[old.length-1].getAttribute('src') === src) { /* same */ }
+  else {
+    const im = document.createElement('img'); im.onload = () => { if (im.naturalWidth > im.naturalHeight * 1.05) im.classList.add('wide'); }; im.src = src; im.alt = `${p.name}${n > 1 ? ` — photo ${k+1} of ${n}` : ''}`; im.decoding = 'async'; im.referrerPolicy = 'no-referrer';
+    if (animate && !RM.matches && old.length) { im.className = 'out'; fr.appendChild(im); requestAnimationFrame(() => requestAnimationFrame(() => im.classList.remove('out'))); old.forEach(o => { o.classList.add('out'); setTimeout(() => o.remove(), 600); }); }
+    else { fr.innerHTML = ''; fr.appendChild(im); $$('.noimg', fr).forEach(x => x.remove()); }
+  }
+  nav.innerHTML = n > 1 ? `<button type="button" data-ph="${esc(p.id)}|-1" aria-label="Previous photo">${IC.prev}</button><span class="cnt" aria-live="polite">${k+1} / ${n}</span><button type="button" data-ph="${esc(p.id)}|1" aria-label="Next photo">${IC.next}</button>` : '';
+}
+function renderDetails(sec, cat, p){
+  const vi = curVi(p), pr = priceOf(p, vi), ok = availOf(p, vi);
+  const opts = p.opts.map((o, gi) => {
+    const chosen = sel[p.id][gi];
+    const many = o.values.length > 12, open = openOpts[p.id + '|' + gi] || o.values.indexOf(chosen) >= 12;
+    return `<fieldset class="opt"><legend>${esc(o.label)}: <span dir="auto">${esc(chosen || '')}</span></legend><div class="chips${many && !open ? ' clamp' : ''}">${o.values.map(val => {
+      // a value is selectable if some available variant uses it together with the other current choices
+      const trial = sel[p.id].slice(); trial[gi] = val; const tv = varIndex(p, trial);
+      const can = tv >= 0 && p.vars[tv].avail;
+      return `<button type="button" class="chip" dir="auto" data-opt="${esc(p.id)}|${gi}|${esc(val)}" aria-pressed="${chosen === val}"${can ? '' : ' disabled aria-disabled="true"'}>${esc(val)}${can ? '' : '<span class="sr"> (sold out)</span>'}</button>`;
+    }).join('')}</div>${many ? `<button type="button" class="more" data-more="${esc(p.id)}|${gi}" aria-expanded="${!!open}">${open ? 'Show fewer' : `Show all ${o.values.length} ${o.label === 'Colour' ? 'colours' : 'options'}`}</button>` : ''}</fieldset>`;
+  }).join('');
+  const q = qtyPick[p.id];
+  $('[data-details]', sec).innerHTML = `<h3 class="f-name">${esc(p.name)}</h3>
+    <p class="price"><span class="price-now">${egp(pr.now)}</span>${pr.was ? `<span class="price-was"><span class="sr">was </span>${egp(pr.was)}</span>` : ''}${pr.off ? `<span class="price-off">${esc(pr.off)}</span>` : ''}</p>
+    ${p.desc ? `<p class="f-desc">${esc(p.desc)}</p>` : ''}
+    ${opts}
+    <div class="buy"><div class="qty" role="group" aria-label="Quantity"><button type="button" data-q="${esc(p.id)}|-1" aria-label="Decrease quantity"${q <= 1 ? ' disabled' : ''}>−</button><output aria-live="polite">${q}</output><button type="button" data-q="${esc(p.id)}|1" aria-label="Increase quantity">+</button></div>
+      <button type="button" class="add" data-add="${esc(p.id)}"${ok ? '' : ' disabled'}><span class="lbl">${ok ? 'Add to bag' : 'Sold out'}</span><span class="ok">${IC.check} Added</span></button></div>
+    <p class="note">${ok ? esc(S.delivery) : 'This option is sold out on the store right now.'}</p>`;
+}
+
+/* ---------- bag ---------- */
+let BAG = [];
+try { const raw = JSON.parse(localStorage.getItem('bo.bag.v1') || '[]'); BAG = raw.filter(l => PR[l.id] && l.q > 0 && (l.v === '' || PR[l.id].vars.some(v => v.k === l.v && v.avail))); } catch(e) { BAG = []; }
+const save = () => { try { localStorage.setItem('bo.bag.v1', JSON.stringify(BAG)); } catch(e){} };
+const lineUnit = l => { const p = PR[l.id]; const vi = l.v ? p.vars.findIndex(v => v.k === l.v) : -1; return priceOf(p, vi).now; };
+const lineImg = l => { const p = PR[l.id]; const v = l.v ? p.vars.find(x => x.k === l.v) : null; return p.imgs[v && v.img >= 0 ? v.img : 0]; };
+const count = () => BAG.reduce((a, l) => a + l.q, 0);
+const subtotal = () => Math.round(BAG.reduce((a, l) => a + lineUnit(l) * l.q, 0) * 100) / 100;
+function addToBag(id, q){
+  const p = PR[id], vi = curVi(p);
+  if (!availOf(p, vi)) return false;
+  const v = vi >= 0 ? p.vars[vi].k : '';
+  const ex = BAG.find(l => l.id === id && l.v === v);
+  if (ex) ex.q = Math.min(99, ex.q + q); else BAG.push({id, v, q: Math.min(99, q)});
+  save(); syncBag(); return true;
+}
+function syncBag(){
+  const n = count();
+  $('#bagN').textContent = n; $('#bagSr').textContent = n === 1 ? 'item in your bag' : 'items in your bag';
+  $('#bagBtn').setAttribute('aria-label', `Bag, ${n} ${n === 1 ? 'item' : 'items'}${n ? ', ' + egp(subtotal()) : ''}`);
+  if ($('#bag').classList.contains('on') && !chkMode) renderBag();
+}
+let chkMode = false;
+function renderBag(){
+  chkMode = false;
+  const B = $('#bagBody'), F = $('#bagFoot');
+  if (!BAG.length) {
+    B.innerHTML = `<div class="empty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M5 8h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8z"/><path d="M9 10V7a3 3 0 0 1 6 0v3"/></svg><h3>Your bag is empty</h3><p>Pick a category and add the pieces you love.</p><button class="cta" type="button" data-act="shop">Choose a category</button></div>`;
+    F.innerHTML = ''; return;
+  }
+  B.innerHTML = BAG.map((l, i) => { const p = PR[l.id], u = lineUnit(l), im = lineImg(l);
+    return `<div class="line"><div class="th">${im ? img(im, '', true, '') : ''}</div><div><h3>${esc(p.name)}</h3><p class="v">${l.v ? esc(p.opts.map(o => o.label).join(' / ')) + ': ' + esc(l.v) + ' · ' : ''}${egp(u)} each</p>
+      <div class="row"><div class="qty" role="group" aria-label="Quantity of ${esc(p.name)}"><button type="button" data-bq="${i}|-1" aria-label="Decrease">−</button><output>${l.q}</output><button type="button" data-bq="${i}|1" aria-label="Increase"${l.q >= 99 ? ' disabled' : ''}>+</button></div>
+      <button class="rm" type="button" data-rm="${i}">Remove<span class="sr"> ${esc(p.name)}</span></button><span class="lt">${egp(Math.round(u * l.q * 100) / 100)}</span></div></div></div>`; }).join('');
+  F.innerHTML = `<div class="sum"><span>${count()} ${count() === 1 ? 'item' : 'items'}</span></div><div class="sum big"><span>Subtotal</span><span>${egp(subtotal())}</span></div><p class="note">Shipping isn’t included. BO Scrunchiess confirms it when you order.</p><button class="btn-wide" type="button" data-act="review">Review order</button>`;
+}
+function orderText(){
+  return 'BO Scrunchiess order\n' + BAG.map(l => { const p = PR[l.id]; return `${l.q} × ${p.name}${l.v ? ' (' + l.v + ')' : ''} — ${egp(Math.round(lineUnit(l) * l.q * 100) / 100)}`; }).join('\n') + `\nSubtotal: ${egp(subtotal())}`;
+}
+function renderReview(){
+  chkMode = true;
+  $('#bagBody').innerHTML = `<div class="chk"><button class="linkback" type="button" data-act="back">Back to bag</button><h3>Review your order</h3>
+    <p class="demo">This page is a design preview. It can’t place orders or take payments. To order, send this list to BO Scrunchiess, or add the same pieces on the official store.</p>
+    <ul>${BAG.map(l => { const p = PR[l.id]; return `<li><span>${l.q} × ${esc(p.name)}${l.v ? ` <small>(${esc(l.v)})</small>` : ''}</span><span>${egp(Math.round(lineUnit(l) * l.q * 100) / 100)}</span></li>`; }).join('')}</ul>
+    <div class="sum big"><span>Subtotal</span><span>${egp(subtotal())}</span></div><p class="note">Shipping isn’t included.</p>
+    <div class="contact"><button type="button" data-act="copy">Copy order list</button><a href="mailto:${S.email}?subject=${encodeURIComponent('Order from BO Scrunchiess website')}&body=${encodeURIComponent(orderText())}">Email ${esc(S.email)}</a><a href="tel:${S.phone}">Call ${esc(S.phoneTxt)}</a><a href="${S.site}" target="_blank" rel="noopener">Open the official store</a></div></div>`;
+  $('#bagFoot').innerHTML = '';
+}
+let lastFocus = null;
+function openBag(){
+  lastFocus = document.activeElement; renderBag(); $('#toast').classList.remove('on');
+  const b = $('#bag'), s = $('#scrim'); b.hidden = false; s.hidden = false;
+  requestAnimationFrame(() => { b.classList.add('on'); s.classList.add('on'); });
+  document.documentElement.style.overflow = 'hidden';
+  setTimeout(() => $('[data-act=close]', b).focus(), 60);
+}
+function closeBag(){
+  const b = $('#bag'), s = $('#scrim'); if (!b.classList.contains('on')) return;
+  b.classList.remove('on'); s.classList.remove('on');
+  setTimeout(() => { b.hidden = true; s.hidden = true; }, 360);
+  document.documentElement.style.overflow = '';
+  if (lastFocus && document.contains(lastFocus)) lastFocus.focus();
+}
+document.addEventListener('keydown', e => {
+  if (!$('#bag').classList.contains('on')) return;
+  if (e.key === 'Escape') { e.preventDefault(); closeBag(); }
+  if (e.key === 'Tab') { const f = $$('a[href],button:not([disabled])', $('#bag')); if (!f.length) return; const a = f[0], z = f[f.length-1];
+    if (e.shiftKey && document.activeElement === a) { e.preventDefault(); z.focus(); } else if (!e.shiftKey && document.activeElement === z) { e.preventDefault(); a.focus(); } }
+});
+
+/* ---------- feedback ---------- */
+let tt; function toast(m){ if ($('#bag').classList.contains('on')) return; const t = $('#toast'); t.textContent = m; t.classList.add('on'); clearTimeout(tt); tt = setTimeout(() => t.classList.remove('on'), 2000); }
+function fly(fromEl, src){
+  const bb = $('#bagBtn'); bb.classList.remove('bump'); void bb.offsetWidth; bb.classList.add('bump');
+  if (RM.matches || !fromEl || !src) return;
+  const a = fromEl.getBoundingClientRect(), b = bb.getBoundingClientRect();
+  const f = document.createElement('div'); f.className = 'fly'; f.innerHTML = img(src, '', false, ''); document.body.appendChild(f);
+  const x0 = a.left + a.width/2 - 32, y0 = a.top + a.height/2 - 32, x1 = b.left + b.width/2 - 32, y1 = b.top + b.height/2 - 32;
+  f.animate([{transform:`translate(${x0}px,${y0}px) scale(1.4)`,opacity:1},{transform:`translate(${(x0+x1)/2}px,${Math.min(y0,y1)-80}px) scale(1)`,opacity:1,offset:.5},{transform:`translate(${x1}px,${y1}px) scale(.3)`,opacity:.3}],{duration:720,easing:'cubic-bezier(.5,0,.3,1)'}).onfinish = () => f.remove();
+}
+
+/* ---------- interactions ---------- */
+function goTo(id){
+  const el = document.getElementById(id); if (!el) return;
+  el.scrollIntoView({behavior: RM.matches ? 'auto' : 'smooth', block:'start'});
+  history.replaceState(null, '', '#' + id);
+  const h = $('h2', el) || el; h.setAttribute('tabindex', '-1'); setTimeout(() => h.focus({preventScroll:true}), RM.matches ? 0 : 500);
+}
+document.addEventListener('click', e => {
+  const t = e.target.closest('[data-go],[data-pick],[data-opt],[data-more],[data-ph],[data-q],[data-add],[data-bq],[data-rm],[data-act]'); if (!t) return;
+  const d = t.dataset;
+  if (d.go) { e.preventDefault(); return goTo(d.go); }
+  if (d.pick) { const [cs, id] = d.pick.split('|'); const cat = D.cats.find(c => c.slug === cs); if (feat[cat.id] === id) return; feat[cat.id] = id; fillStage(cat, true);
+    if (matchMedia('(max-width:899px)').matches) { const fr = $('#' + cs + ' .feature'); const r = fr.getBoundingClientRect(); if (r.top < 60 || r.top > innerHeight * .5) window.scrollBy({top: r.top - 76, behavior: RM.matches ? 'auto' : 'smooth'}); }
+    return; }
+  if (d.opt) { const [id, gi, val] = d.opt.split('|'); const p = PR[id]; sel[id][+gi] = val;
+    // keep the combination valid: if the new pair doesn't exist, choose the first available value for the other group
+    if (varIndex(p, sel[id]) < 0 || !p.vars[varIndex(p, sel[id])].avail) { const m = p.vars.find(v => v.avail && v.k.split(' / ')[+gi] === val); if (m) sel[id] = m.k.split(' / '); }
+    const vi = curVi(p); if (vi >= 0 && p.vars[vi].img >= 0) photo[id] = p.vars[vi].img;
+    refreshProduct(id, true); return; }
+  if (d.more) { openOpts[d.more] = !openOpts[d.more]; refreshProduct(d.more.split('|')[0], false); const b = $(`[data-more="${d.more}"]`); if (b) b.focus(); return; }
+  if (d.ph) { const [id, dir] = d.ph.split('|'); const p = PR[id]; photo[id] = ((photo[id] || 0) + (+dir) + p.imgs.length) % p.imgs.length; refreshProduct(id, true, true); return; }
+  if (d.q) { const [id, dir] = d.q.split('|'); qtyPick[id] = Math.max(1, Math.min(99, qtyPick[id] + (+dir))); refreshProduct(id, false); return; }
+  if (d.add) { const id = d.add, p = PR[id];
+    if (addToBag(id, qtyPick[id])) { const vi = curVi(p);
+      toast(`Added ${qtyPick[id]} × ${p.name}${vi >= 0 ? ' (' + p.vars[vi].k + ')' : ''}`);
+      fly($('[data-frame]', t.closest('.stage')), p.imgs[photo[id] || 0]);
+      t.classList.add('done'); setTimeout(() => t.classList.remove('done'), 1400);
+      qtyPick[id] = 1; const out = $('.qty output', t.closest('.buy')); if (out) out.textContent = '1'; const dec = $('[data-q$="|-1"]', t.closest('.buy')); if (dec) dec.disabled = true; }
+    return; }
+  if (d.bq) { const [i, dir] = d.bq.split('|').map(Number); const l = BAG[i]; if (!l) return; l.q += dir; if (l.q <= 0) BAG.splice(i, 1); save(); syncBag(); renderBag(); const f = $(`[data-bq="${Math.min(i, BAG.length-1)}|${dir}"]`); if (f) f.focus(); return; }
+  if (d.rm) { const l = BAG[+d.rm]; BAG.splice(+d.rm, 1); save(); syncBag(); renderBag(); toast(`Removed ${PR[l.id].name}`); $('[data-act=close]').focus(); return; }
+  switch (d.act) {
+    case 'close': return closeBag();
+    case 'shop': closeBag(); return goTo('choose');
+    case 'review': renderReview(); $('[data-act=back]').focus(); return;
+    case 'back': renderBag(); return;
+    case 'copy': { const txt = orderText(); const ok = () => { t.textContent = 'Order list copied'; t.setAttribute('aria-live', 'polite'); };
+      if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(txt).then(ok, () => fallbackCopy(txt, ok)); else fallbackCopy(txt, ok); return; }
+  }
+});
+function fallbackCopy(txt, ok){ const ta = document.createElement('textarea'); ta.value = txt; ta.setAttribute('readonly', ''); ta.style.cssText = 'position:fixed;opacity:0'; document.body.appendChild(ta); ta.select(); try { document.execCommand('copy'); ok(); } catch(e){} ta.remove(); }
+function refreshProduct(id, animate, photoOnly){
+  for (const cat of D.cats) if (feat[cat.id] === id) { const sec = document.getElementById(cat.slug);
+    const focusKey = document.activeElement && document.activeElement.dataset ? (document.activeElement.dataset.opt || document.activeElement.dataset.q || document.activeElement.dataset.ph) : null;
+    setFrame(sec, PR[id], animate); if (!photoOnly) renderDetails(sec, cat, PR[id]);
+    $$('[data-pick$="|' + id + '"] .rp', sec).forEach(e => { const p = PR[id]; e.textContent = egp(priceOf(p, curVi(p)).now) + (anyAvail(p) ? '' : ' · sold out'); });
+    if (focusKey) { const f = $$('[data-opt],[data-q],[data-ph]', sec).find(x => (x.dataset.opt || x.dataset.q || x.dataset.ph) === focusKey); if (f && !f.disabled) f.focus(); } }
+}
+$('#bagBtn').addEventListener('click', openBag);
+$('#scrim').addEventListener('click', closeBag);
+$('#nowBtn').addEventListener('click', () => goTo('choose'));
+
+/* ---------- scroll: reveals, current category, header ---------- */
+function observe(){
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), {rootMargin:'0px 0px -12% 0px', threshold:.08});
+  $$('.stage').forEach(s => io.observe(s));
+  let cur = null;
+  const spy = new IntersectionObserver(es => {
+    es.forEach(e => { if (e.isIntersecting) cur = e.target; });
+    const pickerVisible = $('#choose').getBoundingClientRect().bottom > 70;
+    const now = $('#now');
+    if (cur && cur.dataset.cat && !pickerVisible) { const c = D.cats.find(x => String(x.id) === cur.dataset.cat); const f = PR[feat[c.id]];
+      $('#nowTxt').textContent = c.name; $('#nowImg').src = f.imgs[0] || ''; $('#nowImg').referrerPolicy = 'no-referrer';
+      $('#nowBtn').setAttribute('aria-label', `Now viewing ${c.name}. Go back to the category list`); now.classList.add('on'); now.removeAttribute('aria-hidden'); $('#nowBtn').tabIndex = 0;
+      $$('.cat').forEach(a => a.setAttribute('aria-current', a.dataset.go === c.slug)); }
+    else { now.classList.remove('on'); now.setAttribute('aria-hidden', 'true'); $('#nowBtn').tabIndex = -1; }
+  }, {rootMargin:'-45% 0px -50% 0px'});
+  $$('.stage,#choose,.hero').forEach(s => spy.observe(s));
+}
+// gentle in-frame drift of the featured photo while scrolling (desktop, motion allowed)
+function drift(){
+  if (RM.matches || !matchMedia('(min-width:900px) and (pointer:fine)').matches) return;
+  let raf = 0;
+  const run = () => { raf = 0; const vh = innerHeight;
+    $$('.stage.in .frame').forEach(fr => { const r = fr.getBoundingClientRect(); if (r.bottom < 0 || r.top > vh) return;
+      const t = ((r.top + r.height/2) - vh/2) / vh; $$('img', fr).forEach(im => { if (!im.classList.contains('out')) im.style.transform = `translateY(${(-t*18).toFixed(1)}px) scale(1.06)`; }); }); };
+  addEventListener('scroll', () => { if (!raf) raf = requestAnimationFrame(run); }, {passive:true}); run();
+}
+addEventListener('scroll', () => $('#hdr').classList.toggle('scrolled', scrollY > 10), {passive:true});
+
+/* ---------- footer ---------- */
+function footer(){
+  // Removed the pattern image injection
+  $('#ftr').innerHTML = `<div class="wrap">
+    <p class="big">BO Scrunchiess</p>
+    <div class="cols">
+      <div>
+        <h2>Contact</h2>
+        <ul>
+          <li><a href="tel:${S.phone}">${esc(S.phoneTxt)}</a></li>
+          <li><a href="mailto:${S.email}">${esc(S.email)}</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Follow</h2>
+        <ul>
+          <li><a href="${S.instagram}" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="${S.tiktok}" target="_blank" rel="noopener">TikTok</a></li>
+          <li><a href="${S.facebook}" target="_blank" rel="noopener">Facebook</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Shop</h2>
+        <ul>${D.cats.map(c => `<li><a href="#${c.slug}" data-go="${c.slug}">${esc(c.name)}</a></li>`).join('')}</ul>
+      </div>
+    </div>
+    <p class="fine">Products, prices, options and availability were copied from <a href="${S.site}" target="_blank" rel="noopener">bo-scrunchiess.shop</a> on ${esc(D.capturedOn)} and may have changed since. Store policies (shipping, returns, payment) are on the official store.</p>
+  </div>`;
+}
+
+/* ---------- boot ---------- */
+D.cats.forEach(c => { c.slug = slug(c.name); });
+hero(); picker();
+$('#stages').innerHTML = D.cats.map((c, i) => stage(c, i)).join('');
+D.cats.forEach(c => fillStage(c, false));
+footer(); syncBag(); observe(); drift();
+if (location.hash && document.getElementById(location.hash.slice(1))) setTimeout(() => document.getElementById(location.hash.slice(1)).scrollIntoView(), 50);
+window.__bo = {count, subtotal, bag: () => BAG.map(l => ({...l})), feat: () => ({...feat})};
+})();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+/* =====================================================================
+   03 · THE CHALLENGES — fog that clears into architecture.
+   --p clears the fog, --draw draws the arches (both from <ScrollEngine/>).
+   ===================================================================== */
+.ch-fog { background: #f7f7f5; padding: 10vh 0 18vh; --p: 0; --draw: 0; }
+.fog-stage { position: sticky; top: 0; height: 100vh; margin-bottom: -100vh; overflow: hidden; pointer-events: none; }
+.arches { position: absolute; inset: 0; width: 100%; height: 100%; fill: none; stroke: rgba(41, 43, 44, .3); stroke-width: 1; }
+.arches path { vector-effect: non-scaling-stroke; stroke-dasharray: 1 1; stroke-dashoffset: calc(1 - var(--draw)); }
+.fog-stage::after { content: ""; position: absolute; inset: 0; background: rgba(247, 247, 245, calc(.9 - var(--p) * .72)); }
+.fog { position: absolute; top: 0; height: 100%; width: 220%; left: -60%; will-change: transform; }
+.fog.f1 { background: radial-gradient(closest-side, rgba(255, 255, 255, .95), rgba(255, 255, 255, 0)) 10% 30% / 40% 60% no-repeat, radial-gradient(closest-side, rgba(255, 255, 255, .9), rgba(255, 255, 255, 0)) 55% 70% / 50% 70% no-repeat; animation: fogA 70s linear infinite alternate; opacity: calc(1 - var(--p) * .9); }
+.fog.f2 { background: radial-gradient(closest-side, rgba(255, 255, 255, .85), rgba(255, 255, 255, 0)) 30% 55% / 45% 60% no-repeat, radial-gradient(closest-side, rgba(255, 255, 255, .8), rgba(255, 255, 255, 0)) 80% 25% / 40% 55% no-repeat; animation: fogB 95s linear infinite alternate; opacity: calc(1 - var(--p) * .75); }
+.fog.f3 { background: radial-gradient(closest-side, rgba(255, 255, 255, .7), rgba(255, 255, 255, 0)) 45% 85% / 70% 40% no-repeat; animation: fogA 120s linear infinite alternate-reverse; opacity: .8; }
+@keyframes fogA { from { transform: translateX(-8%); } to { transform: translateX(14%); } }
+@keyframes fogB { from { transform: translateX(10%); } to { transform: translateX(-12%); } }
+.fog-content { position: relative; z-index: 1; }
+.role { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.4fr); gap: clamp(30px, 5vw, 96px); padding: 6vh 0; border-top: 1px solid var(--line-2); }
+.role-meta { position: sticky; top: calc(var(--nav-h) + 30px); align-self: start; }
+.role-when { font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-3); }
+.role-meta h3 { font-family: var(--serif); font-weight: 400; font-size: clamp(32px, 3vw, 48px); line-height: 1.04; margin: 14px 0 10px; }
+.role-org { color: var(--copper-ink); font-weight: 500; }
+.role-where { color: var(--ink-3); font-size: 14.5px; }
+.cases { display: grid; }
+.case { display: grid; grid-template-columns: 210px minmax(0, 1fr); gap: 24px; padding: 22px 0; border-bottom: 1px solid var(--line); }
+.case:first-child { padding-top: 6px; }
+.case .tag { padding-top: 6px; }
+.case p { font-size: clamp(17px, 1.3vw, 19.5px); line-height: 1.55; color: var(--ink); }
+.role-extra { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: clamp(24px, 4vw, 64px); padding-top: 6vh; border-top: 1px solid var(--line-2); }
+.role-extra h3 { font-family: var(--serif); font-weight: 400; font-size: 26px; line-height: 1.12; margin: 10px 0 8px; }
+.role-extra p:not(.tag) { color: var(--ink-2); font-size: 15px; margin-bottom: 14px; }
+
+@media (max-width: 1100px) {
+  .role { grid-template-columns: 1fr; }
+  .role-meta { position: static; }
+}
+@media (max-width: 960px) {
+  .role-extra { grid-template-columns: 1fr; }
+}
+@media (max-width: 760px) {
+  .case { grid-template-columns: 1fr; gap: 8px; }
+}
