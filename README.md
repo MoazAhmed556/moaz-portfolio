@@ -8,7 +8,7 @@ A cinematic, bright-luxury portfolio in eight chapters, built with **Next.js 16 
 | 02 | The Vision | Drifting clouds and five working principles, each with a real "in practice" proof. |
 | 03 | The Challenges | Fog clears and arches draw in, revealing experience at Markatty and Dentolize. |
 | 04 | The Expertise | A blueprint. Three tabs of skills, each showing its evidence (no percentages). |
-| 05 | The Projects | A sideways exhibition of 13 working projects, each opening in a live, interactive browser viewer. |
+| 05 | The Projects | A sideways exhibition of 16 working projects, each opening in a live, interactive browser viewer. |
 | 06 | Behind the Lens | 19 curated iPhone photographs over a moving "living architecture" background. |
 | 07 | The Next Chapter | Sunrise. Done, learning and aiming for, kept separate. |
 | 08 | The Connection | Real contact details, copy-email and CV download. |
@@ -74,7 +74,7 @@ Every data file is typed (`src/types/index.ts`), so VS Code shows each field and
 ### Add a project
 1. Put the prototype's HTML file in `public/projects/<id>.html`. It's served at `/projects/<id>`.
 2. Add screenshots: `public/images/projects/<id>.jpg` (desktop, 790×494) and `<id>-m.jpg` (phone, 390×844).
-3. Add an entry to `src/data/projects.ts`. Its position in the list is its position in the exhibition. Every room, the index, the viewer and the "01–13" counters update automatically. Rooms alternate between three compositions by position.
+3. Add an entry to `src/data/projects.ts`. Its position in the list is its position in the exhibition. Every room, the index, the viewer and the "01–16" counters update automatically. Rooms alternate between three compositions by position.
 4. Add its id to the matching filters in `projectFilters` (same file) — they drive the category chips in the project index.
 5. When a project is hosted publicly, add `liveUrl: "https://…"`. The "Open on its own" links then become "Visit the live site". The viewer keeps showing the local copy, because many live sites refuse to be framed by another page.
 
@@ -111,7 +111,7 @@ Moaz-Portfolio-Experience/
 ├── public/
 │   ├── photography/            19 curated photographs (Next.js serves optimised sizes)
 │   ├── images/projects/        exhibition screenshots (desktop + phone) per project
-│   ├── projects/               the 13 working projects shown in the live viewer
+│   ├── projects/               the 16 working projects shown in the live viewer
 │   │                           (11 single HTML files + atelier-01/ and automotive-showroom/ builds)
 │   └── cv/Moaz_Ahmed_CV.pdf
 ├── src/
@@ -277,6 +277,6 @@ Re-encoding removed all metadata, including GPS. Titles describe only what is vi
 
 - Experience, dates and figures come from the CV. No testimonials, metrics or certifications were added.
 - DevOps, Linux, Docker and Jenkins appear **only** under "Currently learning".
-- None of the 13 projects has its own public address yet, so the viewer runs the copies in this project and says so.
+- None of the 16 projects has its own public address yet, so the viewer runs the copies in this project and says so.
 - Demo limits are stated per project: demo checkouts and forms, ATELIER 01's enquiry form (saved in the browser only, no email), and Salon Noir's 3D model licences.
 - No GitHub link is shown on the site because none was provided. Add one to `contacts` in `src/data/site.ts`.
