@@ -48,3 +48,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local archive of pages taken off the live site (kept on this machine, never deployed)
+/archive/
