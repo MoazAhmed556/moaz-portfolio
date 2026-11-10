@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 
 /**
- * The opening: once the fonts are ready (or after 1.3s at most), the sun comes into
+ * The opening: once the fonts are ready (or after 0.6s at most), the sun comes into
  * the room and the name assembles letter by letter (CSS in styles/chapters/beginning.css).
  */
 export function HeroEntrance({ targetId }: { targetId: string }) {
@@ -15,7 +15,7 @@ export function HeroEntrance({ targetId }: { targetId: string }) {
       done = true;
       raf = requestAnimationFrame(() => document.getElementById(targetId)?.classList.add("ready"));
     };
-    const timer = window.setTimeout(ready, 1300);
+    const timer = window.setTimeout(ready, 600);
     document.fonts?.ready.then(ready).catch(ready);
     return () => {
       done = true;

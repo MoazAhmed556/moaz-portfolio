@@ -2,6 +2,7 @@
 
 import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useRef } from "react";
+import { UNOFFICIAL_DISCLAIMER } from "@/data/disclaimer";
 import { usePrefersReducedMotion } from "@/hooks/useMediaQuery";
 import type { Project } from "@/types";
 
@@ -42,6 +43,7 @@ export function ProjectDetails({
             {project.name}
           </h2>
           <p className="v-tag">{project.tagline}</p>
+          {project.unofficial && <p className="v-note">{UNOFFICIAL_DISCLAIMER}</p>}
           <ul className="v-stats">
             {project.stats.map((s) => (
               <li key={s}>{s}</li>
@@ -56,14 +58,6 @@ export function ProjectDetails({
             <p>{project.role}</p>
           </section>
           <section className="v-block">
-            <h3>Design objectives</h3>
-            <ul className="v-list">
-              {project.objectives.map((o) => (
-                <li key={o}>{o}</li>
-              ))}
-            </ul>
-          </section>
-          <section className="v-block">
             <h3>Key features</h3>
             <ul className="v-list">
               {project.features.map((f) => (
@@ -72,24 +66,13 @@ export function ProjectDetails({
             </ul>
           </section>
           <section className="v-block">
-            <h3>Verified technologies</h3>
+            <h3>Built with</h3>
             <ul className="v-tech">
               {project.tech.map((t) => (
                 <li key={t}>{t}</li>
               ))}
             </ul>
             <p className="v-small">Checked against the project&apos;s source code.</p>
-          </section>
-          <section className="v-block">
-            <h3>Palette</h3>
-            <ul className="v-pal">
-              {project.colors.map((c) => (
-                <li key={c}>
-                  <span style={{ background: c }} />
-                  {c.toUpperCase()}
-                </li>
-              ))}
-            </ul>
           </section>
           <section className="v-block">
             <h3>Preview notes</h3>

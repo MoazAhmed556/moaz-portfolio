@@ -1,29 +1,42 @@
 import type { ChapterHeading, ExperienceExtra, Role } from "@/types";
 
-/** 03 · THE CHALLENGES — professional experience, taken from the CV. */
+/**
+ * 02 · THE EXPERIENCE (anchor #challenges) — what the work actually is.
+ * No counts or percentages: none of them is confirmed yet. Add one only when Moaz confirms it.
+ */
 export const challengesHeading: ChapterHeading = {
-  label: "The Challenges",
-  title: "Most problems arrive in fog. ",
-  titleEmphasis: "The work is making them clear.",
-  lede: "My professional experience, as it actually is: client-facing technical roles where I solve what I can, and make sure everything else reaches the right person with what they need.",
+  label: "The Experience",
+  title: "Client-facing technical work, ",
+  titleEmphasis: "in e-commerce and clinic software.",
+  lede: "Over three years in client-facing technical roles. My main work is e-commerce operations and client support — which grew into analysing processes, customer problems and competitors, and proposing improvements.",
 };
 
 export const roles: Role[] = [
   {
-    period: "Mar 2025 — Present",
-    title: "Operations & Frontend Developer",
+    period: "Mar 2025 — Present · main role",
+    title: "E-commerce Operations & Client Support",
     organization: "NTG Clarity · Markatty",
     location: "Cairo, Egypt",
     cases: [
-      { tag: "E-commerce operations", text: "I own high-priority and complex client store issues end to end — about three cases a week." },
-      { tag: "Technical troubleshooting", text: "I resolve around 70% of them independently, without escalation — including custom CSS, mobile responsiveness, and spacing and layout issues." },
-      { tag: "Client communication", text: "I work directly with 10+ clients who need urgent fixes or developer-level attention." },
-      { tag: "Business requirements", text: "I clarify what each client needs and recommend practical changes to their store setup." },
-      { tag: "Coordination with developers", text: "When a code change is needed, I investigate the root cause and hand developers a well-documented request." },
-      {
-        tag: "UI & storefront design",
-        text: "I designed and built 10+ interactive UI prototypes in HTML, CSS and JavaScript, so clients and developers can review an experience without any tools — and three storefront themes in React and Next.js, now live on the platform. The Frontend team handled publishing.",
-      },
+      { tag: "Client relationships", text: "I manage client relationships, run client meetings and follow up on their issues and progress, including for pharmacy businesses." },
+      { tag: "Store setup & support", text: "I help clients set up, configure and use their stores and dashboards, explain how the platform works, and troubleshoot operational and platform problems." },
+      { tag: "Working with developers", text: "When a problem needs a developer, I document it clearly for the technical team and follow it until it is addressed." },
+      { tag: "Business & process analysis", text: "Within this role, I review recurring complaints and storefront usability problems, look at how work moves between Sales, Account Management, Operations and Development, and propose clearer responsibilities and handovers to management." },
+      { tag: "Case · Pharmacy Chain Client", text: "Main contact for a pharmacy chain, with weekly review meetings: I solved what I could in the meeting, showed the team how to avoid recurring problems, and escalated real bugs to developers. I also proposed that Add to Cart should change to Notify Me when a product is out of stock — I spotted the UX problem and suggested the fix; I didn’t build it." },
+      { tag: "Case · Client retention", text: "A client unhappy with the service was considering leaving. I handled the conversation, helped rebuild their confidence, and guided them through the dashboard step by step, along with other platform tasks." },
+      { tag: "Case · Proposed CRM workflow & requirements", text: "When Markatty planned its CRM, I proposed the customer-lifecycle workflow — what Sales, Account Management, Operations and Development each own, from first sale to renewal — and what the CRM should track: stages, owners, interactions, onboarding progress and where delays happen. I defined the requirements and the workflow; I didn’t build the CRM system." },
+      { tag: "Case · Competitor analysis", text: "I compared Markatty with other e-commerce platform providers — services, features, pricing and subscriptions, customer experience — and presented the gaps and my recommendations on product, services, pricing and positioning to management." },
+    ],
+  },
+  {
+    period: "Mar 2025 — Present · part-time",
+    title: "Frontend Development",
+    organization: "NTG Clarity · Markatty",
+    location: "Cairo, Egypt",
+    cases: [
+      { tag: "Storefront themes", text: "I design the pages and UX of e-commerce storefront themes, write the HTML, CSS and Tailwind, and build and edit React / Next.js components, with AI assistance where needed." },
+      { tag: "Review & testing", text: "I review the generated code, test on desktop and mobile, and fix visual and responsive issues until the interface is right." },
+      { tag: "With the frontend team", text: "Other developers handle the JavaScript business logic, API integration, data fetching and publishing." },
     ],
   },
   {
@@ -32,21 +45,14 @@ export const roles: Role[] = [
     organization: "Dentolize · Dental Clinic Management System",
     location: "Cairo, Egypt",
     cases: [
-      { tag: "Client relationships", text: "I managed relationships with 15 dental clinics, resolving issues by phone, AnyDesk remote sessions and on-site visits." },
-      { tag: "Technical troubleshooting", text: "I resolved around four technical issues a week — device problems, system start-up failures, date and time configuration errors — mostly remotely." },
-      { tag: "Training & onboarding", text: "I onboarded and trained 30 clinics, doctors and staff, in person and over Zoom or Google Meet, driving feature adoption." },
-      { tag: "Coordination with developers", text: "I reported bugs with full details and followed up on fixes, updates and rollouts." },
+      { tag: "Client accounts", text: "I managed clinic accounts and handled system issues by phone, AnyDesk remote sessions and on-site visits." },
+      { tag: "Onboarding", text: "I helped clinic teams adopt the system and use its features." },
+      { tag: "Bug reporting", text: "I reported bugs to the development team in detail and followed fixes and updates through." },
     ],
   },
 ];
 
 export const experienceExtras: ExperienceExtra[] = [
-  {
-    tag: "Live client project",
-    title: "United World Foundation",
-    text: "A bilingual English / Arabic website for a non-profit — areas of work, success stories, archive, contact and donations — designed and built with React and Next.js as a Markatty client project.",
-    link: { label: "Visit uwf-eg.org/en", href: "https://uwf-eg.org/en" },
-  },
   {
     tag: "Education",
     title: "B.Sc. Computers & Management Information Systems",

@@ -39,3 +39,8 @@
 @media (max-width: 760px) {
   .case { grid-template-columns: 1fr; gap: 8px; }
 }
+
+/* The open sky at the end of The Beginning dissolves into this fog (the clouds chapter in between was removed). */
+.ch-fog { position: relative; }
+.ch-fog::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 90vh; z-index: 1; background: linear-gradient(180deg, #b7d6ea 0%, #cfe2ee 22%, #e6eef3 50%, rgba(247, 247, 245, 0) 100%); pointer-events: none; }
+@media (prefers-reduced-motion: reduce) { .ch-fog::before { display: none; } }

@@ -55,8 +55,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${cormorant.variable} ${hanken.variable}`} suppressHydrationWarning>
       <head>
-        {/* Before first paint: mark that JavaScript runs, so reveal animations start hidden instead of flashing. */}
-        <script dangerouslySetInnerHTML={{ __html: `document.documentElement.classList.add("js")` }} />
+        {/* Before first paint: mark that JavaScript runs, so reveal animations start hidden instead of flashing.
+            Then start the hero entrance as soon as the hero markup and the fonts are ready ("ready" on <html>),
+            without waiting for React to load; <HeroEntrance/> remains as a fallback. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){var d=document.documentElement,done=0;d.classList.add("js");function go(){if(done)return;done=1;requestAnimationFrame(function(){requestAnimationFrame(function(){d.classList.add("ready")})})}function start(){setTimeout(go,500);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(go,go)}(function wait(){if(document.querySelector(".begin-ctas"))start();else if(document.readyState==="loading")requestAnimationFrame(wait);else start()})()})();`,
+          }}
+        />
       </head>
       <body>{children}</body>
     </html>

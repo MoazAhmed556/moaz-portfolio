@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useProjectViewer } from "@/components/projects/ProjectViewerContext";
+import { UNOFFICIAL_DISCLAIMER } from "@/data/disclaimer";
 import { Icon } from "@/components/ui/Icon";
 import { useMediaQuery, usePrefersReducedMotion } from "@/hooks/useMediaQuery";
 import { onScrollFrame, requestScrollFrame } from "@/lib/scroll-engine";
@@ -165,6 +166,7 @@ export function ProjectGallery({ projects }: { projects: Project[] }) {
                   {p.name}
                 </h3>
                 <p className="rx-tag">{p.tagline}</p>
+                {p.unofficial && <p className="rx-note">{UNOFFICIAL_DISCLAIMER}</p>}
                 <ul className="rx-stats">
                   {p.stats.map((s) => (
                     <li key={s}>{s}</li>

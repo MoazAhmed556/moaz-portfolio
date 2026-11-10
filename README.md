@@ -1,17 +1,15 @@
 # Moaz Ahmed — A Journey Through Light
 
-A cinematic, bright-luxury portfolio in eight chapters, built with **Next.js 16 (App Router), React 19, TypeScript, Tailwind CSS v4, Motion and Lucide**.
+A cinematic, bright-luxury portfolio in six chapters, built with **Next.js 16 (App Router), React 19, TypeScript, Tailwind CSS v4, Motion and Lucide**.
 
 | # | Chapter | What happens |
 |---|---|---|
 | 01 | The Beginning | A sunlit room drawn in CSS. Scrolling walks you through its window into open sky. |
-| 02 | The Vision | Drifting clouds and five working principles, each with a real "in practice" proof. |
-| 03 | The Challenges | Fog clears and arches draw in, revealing experience at Markatty and Dentolize. |
-| 04 | The Expertise | A blueprint. Three tabs of skills, each showing its evidence (no percentages). |
-| 05 | The Projects | A sideways exhibition of 16 working projects, each opening in a live, interactive browser viewer. |
-| 06 | Behind the Lens | 19 curated iPhone photographs over a moving "living architecture" background. |
-| 07 | The Next Chapter | Sunrise. Done, learning and aiming for, kept separate. |
-| 08 | The Connection | Real contact details, copy-email and CV download. |
+| 02 | The Experience | Fog clears and arches draw in, revealing the work at Markatty and Dentolize (anchor `#challenges`). |
+| 03 | The Skills | A blueprint. Work skills, tools and current learning, each saying how hands-on it is (anchor `#expertise`). |
+| 04 | The Projects | A sideways exhibition of seven projects — one client website and six concepts — each opening in a live browser viewer. |
+| 05 | Behind the Lens | One row of five photographs over a moving "living architecture" background. |
+| 06 | The Connection | Contact details, copy-email and CV download. |
 
 ---
 
@@ -49,17 +47,15 @@ All text, links, projects and photographs live in **`src/data/`**. You rarely ne
 | Name, SEO title/description, email, phone, LinkedIn, CV path, footer | `src/data/site.ts` |
 | Opening chapter: roles, headline, intro, buttons | `src/data/site.ts` → `hero` |
 | Chapter names and the one-line menu descriptions | `src/data/navigation.ts` |
-| The five principles (02) | `src/data/vision.ts` |
 | Experience, roles, education (03) | `src/data/experience.ts` |
-| Skills and their evidence (04) | `src/data/skills.ts` |
+| Skills and their evidence (03) | `src/data/skills.ts` |
 | Projects (05) | `src/data/projects.ts` |
-| Photographs and collections (06) | `src/data/photography.ts` |
-| Done / learning / aiming for (07) | `src/data/journey.ts` |
+| Photographs (05) | `src/data/photography.ts` |
 | Colours, fonts | `src/styles/base.css` (`:root`) and `src/app/globals.css` (`@theme`) |
 
 Every data file is typed (`src/types/index.ts`), so VS Code shows each field and underlines a typo or a missing value.
 
-**Titles with an italic ending:** chapter titles are split into `title` and `titleEmphasis`. The emphasis part is set in copper italics, for example `title: "Most problems arrive in fog. "` and `titleEmphasis: "The work is making them clear."`.
+**Titles with an italic ending:** chapter titles are split into `title` and `titleEmphasis`. The emphasis part is set in copper italics, for example `title: "What I work with, "` and `titleEmphasis: "and how hands-on I am."`.
 
 ### Replace or add a photograph
 1. Put the JPG in `public/photography/`. About 1920 px on the long side is plenty: Next.js creates the smaller sizes automatically.
@@ -74,7 +70,7 @@ Every data file is typed (`src/types/index.ts`), so VS Code shows each field and
 ### Add a project
 1. Put the prototype's HTML file in `public/projects/<id>.html`. It's served at `/projects/<id>`.
 2. Add screenshots: `public/images/projects/<id>.jpg` (desktop, 790×494) and `<id>-m.jpg` (phone, 390×844).
-3. Add an entry to `src/data/projects.ts`. Its position in the list is its position in the exhibition. Every room, the index, the viewer and the "01–16" counters update automatically. Rooms alternate between three compositions by position.
+3. Add an entry to `src/data/projects.ts`. Its position in the list is its position in the exhibition. Every room, the index, the viewer and the "01–06" counters update automatically. Rooms alternate between three compositions by position.
 4. Add its id to the matching filters in `projectFilters` (same file) — they drive the category chips in the project index.
 5. When a project is hosted publicly, add `liveUrl: "https://…"`. The "Open on its own" links then become "Visit the live site". The viewer keeps showing the local copy, because many live sites refuse to be framed by another page.
 
@@ -109,23 +105,23 @@ Overwrite `public/cv/Moaz_Ahmed_CV.pdf`, or change `cvPath` in `src/data/site.ts
 ```
 Moaz-Portfolio-Experience/
 ├── public/
-│   ├── photography/            19 curated photographs (Next.js serves optimised sizes)
+│   ├── photography/            19 photographs; 5 are shown (see src/data/photography.ts)
 │   ├── images/projects/        exhibition screenshots (desktop + phone) per project
-│   ├── projects/               the 16 working projects shown in the live viewer
+│   ├── projects/               16 local projects; 6 of them are shown, plus the live client site (UWF)
 │   │                           (11 single HTML files + atelier-01/ and automotive-showroom/ builds)
 │   └── cv/Moaz_Ahmed_CV.pdf
 ├── src/
 │   ├── app/
 │   │   ├── layout.tsx          fonts, SEO metadata, viewport, pre-paint "js" flag
-│   │   ├── page.tsx            assembles the eight chapters
+│   │   ├── page.tsx            assembles the six chapters
 │   │   ├── globals.css         Tailwind + theme tokens + imports from src/styles
 │   │   ├── favicon.ico · icon.svg · apple-icon.png
 │   │   ├── opengraph-image.jpg · twitter-image.jpg (+ .alt.txt)
 │   │   └── robots.ts · sitemap.ts
 │   ├── components/
 │   │   ├── layout/             Navbar, ChapterNavigation (side rail), ChapterMenu, JourneyProgress, Footer
-│   │   ├── chapters/           HeroSection, VisionSection, ChallengesSection, ExpertiseSection,
-│   │   │                       ProjectsSection, BehindTheLensSection, NextChapterSection, ContactSection
+│   │   ├── chapters/           HeroSection, ChallengesSection, ExpertiseSection,
+│   │   │                       ProjectsSection, BehindTheLensSection, ContactSection
 │   │   ├── expertise/          ExpertiseExplorer (tabs → skills → evidence)
 │   │   ├── projects/           ProjectGallery (exhibition), ProjectIndex, ProjectViewer,
 │   │   │                       ProjectPreview (live iframe), ProjectDetails, ProjectNavigation,
@@ -162,8 +158,8 @@ The whole page is prerendered at build time (`○ Static`).
 **Scroll-linked motion without re-renders.** `lib/scroll-engine.ts` runs at most one `requestAnimationFrame` per scroll or resize. Effects subscribe to it and write CSS custom properties straight to the DOM, so the cinematic motion never re-renders React:
 - `--p`: progress through a chapter;
 - `--jp`: progress through the whole journey;
-- `--draw`: how far the arches in chapter 03 are drawn;
-- `--exit`: the sunlight at the end of chapter 06.
+- `--draw`: how far the arches in chapter 02 are drawn;
+- `--exit`: the sunlight at the end of chapter 05.
 
 Every subscription, listener, observer and animation loop is removed in its effect's cleanup.
 
@@ -249,7 +245,7 @@ The canonical and Open Graph URLs use your Vercel production domain automaticall
 - `npm run lint`: passed, no warnings.
 - `npm run build`: passed, all routes prerendered as static.
 - Tested in the browser at desktop (1440×900), tablet (768×1024) and phone (390×844):
-  - **Chapters and navigation:** all eight chapters; navigation, side rail, journey bar and Chapters menu; direct links (`/#lens`, `/#project/pawland`).
+  - **Chapters and navigation:** all six chapters; navigation, side rail, journey bar and Chapters menu; direct links (`/#lens`, `/#project/pawland`).
   - **Expertise:** tabs, and the phone accordion.
   - **Projects:** the pinned exhibition and its controls; the project index; the live viewer (all 8 prototype URLs, switching, device widths, full screen, jump list, Esc, back to the room).
   - **Behind the Lens:** filters, the lightbox (keys and wrap-around), and phone filmstrips.
@@ -261,7 +257,7 @@ The canonical and Open Graph URLs use your Vercel production domain automaticall
 
 ## Photography
 
-19 photographs, chosen from 29 originals for sharpness, clean compression and variety. Near-duplicates and soft or heavily compressed shots were left out.
+19 photographs (5 shown on the page), chosen from 29 originals for sharpness, clean compression and variety. Near-duplicates and soft or heavily compressed shots were left out.
 
 Each kept photo was rebuilt from its original with gentle, whole-image corrections:
 - black point and highlights adjusted;
@@ -275,8 +271,9 @@ Re-encoding removed all metadata, including GPS. Titles describe only what is vi
 
 ## Content honesty
 
-- Experience, dates and figures come from the CV. No testimonials, metrics or certifications were added.
-- DevOps, Linux, Docker and Jenkins appear **only** under "Currently learning".
-- None of the 16 projects has its own public address yet, so the viewer runs the copies in this project and says so.
+- Experience and dates come from the CV. No counts, percentages, testimonials or certifications are shown until Moaz confirms them.
+- Every project says what it is (personal project, self-initiated concept or unofficial concept) and what he did himself: planning, design, directing the AI-assisted build, review, testing and his own HTML / CSS edits (not JavaScript logic or API integration). Real-brand concepts show the disclaimer.
+- DevOps appears **only** under "Currently learning".
+- None of the projects has its own public address yet, so the viewer runs the copies in this project and says so.
 - Demo limits are stated per project: demo checkouts and forms, ATELIER 01's enquiry form (saved in the browser only, no email), and Salon Noir's 3D model licences.
 - No GitHub link is shown on the site because none was provided. Add one to `contacts` in `src/data/site.ts`.

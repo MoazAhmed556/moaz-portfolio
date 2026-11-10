@@ -1,31 +1,29 @@
 import type { Chapter, ChapterId, NavShortcut } from "@/types";
 
 /**
- * NAVIGATION — the eight chapters in page order.
- * `id` is the section anchor (#vision, #lens …); titles and blurbs appear in the
+ * NAVIGATION — the six chapters in page order.
+ * `id` is the section anchor (#challenges, #projects …); titles and blurbs appear in the
  * top bar, the side rail and the Chapters menu.
  */
 export const chapters: Chapter[] = [
-  { id: "beginning", number: 1, title: "The Beginning", blurb: "Who I am, in a room full of light." },
-  { id: "vision", number: 2, title: "The Vision", blurb: "How I approach problems." },
-  { id: "challenges", number: 3, title: "The Challenges", blurb: "My professional experience." },
-  { id: "expertise", number: 4, title: "The Expertise", blurb: "Skills, tools and current learning — with evidence." },
-  { id: "projects", number: 5, title: "The Projects", blurb: "Sixteen live projects you can use." },
-  { id: "lens", number: 6, title: "Behind the Lens", blurb: "A personal photography collection." },
-  { id: "next", number: 7, title: "The Next Chapter", blurb: "What I am learning, and where I am heading." },
-  { id: "connection", number: 8, title: "The Connection", blurb: "Get in touch." },
+  { id: "beginning", number: 1, title: "The Beginning", blurb: "Who I am and what I do." },
+  { id: "challenges", number: 2, title: "The Experience", blurb: "Where I have worked." },
+  { id: "expertise", number: 3, title: "The Skills", blurb: "What I work with, and how hands-on I am." },
+  { id: "projects", number: 4, title: "The Projects", blurb: "Six concepts and a client website you can open." },
+  { id: "lens", number: 5, title: "Behind the Lens", blurb: "A few of my photographs." },
+  { id: "connection", number: 6, title: "The Connection", blurb: "Contact details and CV." },
 ];
 
 /** Shortcuts in the top bar. */
 export const navShortcuts: NavShortcut[] = [
+  { label: "Experience", chapter: "challenges" },
   { label: "Projects", chapter: "projects" },
-  { label: "Photography", chapter: "lens" },
 ];
 
 /** Buttons at the bottom of the Chapters menu. */
 export const menuLinks: { label: string; chapter: ChapterId; primary?: boolean }[] = [
   { label: "Go to the projects", chapter: "projects", primary: true },
-  { label: "Go to the photography", chapter: "lens" },
+  { label: "Get in touch", chapter: "connection" },
 ];
 
 export function chapterById(id: ChapterId): Chapter {

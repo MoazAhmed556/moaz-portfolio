@@ -9,13 +9,11 @@
 @import "../styles/base.css";
 @import "../styles/navigation.css";
 @import "../styles/chapters/beginning.css";
-@import "../styles/chapters/vision.css";
 @import "../styles/chapters/challenges.css";
 @import "../styles/chapters/expertise.css";
 @import "../styles/chapters/projects.css";
 @import "../styles/chapters/project-viewer.css";
 @import "../styles/chapters/lens.css";
-@import "../styles/chapters/next.css";
 @import "../styles/chapters/connection.css";
 
 @theme {

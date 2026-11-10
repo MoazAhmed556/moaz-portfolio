@@ -3,15 +3,13 @@
  * so an editor in VS Code shows exactly which fields a project, photo or skill needs.
  */
 
-/** The anchor ids of the eight chapters, in page order. */
+/** The anchor ids of the six chapters, in page order. */
 export type ChapterId =
   | "beginning"
-  | "vision"
   | "challenges"
   | "expertise"
   | "projects"
   | "lens"
-  | "next"
   | "connection";
 
 export interface Chapter {
@@ -76,15 +74,6 @@ export interface HeroContent {
   secondaryCta: { label: string; href: string };
 }
 
-/* -------------------------------------------------------------- vision */
-
-export interface Principle {
-  numeral: string;
-  title: string;
-  text: string;
-  proof: string;
-}
-
 /* ---------------------------------------------------------- experience */
 
 export interface ExperienceCase {
@@ -142,7 +131,6 @@ export interface Project {
   liveUrl?: string;
   screenshot: string;
   screenshotMobile: string;
-  colors: string[];
   /** Background tint of its exhibition room. */
   tint: string;
   accent: string;
@@ -150,12 +138,13 @@ export interface Project {
   tagline: string;
   description: string;
   role: string;
-  objectives: string[];
   features: string[];
   tech: string[];
   notes: string;
   /** iframe `allow` attribute, e.g. "camera; clipboard-write". */
   allow: string;
+  /** Uses a real business name: shows the "unofficial concept" disclaimer (data/disclaimer.ts). */
+  unofficial?: boolean;
 }
 
 /* ---------------------------------------------------------- photography */
@@ -183,10 +172,3 @@ export interface Photo {
   layout: { start: number; span: number; drop: number };
 }
 
-/* ------------------------------------------------------- next chapter */
-
-export interface JourneyPath {
-  kind: "done" | "learning" | "aim";
-  label: string;
-  items: string[];
-}

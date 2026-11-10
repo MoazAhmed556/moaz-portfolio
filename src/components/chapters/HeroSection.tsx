@@ -73,7 +73,7 @@ export function HeroSection() {
           </div>
         </div>
 
-        <a className="scroll-cue" href="#vision" aria-label="Scroll to the next chapter">
+        <a className="scroll-cue" href="#challenges" aria-label="Scroll to the next chapter">
           <span aria-hidden="true">Scroll</span>
           <i aria-hidden="true" />
         </a>

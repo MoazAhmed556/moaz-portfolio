@@ -71,21 +71,22 @@
 .scroll-cue i::after { content: ""; position: absolute; left: -1px; width: 3px; height: 14px; border-radius: 2px; background: var(--copper); animation: cue 2.4s var(--ease) infinite; }
 @keyframes cue { from { top: -14px; } to { top: 100%; } }
 
-/* entrance: the sun comes into the room (.ready is added by <HeroEntrance/>) */
+/* entrance: the sun comes into the room (.ready is added to <html> by the inline script in layout.tsx, and to the section by <HeroEntrance/>) */
 .js .room { filter: brightness(1.06) saturate(.6); transition: filter 2.4s var(--ease); }
 .js .room-shaft, .js .room-patch, .js .room-spill { opacity: 0; transition: opacity 2.6s var(--ease) .3s; }
-.js .bn-line .lt { opacity: 0; transform: translateY(42%); filter: blur(10px); transition: opacity 1.2s var(--ease-out), transform 1.4s var(--ease-out), filter 1.2s var(--ease-out); transition-delay: calc(400ms + var(--li) * 70ms); }
-.js .ch-begin .ch-label, .js .begin-roles, .js .begin-head, .js .begin-intro, .js .begin-ctas, .js .scroll-cue span { opacity: 0; translate: 0 16px; transition: opacity 1.1s var(--ease), translate 1.2s var(--ease-out); }
+.js .bn-line .lt { opacity: 0; transform: translateY(42%); filter: blur(10px); transition: opacity 1s var(--ease-out), transform 1.1s var(--ease-out), filter 1s var(--ease-out); transition-delay: calc(150ms + var(--li) * 45ms); }
+.js .ch-begin .ch-label, .js .begin-roles, .js .begin-head, .js .begin-intro, .js .begin-ctas, .js .scroll-cue span { opacity: 0; translate: 0 16px; transition: opacity .8s var(--ease), translate .9s var(--ease-out); }
 .ready .room { filter: none; }
 .ready .room-shaft, .ready .room-patch, .ready .room-spill { opacity: 1; }
 .ready .bn-line .lt { opacity: 1; transform: none; filter: none; }
 .ch-begin.ready .ch-label, .ready .begin-roles, .ready .begin-head, .ready .begin-intro, .ready .begin-ctas, .ready .scroll-cue span { opacity: 1; translate: 0 0; }
-.ch-begin.ready .ch-label { transition-delay: .2s; }
-.ready .begin-roles { transition-delay: 1.05s; }
-.ready .begin-head { transition-delay: 1.2s; }
-.ready .begin-intro { transition-delay: 1.35s; }
-.ready .begin-ctas { transition-delay: 1.5s; }
-.ready .scroll-cue span { transition-delay: 1.8s; }
+/* the text follows the name closely, so the content is readable within about a second */
+.ch-begin.ready .ch-label, .ready .ch-begin .ch-label { opacity: 1; translate: 0 0; transition-delay: .1s; }
+.ready .begin-roles { transition-delay: .4s; }
+.ready .begin-head { transition-delay: .5s; }
+.ready .begin-intro { transition-delay: .6s; }
+.ready .begin-ctas { transition-delay: .7s; }
+.ready .scroll-cue span { transition-delay: 1s; }
 
 @media (max-width: 760px) {
   .ch-begin { height: 170vh; }
@@ -106,4 +107,9 @@
   .ch-begin { height: auto; }
   .begin-stage { position: relative; }
   .begin-sky { display: none; }
+}
+
+/* Phones with enough height also show the short intro, so a first-time visitor sees what Moaz does (small phones keep the original layout). */
+@media (max-width: 760px) and (min-height: 700px) {
+  .begin-intro { display: block; font-size: 14.5px; line-height: 1.5; margin-top: 12px; }
 }

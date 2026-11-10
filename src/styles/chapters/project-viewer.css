@@ -111,3 +111,6 @@ dialog.viewer::backdrop { background: rgba(245, 243, 238, .7); }
 @media (max-width: 400px) {
   .v-ctrl .v-arrow { display: none; }
 }
+
+/* disclaimer on real-brand concepts */
+.v-note { margin-top: 14px; padding-left: 12px; border-left: 1px solid var(--copper); font-size: 13.5px; line-height: 1.5; color: var(--ink-2); }

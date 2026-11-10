@@ -62,16 +62,19 @@ export function PhotographyGallery({ head, collections, photos }: { head: ReactN
     <>
       <div className="wrap lens-head">
         {head}
-        <div className="lens-filters" role="group" aria-label="Filter the collection" data-reveal="frame">
-          <button type="button" className="lf" aria-pressed={filter === "all"} onClick={() => choose("all")}>
-            All <span>{photos.length}</span>
-          </button>
-          {collections.map((c) => (
-            <button key={c.id} type="button" className="lf" aria-pressed={filter === c.id} onClick={() => choose(c.id)}>
-              {c.name} <span>{photos.filter((p) => p.collection === c.id).length}</span>
+        {/* filters only make sense with more than one collection */}
+        {collections.length > 1 && (
+          <div className="lens-filters" role="group" aria-label="Filter the collection" data-reveal="frame">
+            <button type="button" className="lf" aria-pressed={filter === "all"} onClick={() => choose("all")}>
+              All <span>{photos.length}</span>
             </button>
-          ))}
-        </div>
+            {collections.map((c) => (
+              <button key={c.id} type="button" className="lf" aria-pressed={filter === c.id} onClick={() => choose(c.id)}>
+                {c.name} <span>{photos.filter((p) => p.collection === c.id).length}</span>
+              </button>
+            ))}
+          </div>
+        )}
       </div>
 
       <div className="lens-collections" ref={wrapRef}>
